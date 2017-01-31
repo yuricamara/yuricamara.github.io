@@ -387,54 +387,6 @@ a {
   font-weight: bold;
 }
 
-/*---------------- Contato ------------------------*/
-.contato-secao {
-  height: 380px;
-}
-
-.contato {
-  padding-left: 35px;
-  line-height: 24px;
-  margin-left: 20px;
-}
-
-.contato > a {
-  text-decoration: underline;
-}
-
-.form-contato{
-  padding-left: 20px;
-}
-
-.form-contato > label{
-  font-size: 14px;
-  display: block;
-  margin: 10px 0 5px;
-}
-
-.form-contato > input{
-  font-size: 14px;
-  height: 30px;
-  width: 450px;
-  padding-left: 10px;
-}
-
-.form-contato > button{
-  display: block;
-  font-size: 14px;
-  width: 90px;
-  margin: 10px 0 5px;
-}
-
-.form-contato > textarea{
-  font-size: 14px;
-  min-height: 100px;
-  min-width: 450px;
-  padding-left: 10px;
-  padding-top: 5px;
-  max-height: 150px;
-}
-
 /* ------------------------------------------------*/
 /* --------------->>> Footer  <<<-----------*/
 /* ------------------------------------------------*/
