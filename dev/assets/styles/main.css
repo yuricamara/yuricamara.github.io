@@ -219,7 +219,14 @@ a {
 
 /*----------------  Portfolio ----------------------*/
 .portfolio {
-  min-height: 405px;
+  min-height: 465px;
+}
+
+.portfolio-link-apps{
+  text-transform: none;
+  font-size: 15px;
+  display: block;
+  margin-top: 10px;
 }
 
 .app-1 {
