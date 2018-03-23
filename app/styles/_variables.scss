@@ -1,0 +1,18 @@
+/**
+ * Variables
+ * --------------------------------------------------
+ */
+
+// Named Color Variables
+// --------------------------------------------------
+// Exemplo de uso:
+//  background-color: color($colors, secondary-dark);
+//  color: color($colors, facebook, contrast);
+
+$colors: (
+  primary:          #2e81b7,
+  secondary:        #4f5666,
+  danger:           #e54d42,
+  dark:             #222,
+);
+
