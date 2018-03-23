@@ -1,2 +1,5 @@
-.idea
-Thumbs.db
+node_modules
+dist/
+.tmp
+app.yaml
+.idea/
