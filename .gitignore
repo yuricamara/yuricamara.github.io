@@ -1,5 +1,9 @@
-node_modules
-dist/
-.tmp
-app.yaml
 .idea/
+.npm/
+.sass-cache/
+.tmp
+.vscode/
+app.yaml
+dist/
+node_modules
+Thumbs.db

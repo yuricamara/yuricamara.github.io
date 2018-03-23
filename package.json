@@ -1,4 +1,11 @@
 {
+  "name": "Yuri Câmara Fernandes - Portfolio",
+  "version": "0.0.1",
+  "author": {
+    "name": "Yuri Câmara Fernandes",
+    "email": "yuricamara@gmail.com.br",
+    "url": "http://yuricamara.com.br"
+  },
   "devDependencies": {
     "apache-server-configs": "^2.14.0",
     "babel-core": "^6.14.0",
