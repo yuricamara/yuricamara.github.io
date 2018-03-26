@@ -1,0 +1,30 @@
+/**
+ * Components
+ * --------------------------------------------------
+ */
+
+.c-freelancer-photo{
+  @include circle(150px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.c-freelancer-info{
+  text-align: center;
+
+  &_name{
+    font-size: 60px;
+  }
+
+  &_job{
+    font-size: 30px;
+  }
+}
+
+.c-btn-linkedin{
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+
+  color: white;
+}
+

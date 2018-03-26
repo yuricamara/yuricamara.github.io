@@ -1,8 +1,13 @@
-// Libs
-@import './libs/normalize';
-
-// Theme
 @import
-  './theme/scaffold',
-  './variables'
+  './libs/normalize';
+
+@import
+  './mixins',
+  './variables';
+
+@import
+  './components',
+  './layout',
+  './scaffold',
+  './theme'
 ;
