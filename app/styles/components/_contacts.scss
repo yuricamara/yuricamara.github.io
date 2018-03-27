@@ -1,0 +1,17 @@
+/**
+ * Contacts Components
+ * --------------------------------------------------
+ */
+
+.c-contact-whatsapp{
+  cursor: text;
+}
+
+.c-contact-email_icon{
+  @include fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-at);
+  }
+}
