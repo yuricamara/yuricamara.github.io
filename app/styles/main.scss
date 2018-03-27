@@ -1,15 +1,19 @@
 @import
-  './libs/normalize';
+  './libs/normalize'
+;
 
 @import
-  './variables';
+  './variables'
+;
 
 @import
-  './mixins';
+  './mixins'
+;
 
 @import
   './components/community',
   './components/freelancer',
+  './components/offers',
   './components/projects',
   './components/services',
   './components/technologies',
