@@ -8,3 +8,21 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.c-offer_icon-wrap{
+  color: map_get($colors, dark);
+  font-size: 40px;
+  text-align: center;
+}
+
+.c-offer_icon{
+  @include fa-icon;
+}
+
+.c-offer_icon--nota-fiscal{
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-user);
+  }
+}

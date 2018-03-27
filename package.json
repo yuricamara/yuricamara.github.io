@@ -45,5 +45,7 @@
   "eslintConfig": {
     "extends": "google"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "1.0.4"
+  }
 }
