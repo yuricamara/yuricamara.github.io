@@ -21,51 +21,40 @@
 
 .c-offer_icon{
   @include fa-icon;
+  @extend .fas;
 }
 
 .c-offer_icon--attendance{
-  @extend .fas;
-
   &:before {
     content: fa-content($fa-var-users);
   }
 }
 
 .c-offer_icon--availability{
-  @extend .fas;
-
   &:before {
     content: fa-content($fa-var-clock);
   }
 }
 
 .c-offer_icon--delivery{
-  @extend .fas;
-
   &:before {
     content: fa-content($fa-var-tasks);
   }
 }
 
 .c-offer_icon--invoice{
-  @extend .fas;
-
   &:before {
     content: fa-content($fa-var-align-left);
   }
 }
 
 .c-offer_icon--termination{
-  @extend .fas;
-
   &:before {
     content: fa-content($fa-var-hand-paper);
   }
 }
 
 .c-offer_icon--warranty{
-  @extend .fas;
-
   &:before {
     content: fa-content($fa-var-bug);
   }
