@@ -8,7 +8,11 @@
   './mixins';
 
 @import
+  './components/community',
+  './components/freelancer',
   './components/projects',
+  './components/services',
+  './components/technologies',
   './components',
   './layout',
   './scaffold',

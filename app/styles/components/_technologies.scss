@@ -1,0 +1,18 @@
+/**
+ * Technologies Components
+ * --------------------------------------------------
+ */
+
+.c-technologies{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img{
+    margin: 15px;
+    padding: 10px;
+    width: 200px;
+
+    align-self: center;
+  }
+}
