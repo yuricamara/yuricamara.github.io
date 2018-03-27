@@ -9,6 +9,10 @@
   justify-content: center;
 }
 
+.c-offer{
+  margin: 30px;
+}
+
 .c-offer_icon-wrap{
   color: map_get($colors, dark);
   font-size: 40px;
@@ -19,10 +23,50 @@
   @include fa-icon;
 }
 
-.c-offer_icon--nota-fiscal{
+.c-offer_icon--attendance{
   @extend .fas;
 
   &:before {
-    content: fa-content($fa-var-user);
+    content: fa-content($fa-var-users);
+  }
+}
+
+.c-offer_icon--availability{
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-clock);
+  }
+}
+
+.c-offer_icon--delivery{
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-tasks);
+  }
+}
+
+.c-offer_icon--invoice{
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-align-left);
+  }
+}
+
+.c-offer_icon--termination{
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-hand-paper);
+  }
+}
+
+.c-offer_icon--warranty{
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-bug);
   }
 }
