@@ -3,16 +3,15 @@
  * --------------------------------------------------
  */
 
-// Named Color Variables
+// Maps
 // --------------------------------------------------
 // Exemplo de uso:
-//  background-color: color($colors, secondary-dark);
-//  color: color($colors, facebook, contrast);
+//  background-color: map-get($colors, dark);
 
 $colors: (
   primary:          #2e81b7,
   secondary:        #4f5666,
   danger:           #e54d42,
-  dark:             #222,
+  dark:             #333
 );
 

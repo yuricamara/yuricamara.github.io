@@ -3,6 +3,7 @@
  * --------------------------------------------------
  */
 
+// HEAD
 .c-freelancer-photo{
   @include circle(150px);
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
@@ -30,12 +31,22 @@
   font-size: 18px;
 }
 
+// MAIN
 .c-tecnologias-logos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   img{
-    width: 150px;
+    margin: 15px;
+    padding: 10px;
+    width: 200px;
+
+    align-self: center;
   }
 }
 
+// FOOTER
 .c-link-whatsapp{
   cursor: text;
 }

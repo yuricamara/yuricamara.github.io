@@ -4,6 +4,6 @@
  */
 
 .th-header{
-  background-color: black;
+  background-color: map-get($colors, dark);
   color: white;
 }

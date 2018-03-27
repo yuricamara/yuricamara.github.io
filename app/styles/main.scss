@@ -2,8 +2,10 @@
   './libs/normalize';
 
 @import
-  './mixins',
   './variables';
+
+@import
+  './mixins';
 
 @import
   './components',
