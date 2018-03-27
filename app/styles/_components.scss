@@ -68,7 +68,7 @@
   }
 }
 
-.c-tecnologias{
+.c-technologies{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -80,6 +80,22 @@
 
     align-self: center;
   }
+}
+
+.c-community{
+  display: flex;
+  justify-content: center;
+}
+
+.c-community-webdebgroup{
+  width: 320px;
+
+  display: block;
+
+  img{
+    width: 100%;
+  }
+
 }
 
 // FOOTER
