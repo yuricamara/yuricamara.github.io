@@ -8,15 +8,47 @@
 }
 
 .c-project{
+  padding: 70px 0;
+
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 
   color: white;
 }
 
 .c-project_design{
   position: relative;
+}
+
+.c-project_info-title{
+  margin-bottom: 15px;
+
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.c-project_info-subtitle{
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  opacity: .6;
+}
+
+.c-project_info-description{
+  margin-bottom: 25px;
+}
+
+.c-project_info-features{
+
+  >li:first-child{
+    border-top: 2px solid  rgba(255,255,255,.5);
+  }
+
+  >li{
+    border-bottom: 2px solid  rgba(255,255,255,.5);
+    padding: 10px 15px;
+  }
 }
 
 // Ícones
@@ -105,10 +137,6 @@
   top: 0;
 
   background-color: #568DAC;
-}
-
-.c-project_math_info{
-
 }
 
 // Projeto Me Conheça
