@@ -3,13 +3,26 @@
  * --------------------------------------------------
  */
 
+.c-contact{
+  display: block;
+}
+
 .c-contact-whatsapp{
   cursor: text;
+}
+
+.c-contact-whatsapp_icon{
+  height: 20px;
+  width: 20px;
+
+  fill: #008000;
 }
 
 .c-contact-email_icon{
   @include fa-icon;
   @extend .fas;
+
+  color: black;
 
   &:before {
     content: fa-content($fa-var-at);
