@@ -32,13 +32,25 @@
 
 .c-offer_icon--availability{
   &:before {
-    content: fa-content($fa-var-clock);
+    content: fa-content($fa-var-comments);
   }
 }
 
 .c-offer_icon--delivery{
   &:before {
     content: fa-content($fa-var-tasks);
+  }
+}
+
+.c-offer_icon--exclusivity{
+  &:before {
+    content: fa-content($fa-var-crosshairs);
+  }
+}
+
+.c-offer_icon--experience{
+  &:before {
+    content: fa-content($fa-var-star);
   }
 }
 
