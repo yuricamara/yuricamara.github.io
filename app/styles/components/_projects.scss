@@ -14,6 +14,17 @@
   fill: black;
 }
 
+.c-project_link-icon{
+  @include fa-icon;
+  @extend .fas;
+
+  color: black;
+
+  &:before {
+    content: fa-content($fa-var-external-link-alt);
+  }
+}
+
 .c-project_math,
 .c-project_chart{
   display: block;
