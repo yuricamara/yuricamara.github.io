@@ -18,10 +18,21 @@
   fill: #008000;
 }
 
+.c-contact-address_icon,
 .c-contact-email_icon{
   @include fa-icon;
   @extend .fas;
+}
 
+.c-contact-address_icon{
+  color: black;
+
+  &:before {
+    content: fa-content($fa-var-map-marker-alt);
+  }
+}
+
+.c-contact-email_icon{
   color: black;
 
   &:before {
