@@ -30,8 +30,27 @@
   height: 200px;
   max-width: 320px;
   padding: 10px;
+}
 
-  display: block;
+// Email App
+// ******************************
+.c-project_email-app{
+  background-color: #568DAC;
+}
+
+.c-project_email-app_content{
+  @include fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-at);
+  }
+
+  width: 100%;
+
+  font-size: 36px;
+  line-height: 200px;
+  text-align: center;
 }
 
 // Math Exercises Builder
@@ -42,6 +61,27 @@
 
 .c-project_math_content{
   color: #FFF;
+  font-size: 36px;
+  line-height: 200px;
+  text-align: center;
+}
+
+// Me Conheça
+// ******************************
+.c-project_meconheca{
+  background-color: #568DAC;
+}
+
+.c-project_meconheca_content{
+  @include fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-comment-alt);
+  }
+
+  width: 100%;
+
   font-size: 36px;
   line-height: 200px;
   text-align: center;
