@@ -7,6 +7,18 @@
 
 }
 
+.c-project{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  color: white;
+}
+
+.c-project_design{
+  position: relative;
+}
+
 // Ícones
 // ******************************
 
@@ -44,18 +56,13 @@
   @extend .fas;
 
   color: black;
+  font-size: 250px;
 
   &:before {
     content: fa-content($fa-var-desktop);
   }
 }
 
-.c-project{
-  border-radius: 10px;
-  height: 200px;
-  max-width: 320px;
-  padding: 10px;
-}
 
 // Projeto Email App
 // ******************************
@@ -74,7 +81,6 @@
   width: 100%;
 
   font-size: 36px;
-  line-height: 200px;
   text-align: center;
 }
 
@@ -84,11 +90,25 @@
   background-color: #568DAC;
 }
 
-.c-project_math_content{
-  color: #FFF;
+.c-project_math_design{
   font-size: 36px;
-  line-height: 200px;
   text-align: center;
+}
+
+.c-project_math_design-content{
+  height: 50px;
+  margin: 32px;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  background-color: #568DAC;
+}
+
+.c-project_math_info{
+
 }
 
 // Projeto Me Conheça
