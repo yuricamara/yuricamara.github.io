@@ -93,104 +93,18 @@
   background-color: #E9E9E9;
 }
 
-.c-project_chart_content .wrap-infos{
-  border: 1px solid #000;
-  padding: 5px;
-  display: inline-block;
-  border-radius: 5px;
-  margin: 0 5px;
-  height: 30px;
-  width: 100px;
-}
+.c-project_chart_content{
+  @include fa-icon;
+  @extend .fas;
 
-.c-project_chart_content .topo .wrap-infos{
-  background-color: #D5FFEA;
-}
+  &:before {
+    content: fa-content($fa-var-sitemap);
+  }
 
-.c-project_chart_content .branch .primeiro-filho .wrap-infos{
-  background-color: #FFFFDD;
-}
+  width: 100%;
 
-.c-project_chart_content .branch .lastchild .wrap-infos{
-  background-color: #B7EBFF;
-}
-
-.c-project_chart_content .branch{
-  padding-top: 30px;
-  position: relative;
-  width: 365px;
-}
-
-.c-project_chart_content li {
-  float: left;
+  font-size: 36px;
+  line-height: 200px;
   text-align: center;
-  list-style-type: none;
-  position: relative;
-}
-
-.c-project_chart_content .branch > li{
-  padding: 30px 30px 0;
-}
-
-/*Conectores*/
-.c-project_chart_content li> ul > li:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 50%;
-  border-top: 1px solid #000;
-  width: 50%;
-  height: 30px;
-}
-
-.c-project_chart_content li > ul > li:after{
-  content: '';
-
-  position: absolute;
-  top: 0;
-  right: 50%;
-  left: 50%;
-
-  border-left: 1px solid #000;
-  border-top: 1px solid #000; /* Borda problemáticaRenderizado como zero no IE8 */
-
-  width: 50%;  /* Causador do bug da barra direita no IE8 */
-  height: 30px;
-}
-
-/* Remoção do conector esquerdo do primeiro filho e conector direito do último */
-
-.c-project_chart_content li:first-child:before{
-  border: 0 none;
-}
-
-.c-project_chart_content .lastchild:after{
-  border: 0 none;
-}
-
-/* Adicionar de volta o conector vertical para os últimos nós. */
-
-.c-project_chart_content .lastchild:before{
-  border-right: 1px solid #000;
-  border-radius: 0 5px 0 0;
-}
-
-.c-project_chart_content li:first-child:after{
-  border-radius: 5px 0 0 0;
-}
-
-/* Adcionar de volta conector dos pais */
-.c-project_chart_content ul:before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: 50%;
-  border-left: 1px solid #000;
-  width: 0;
-  height: 35px;
-}
-
-.c-project_chart_content > li {
-  padding-top: 15px;
 }
 
