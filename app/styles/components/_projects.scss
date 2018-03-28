@@ -7,6 +7,9 @@
 
 }
 
+// Ícones
+// ******************************
+
 .c-project_github-icon{
   height: 40px;
   width: 40px;
@@ -25,6 +28,28 @@
   }
 }
 
+.c-project_mobile-icon{
+  @include fa-icon;
+  @extend .fas;
+
+  color: black;
+
+  &:before {
+    content: fa-content($fa-var-mobile-alt);
+  }
+}
+
+.c-project_desktop-icon{
+  @include fa-icon;
+  @extend .fas;
+
+  color: black;
+
+  &:before {
+    content: fa-content($fa-var-desktop);
+  }
+}
+
 .c-project{
   border-radius: 10px;
   height: 200px;
@@ -32,7 +57,7 @@
   padding: 10px;
 }
 
-// Email App
+// Projeto Email App
 // ******************************
 .c-project_email-app{
   background-color: #568DAC;
@@ -53,7 +78,7 @@
   text-align: center;
 }
 
-// Math Exercises Builder
+// Projeto Math Exercises Builder
 // ******************************
 .c-project_math{
   background-color: #568DAC;
@@ -66,7 +91,7 @@
   text-align: center;
 }
 
-// Me Conheça
+// Projeto Me Conheça
 // ******************************
 .c-project_meconheca{
   background-color: #568DAC;
@@ -87,7 +112,7 @@
   text-align: center;
 }
 
-// Organograma Dinâmico
+// Projeto Organograma Dinâmico
 // ******************************
 .c-project_chart{
   background-color: #E9E9E9;
