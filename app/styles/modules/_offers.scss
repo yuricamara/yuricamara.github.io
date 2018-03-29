@@ -1,73 +1,73 @@
 /**
- * Offers Components
+ * Offers Module
  * --------------------------------------------------
  */
 
-.c-offers{
+.m-offers{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.c-offer{
+.m-offer{
   margin: 30px;
   max-width: 300px
 }
 
-.c-offer_icon-wrap{
+.m-offer_icon-wrap{
   color: map_get($colors, dark);
   font-size: 40px;
   text-align: center;
 }
 
-.c-offer_icon{
+.m-offer_icon{
   @include fa-icon;
   @extend .fas;
 }
 
-.c-offer_icon--attendance{
+.m-offer_icon--attendance{
   &:before {
     content: fa-content($fa-var-users);
   }
 }
 
-.c-offer_icon--availability{
+.m-offer_icon--availability{
   &:before {
     content: fa-content($fa-var-comments);
   }
 }
 
-.c-offer_icon--delivery{
+.m-offer_icon--delivery{
   &:before {
     content: fa-content($fa-var-tasks);
   }
 }
 
-.c-offer_icon--exclusivity{
+.m-offer_icon--exclusivity{
   &:before {
     content: fa-content($fa-var-crosshairs);
   }
 }
 
-.c-offer_icon--experience{
+.m-offer_icon--experience{
   &:before {
     content: fa-content($fa-var-star);
   }
 }
 
-.c-offer_icon--invoice{
+.m-offer_icon--invoice{
   &:before {
     content: fa-content($fa-var-align-left);
   }
 }
 
-.c-offer_icon--termination{
+.m-offer_icon--termination{
   &:before {
     content: fa-content($fa-var-hand-paper);
   }
 }
 
-.c-offer_icon--warranty{
+.m-offer_icon--warranty{
   &:before {
     content: fa-content($fa-var-bug);
   }

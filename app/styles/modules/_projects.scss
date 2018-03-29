@@ -1,13 +1,13 @@
 /**
- * Projects Components
+ * Projects Module
  * --------------------------------------------------
  */
 
-.c-projects{
+.m-projects{
 
 }
 
-.c-project{
+.m-project{
   padding: 70px 0;
 
   display: flex;
@@ -17,51 +17,51 @@
   color: white;
 }
 
-.c-project_design{
+.m-project_design{
   position: relative;
 }
 
-.c-project_info-title{
+.m-project_info-title{
   margin-bottom: 15px;
 
   font-size: 36px;
   text-transform: uppercase;
 }
 
-.c-project_info-subtitle{
+.m-project_info-subtitle{
   margin-bottom: 20px;
 
   text-transform: uppercase;
   opacity: .6;
 }
 
-.c-project_info-description{
+.m-project_info-description{
   margin-bottom: 25px;
 }
 
-.c-project_info-features{
+.m-project_info-features{
+  $border: 2px solid rgba(255,255,255,.5);
 
   >li:first-child{
-    border-top: 2px solid  rgba(255,255,255,.5);
+    border-top: $border;
   }
 
   >li{
-    border-bottom: 2px solid  rgba(255,255,255,.5);
+    border-bottom: $border;
     padding: 10px 15px;
   }
 }
 
 // Ícones
 // ******************************
-
-.c-project_github-icon{
+.m-project_github-icon{
   height: 40px;
   width: 40px;
 
   fill: black;
 }
 
-.c-project_link-icon{
+.m-project_link-icon{
   @include fa-icon;
   @extend .fas;
 
@@ -72,7 +72,7 @@
   }
 }
 
-.c-project_mobile-icon{
+.m-project_mobile-icon{
   @include fa-icon;
   @extend .fas;
 
@@ -83,7 +83,7 @@
   }
 }
 
-.c-project_desktop-icon{
+.m-project_desktop-icon{
   @include fa-icon;
   @extend .fas;
 
@@ -98,11 +98,11 @@
 
 // Projeto Email App
 // ******************************
-.c-project_email-app{
+.m-project_email-app{
   background-color: #568DAC;
 }
 
-.c-project_email-app_content{
+.m-project_email-app_content{
   @include fa-icon;
   @extend .fas;
 
@@ -118,16 +118,16 @@
 
 // Projeto Math Exercises Builder
 // ******************************
-.c-project_math{
+.m-project_math{
   background-color: #568DAC;
 }
 
-.c-project_math_design{
+.m-project_math_design{
   font-size: 36px;
   text-align: center;
 }
 
-.c-project_math_design-content{
+.m-project_math_design-content{
   height: 50px;
   margin: 32px;
 
@@ -141,11 +141,11 @@
 
 // Projeto Me Conheça
 // ******************************
-.c-project_meconheca{
+.m-project_meconheca{
   background-color: #568DAC;
 }
 
-.c-project_meconheca_content{
+.m-project_meconheca_content{
   @include fa-icon;
   @extend .fas;
 
@@ -162,11 +162,11 @@
 
 // Projeto Organograma Dinâmico
 // ******************************
-.c-project_chart{
+.m-project_chart{
   background-color: #E9E9E9;
 }
 
-.c-project_chart_content{
+.m-project_chart_content{
   @include fa-icon;
   @extend .fas;
 

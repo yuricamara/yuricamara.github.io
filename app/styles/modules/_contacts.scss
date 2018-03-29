@@ -1,30 +1,30 @@
 /**
- * Contacts Components
+ * Contacts Module
  * --------------------------------------------------
  */
 
-.c-contact{
+.m-contact{
   display: block;
 }
 
-.c-contact-whatsapp{
+.m-contact-whatsapp{
   cursor: text;
 }
 
-.c-contact-whatsapp_icon{
+.m-contact-whatsapp_icon{
   height: 20px;
   width: 20px;
 
   fill: #008000;
 }
 
-.c-contact-address_icon,
-.c-contact-email_icon{
+.m-contact-address_icon,
+.m-contact-email_icon{
   @include fa-icon;
   @extend .fas;
 }
 
-.c-contact-address_icon{
+.m-contact-address_icon{
   color: black;
 
   &:before {
@@ -32,7 +32,7 @@
   }
 }
 
-.c-contact-email_icon{
+.m-contact-email_icon{
   color: black;
 
   &:before {

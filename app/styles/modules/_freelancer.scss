@@ -1,14 +1,14 @@
 /**
- * Freelancer Components
+ * Freelancer Module
  * --------------------------------------------------
  */
 
-.c-freelancer-photo{
+.m-freelancer-photo{
   @include circle(150px);
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 
-.c-freelancer-info{
+.m-freelancer-info{
   text-align: center;
 
   &_name{
@@ -20,7 +20,7 @@
   }
 }
 
-.c-btn-linkedin{
+.m-btn-linkedin{
   border: 1px solid white;
   border-radius: 4px;
   padding: 20px 40px;
@@ -30,7 +30,7 @@
   font-size: 18px;
 }
 
-.c-btn-linkedin_icon{
+.m-btn-linkedin_icon{
   height: 60px;
   width: 60px;
 

@@ -1,15 +1,15 @@
 /**
- * Services Components
+ * Services Module
  * --------------------------------------------------
  */
 
-.c-services{
+.m-services{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.c-service{
+.m-service{
   margin: 15px;
 
   &_logo-wrap{

@@ -13,13 +13,13 @@
 ;
 
 @import
-  './components/community',
-  './components/contacts',
-  './components/freelancer',
-  './components/offers',
-  './components/projects',
-  './components/services',
-  './components/technologies',
+  'modules/community',
+  'modules/contacts',
+  'modules/freelancer',
+  'modules/offers',
+  'modules/projects',
+  'modules/services',
+  'modules/technologies',
   './layout',
   './scaffold',
   './theme'
