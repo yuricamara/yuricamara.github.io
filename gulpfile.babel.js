@@ -136,7 +136,6 @@ gulp.task('scripts', () =>
 gulp.task('svg', ()=>{
   return gulp.src('app/images/figures-svg/*.svg')
     .pipe($.svgSprite({
-      log: 'debug',
       mode: {
         symbol: {
           dest: '.',
