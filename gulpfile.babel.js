@@ -133,6 +133,26 @@ gulp.task('scripts', () =>
       .pipe(gulp.dest('.tmp/scripts'))
 );
 
+gulp.task('svg', ()=>{
+  return gulp.src('app/images/figures-svg/*.svg')
+    .pipe($.svgSprite({
+      log: 'debug',
+      mode: {
+        symbol: {
+          dest: '.',
+          sprite: 'figures-svg.svg',
+          example: true
+        }
+      },
+      svg: {
+        xmlDeclaration: false,
+        doctypeDeclaration: false,
+        namespaceClassnames: false
+      }
+    }))
+    .pipe(gulp.dest('app/images'))
+});
+
 // Scan your HTML for assets & optimize them
 gulp.task('html', () => {
   return gulp.src('app/**/*.html')
