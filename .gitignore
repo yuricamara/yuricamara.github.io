@@ -8,3 +8,4 @@ dist/
 node_modules
 Thumbs.db
 /app/images/figures-svg.svg
+/app/images/sprite.symbol.html

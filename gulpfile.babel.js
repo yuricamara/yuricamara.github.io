@@ -139,7 +139,8 @@ gulp.task('svg', ()=>{
       mode: {
         symbol: {
           dest: '.',
-          sprite: 'figures-svg.svg'
+          sprite: 'figures-svg.svg',
+          example: true
         }
       },
       svg: {
