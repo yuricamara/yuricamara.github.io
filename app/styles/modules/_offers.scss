@@ -14,6 +14,13 @@
   max-width: 300px
 }
 
+.m-offer_title{
+  height: 100px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
 .m-offer_icon-wrap{
   color: map_get($colors, dark);
   font-size: 40px;
@@ -25,17 +32,18 @@
   @extend .fas;
 }
 
+.c-icon-comments{
+  background: transparent url("../images/figures-svg.svg#icon-comments") 50% 0 no-repeat;
+  background-size: 60px 60px;
+}
+
 .m-offer_icon--attendance{
   &:before {
     content: fa-content($fa-var-users);
   }
 }
 
-.m-offer_icon--availability{
-  &:before {
-    content: fa-content($fa-var-comments);
-  }
-}
+
 
 .m-offer_icon--delivery{
   &:before {
