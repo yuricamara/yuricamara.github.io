@@ -28,53 +28,41 @@
 }
 
 .m-offer_icon{
-  @include fa-icon;
-  @extend .fas;
-}
-
-.c-icon-comments{
-  background: transparent url("../images/figures-svg.svg#icon-comments") 50% 0 no-repeat;
-  background-size: 60px 60px;
-}
-
-.m-offer_icon--attendance{
-  &:before {
-    content: fa-content($fa-var-users);
+  background:{
+    position: 50% 0;
+    repeat: no-repeat;
+    size: 60px 60px;
   }
 }
 
-.m-offer_icon--delivery{
-  &:before {
-    content: fa-content($fa-var-tasks);
-  }
+.m-offer_icon-attendance{
+  background-image: url("../images/figures-svg.svg#icon-users");
 }
 
-.m-offer_icon--exclusivity{
-  &:before {
-    content: fa-content($fa-var-crosshairs);
-  }
+.m-offer_icon-comments{
+  background-image: url("../images/figures-svg.svg#icon-comments");
 }
 
-.m-offer_icon--experience{
-  &:before {
-    content: fa-content($fa-var-star);
-  }
+.m-offer_icon-delivery{
+  background-image: url("../images/figures-svg.svg#icon-tasks");
 }
 
-.m-offer_icon--invoice{
-  &:before {
-    content: fa-content($fa-var-align-left);
-  }
+.m-offer_icon-exclusivity{
+  background-image: url("../images/figures-svg.svg#icon-crosshairs");
 }
 
-.m-offer_icon--termination{
-  &:before {
-    content: fa-content($fa-var-hand-paper);
-  }
+.m-offer_icon-experience{
+  background-image: url("../images/figures-svg.svg#icon-star");
 }
 
-.m-offer_icon--warranty{
-  &:before {
-    content: fa-content($fa-var-bug);
-  }
+.m-offer_icon-invoice{
+  background-image: url("../images/figures-svg.svg#icon-invoice");
+}
+
+.m-offer_icon-termination{
+  background-image: url("../images/figures-svg.svg#icon-hand-paper");
+}
+
+.m-offer_icon-warranty{
+  background-image: url("../images/figures-svg.svg#icon-bug");
 }

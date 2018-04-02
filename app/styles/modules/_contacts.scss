@@ -3,39 +3,30 @@
  * --------------------------------------------------
  */
 
-.m-contact{
-  display: block;
+.m-contacts{
+
 }
 
 .m-contact-whatsapp{
   cursor: text;
 }
 
-.m-contact-whatsapp_icon{
-  height: 20px;
-  width: 20px;
+// Ícones
+// ******************************
+.m-contact_icon{
+  padding-left: 20px;
 
-  fill: #008000;
+  background-repeat: no-repeat;
 }
 
-.m-contact-address_icon,
-.m-contact-email_icon{
-  @include fa-icon;
-  @extend .fas;
+.m-contact_icon-address{
+  background-image: url("../images/figures-svg.svg#icon-map-marker-alt");
 }
 
-.m-contact-address_icon{
-  color: black;
-
-  &:before {
-    content: fa-content($fa-var-map-marker-alt);
-  }
+.m-contact_icon-email{
+  background-image: url("../images/figures-svg.svg#icon-at");
 }
 
-.m-contact-email_icon{
-  color: black;
-
-  &:before {
-    content: fa-content($fa-var-at);
-  }
+.m-contact_icon-whatsapp{
+  background-image: url("../images/figures-svg.svg#logo-whatsapp");
 }

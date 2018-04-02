@@ -47,6 +47,5 @@
     "extends": "google"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free-webfonts": "1.0.4"
   }
 }

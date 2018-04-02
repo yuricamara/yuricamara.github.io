@@ -12,13 +12,19 @@
   font-size: 18px;
 }
 
+.c-btn-icon{
+  background:{
+    position: 0 0;
+    repeat: no-repeat;
+    size: 60px 60px;
+  }
+}
+
+// Linkedin
 .c-btn-linkedin{
   color: white;
 }
 
-.c-btn-linkedin_icon{
-  height: 60px;
-  width: 60px;
-
-  fill: black;
+.c-btn-icon-linkedin{
+  background-image: url("../images/figures-svg.svg#logo-linkedin");
 }
