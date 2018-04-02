@@ -20,6 +20,10 @@
   position: relative;
 }
 
+.m-project_info{
+  width: 50%;
+}
+
 .m-project_info-title{
   margin-bottom: 15px;
 
@@ -51,37 +55,11 @@
   }
 }
 
-// Ícones
-// ******************************
-.m-project_icon-desktop{
-  // desktop
-}
-
-.m-project_icon-github{
-
-}
-
-.m-project_icon-link{
-  // external-link-alt
-}
-
-.m-project_icon-mobile{
-  // mobile-alt
-}
-
 // Projeto Email App
 // ******************************
-.m-project_email-app{
-  background-color: #568DAC;
-}
-
-.m-project_email-app_content{
-  width: 100%;
-
-  font-size: 36px;
-  text-align: center;
-
+.m-email-app-project{
   // at
+  background-color: #568DAC;
 }
 
 // Projeto Math Exercises Builder
@@ -102,34 +80,52 @@
   text-align: center;
 }
 
-// Projeto Me Conheça
+// Projeto Me Conheça - Aplicação Web
 // ******************************
-.m-meconheca-project{
-  background-color: #568DAC;
+.m-meconheca-web-app-project{
+  background-color: orange;
 }
 
-.m-meconheca-project_content{
-  width: 100%;
+.m-meconheca-web-app-project_image{
+  height: 200px;
+  width: 200px;
 
-  font-size: 36px;
-  line-height: 200px;
-  text-align: center;
-
-  // icon comment-alt
+  background: transparent url("../images/figures-svg.svg#icon-desktop") no-repeat;
 }
+
+.m-meconheca-web-app-project_image-inner{
+  height: 100%;
+
+  background: transparent url("../images/figures-svg.svg#icon-comment-alt") 50% 50% no-repeat;
+  background-size: 35%;
+}
+
+
+// Projeto Me Conheça - Aplicativo Mobile
+// ******************************
+.m-meconheca-mobile-app-project{
+  background-color: cornflowerblue;
+}
+
+.m-meconheca-mobile-app-project_image{
+  height: 200px;
+  width: 200px;
+
+  background: transparent url("../images/figures-svg.svg#icon-mobile") no-repeat;
+}
+
+.m-meconheca-mobile-app-project_image-inner{
+  height: 100%;
+
+  background: transparent url("../images/figures-svg.svg#icon-comment-alt") 50% 50% no-repeat;
+  background-size: 35%;
+}
+
 
 // Projeto Organograma Dinâmico
 // ******************************
 .m-chart-project{
-  background-color: #E9E9E9;
-}
-
-.m-chart-project_content{
   // icon sitemap
-  width: 100%;
-
-  font-size: 36px;
-  line-height: 200px;
-  text-align: center;
+  background-color: #E9E9E9;
 }
 
