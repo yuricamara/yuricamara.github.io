@@ -4,7 +4,6 @@
  */
 
 .l-header,
-.l-main,
 .l-footer{
   padding: 13px;
 }
@@ -13,7 +12,12 @@
   @include flex-centralize;
 }
 
+.l-section,
 .l-footer{
   margin: 0 auto;
   max-width: 1000px;
+}
+
+.l-section{
+  padding-top: 150px;
 }
