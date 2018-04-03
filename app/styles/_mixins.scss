@@ -20,21 +20,27 @@
 // --------------------------------------------------
 // Exemplo de uso:
 //  .classe{
-//    @include tablet{
+//    @include for-tablet-portrait-up{
 //      display: none;
 //    }
 //  }
+// Fonte:
+// https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
 
-@mixin media-tablet {
-  @media (min-width: 630px) and (max-width: 700px) {
-    @content;
-  }
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
 }
-
-@mixin media-desktop {
-  @media (min-width: 60em) {
-    @content;
-  }
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
 }
 
 // Shapes

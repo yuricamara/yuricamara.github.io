@@ -5,6 +5,9 @@
 
 .m-freelancer-photo{
   @include circle(150px);
+
+  margin-bottom: 50px;
+
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 
@@ -12,10 +15,23 @@
   text-align: center;
 
   &_name{
-    font-size: 60px;
+    margin-bottom: 20px;
+
+    font-family: $font-stack-primary;
+    font-size: 36px;
+    font-weight: bold;
+    @include for-tablet-portrait-up{
+      font-size: 48px;
+    }
   }
 
-  &_job{
-    font-size: 30px;
+  &_description{
+    margin-bottom: 50px;
+    max-width: 540px;
+
+    font-size: 20px;
+    @include for-tablet-portrait-up{
+      font-size: 24px;
+    }
   }
 }

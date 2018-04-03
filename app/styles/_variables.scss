@@ -3,9 +3,7 @@
  * --------------------------------------------------
  */
 
-// Maps
-// --------------------------------------------------
-// Exemplo de uso:
+// Maps - Exemplo de uso
 //  background-color: map-get($colors, dark);
 
 $colors: (
@@ -14,4 +12,9 @@ $colors: (
   danger:           #e54d42,
   dark:             #333
 );
+
+$font-stack-primary: Montserrat, sans-serif;
+$font-stack-secundary: "Open Sans", sans-serif;
+
+$distance-min-lateral: 13px;
 

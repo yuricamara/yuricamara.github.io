@@ -7,6 +7,10 @@ html {
   color: #222;
 }
 
+html,body{
+  font-size: 62.5%;
+}
+
 a{
   text-decoration: none;
 }
@@ -26,6 +30,15 @@ figure{
 
 h1,h2,h3,p{
   margin: 0;
+}
+
+h1,h2,h3{
+  font-family: $font-stack-primary;
+  font-weight: normal;
+}
+
+ul,a,img,p{
+  font-family: $font-stack-secundary;
 }
 
 ::-moz-selection {
