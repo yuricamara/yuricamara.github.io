@@ -9,7 +9,7 @@
 
 .m-project{
   margin-bottom: 20px;
-  padding: 70px 0;
+  padding: 70px $distance-min-lateral;
 
   color: white;
 }
@@ -20,14 +20,34 @@
   justify-content: space-evenly;
 }
 
-.m-project_image{
+// Imagem
+.m-project_desktop-image{
+  height: 200px;
+  width: 200px;
+
   position: relative;
+  align-self: center;
+
+  background: transparent url("../images/figures-svg.svg#icon-desktop") no-repeat;
+}
+
+.m-project_desktop-image-inner{
+  border-radius: 5px;
+  height: 113px;
+  width: 168px;
+
+  position: absolute;
+  top: 30px;
+  left: 16px;
 }
 
 .m-project_info{
-  width: 50%;
+  @include for-tablet-portrait-up{
+    width: 50%;
+  }
 }
 
+// Informações
 .m-project_info-title{
   margin-bottom: 15px;
 
@@ -44,7 +64,7 @@
 }
 
 .m-project_info-description{
-  margin-bottom: 25px;
+  margin-bottom: 55px;
 }
 
 .m-project_info-features{
@@ -74,15 +94,16 @@
 }
 
 .m-math-project_image{
-  height: 200px;
-  width: 200px;
-
-  background: transparent url("../images/figures-svg.svg#icon-desktop") no-repeat;
 }
 
 .m-math-project_image-inner{
-  font-size: 36px;
+  color: #000;
+  font-size: 28px;
+  font-weight: bold;
   text-align: center;
+  line-height: 113px;
+
+  background-color: lighten(#568DAC, 10%);
 }
 
 // Projeto Me Conheça - Aplicação Web
@@ -92,15 +113,10 @@
 }
 
 .m-meconheca-web-app-project_image{
-  height: 200px;
-  width: 200px;
-
   background: transparent url("../images/figures-svg.svg#icon-desktop") no-repeat;
 }
 
 .m-meconheca-web-app-project_image-inner{
-  height: 100%;
-
   background: transparent url("../images/figures-svg.svg#icon-comment-alt") 50% 50% no-repeat;
   background-size: 35%;
 }
@@ -113,9 +129,6 @@
 }
 
 .m-meconheca-mobile-app-project_image{
-  height: 200px;
-  width: 200px;
-
   background: transparent url("../images/figures-svg.svg#icon-mobile") no-repeat;
 }
 

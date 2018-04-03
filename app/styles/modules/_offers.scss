@@ -9,16 +9,15 @@
 
 .m-offers_content{
   @include clearfix;
+  padding: 0 $distance-min-lateral;
 }
 
 .m-offer{
-  padding: 0 $distance-min-lateral;
   width: 100%;
 
   float: left;
 
   @include for-tablet-portrait-up{
-    padding: 0;
     width: 50%;
   }
   @include for-tablet-landscape-up{
