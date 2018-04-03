@@ -3,6 +3,8 @@
  * --------------------------------------------------
  */
 
+// Tipografia
+// *************************************
 html {
   color: #222;
 }
@@ -11,44 +13,37 @@ html,body{
   font-size: 62.5%;
 }
 
-a{
-  text-decoration: none;
-}
-
-ul{
-  margin: 0;
-  padding: 0;
-}
-
-li{
-  list-style: none;
-}
-
-figure{
-  margin: 0;
-}
-
-h1,h2,h3,p{
-  margin: 0;
-}
-
 h1,h2,h3{
   font-family: $font-stack-primary;
   font-weight: normal;
 }
 
-ul,a,img,p{
+ul,li,a,img,p{
   font-family: $font-stack-secundary;
+  font-size: 14px;
 }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+h1{
+  font-size: 32px;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+h2{
+  font-size: 28px;
+}
+
+h3{
+  font-size: 22px;
+}
+
+// Posicionamento, Distâncias e Dimensionamento
+// *************************************
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,p,figure{
+  margin: 0;
 }
 
 audio,
@@ -68,4 +63,24 @@ fieldset {
 
 textarea {
   resize: vertical;
+}
+
+// Design
+// ************************************
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
