@@ -3,24 +3,51 @@
  * --------------------------------------------------
  */
 
+.m-offers{
+  background-color: #fff;
+}
+
 .m-offers_content{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @include clearfix;
 }
 
 .m-offer{
-  margin: 30px;
-  max-width: 300px
+  padding: 0 $distance-min-lateral;
+  width: 100%;
+
+  float: left;
+
+  @include for-tablet-portrait-up{
+    padding: 0;
+    width: 50%;
+  }
+  @include for-tablet-landscape-up{
+    width: 33%;
+  }
+  @include for-desktop-up{
+    width: 25%;
+  }
 }
 
+// Textos
+// ***********************************************
 .m-offer_title{
   height: 100px;
+  padding-bottom: 25px;
 
   display: flex;
   align-items: flex-end;
+  justify-content: center;
 }
 
+.m-offer_informations{
+  padding-bottom: 70px;
+
+  text-align: center;
+}
+
+// Ícones
+// ************************************************
 .m-offer_icon-wrap{
   color: map_get($colors, dark);
   font-size: 40px;
