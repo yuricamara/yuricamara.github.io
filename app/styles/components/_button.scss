@@ -12,7 +12,7 @@ $btn-height: 48px;
 
   display: block;
 
-  font-size: 18px;
+  font-size: 20px;
 
   transition: background-color .15s ease-in-out;
 }
@@ -26,10 +26,13 @@ $btn-height: 48px;
 // Linkedin
 // ***************************************************
 .c-btn-linkedin{
-  $background-color: #1d809f;
+  $background-color: #fff;
 
-  color: white;
+  border: 2px solid #0077b5;
+
+  color: #0077b5;
   background-color: $background-color;
+  font-weight: bold;
 
   &:hover{
     background-color: darken($background-color, 5%);
@@ -38,4 +41,5 @@ $btn-height: 48px;
 
 .c-btn-icon-linkedin{
   background-image: url("../images/figures-svg.svg#logo-linkedin");
+  background-position-y: -3px;
 }
