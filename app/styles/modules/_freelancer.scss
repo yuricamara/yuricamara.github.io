@@ -17,7 +17,7 @@
   text-align: center;
 
   &_name{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     font-family: $font-stack-primary;
     font-size: 36px;
@@ -37,4 +37,12 @@
       font-size: 22px;
     }
   }
+}
+
+.m-freelancer-info_border{
+  margin: 0 auto 20px;
+  padding: 1px;
+  width: 70%;
+
+  background: #52edc7;
 }
