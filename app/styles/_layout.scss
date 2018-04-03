@@ -11,7 +11,11 @@
 }
 
 .l-section{
-  padding-top: 150px;
+  padding: 100px 0;
+
+  @include for-tablet-portrait-up{
+    padding: 150px 0;
+  }
 }
 
 .l-footer{
