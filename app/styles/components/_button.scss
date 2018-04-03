@@ -3,25 +3,37 @@
  * --------------------------------------------------
  */
 
+$btn-height: 48px;
+
 .c-btn{
   border-radius: 4px;
-  padding: 20px 40px;
+  height: $btn-height;
+  width: 150px;
+
+  display: block;
 
   font-size: 18px;
+
+  transition: background-color .15s ease-in-out;
 }
 
 .c-btn-icon{
-  background:{
-    position: 0 0;
-    repeat: no-repeat;
-    size: 60px 60px;
-  }
+  background-repeat:no-repeat;
+  text-indent: 50px;
+  line-height: $btn-height;
 }
 
 // Linkedin
+// ***************************************************
 .c-btn-linkedin{
+  $background-color: #1d809f;
+
   color: white;
-  background-color: #1d809f;
+  background-color: $background-color;
+
+  &:hover{
+    background-color: darken($background-color, 5%);
+  }
 }
 
 .c-btn-icon-linkedin{
