@@ -39,6 +39,12 @@
   position: absolute;
   top: 30px;
   left: 16px;
+
+  background: {
+    position: 50% 50%;
+    repeat: no-repeat;
+    size: 35%;
+  };
 }
 
 .m-project_info{
@@ -97,13 +103,8 @@
 }
 
 .m-math-project_image-inner{
-  color: #000;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 113px;
-
   background-color: lighten(#568DAC, 10%);
+  background-image: url("../images/figures-svg.svg#icon-math");
 }
 
 // Projeto Me Conheça - Aplicação Web
@@ -113,12 +114,10 @@
 }
 
 .m-meconheca-web-app-project_image{
-  background: transparent url("../images/figures-svg.svg#icon-desktop") no-repeat;
 }
 
 .m-meconheca-web-app-project_image-inner{
-  background: transparent url("../images/figures-svg.svg#icon-comment-alt") 50% 50% no-repeat;
-  background-size: 35%;
+  background-image: url("../images/figures-svg.svg#icon-comment-alt");
 }
 
 
