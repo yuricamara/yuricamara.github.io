@@ -37,7 +37,6 @@
     @include for-tablet-portrait-up{
       font-size: 22px;
     }
-
   }
 }
 
@@ -47,4 +46,13 @@
   width: 70%;
 
   background: #52edc7;
+}
+
+.m-freelancer_link-webdebgroup{
+  height: 30px;
+  width: 30px;
+
+  display: inline-block;
+
+  background: url("../images/figures-svg.svg#icon-external-link-alt") no-repeat;
 }
