@@ -83,11 +83,23 @@
   text-transform: uppercase;
 }
 
-.m-project_info-subtitle{
+.m-project_info-tags{
   margin-bottom: 20px;
+
+  display: flex;
 
   text-transform: uppercase;
   opacity: .6;
+
+  > li{
+    &:first-child{
+      list-style: none;
+      padding-left: 0;
+    }
+
+    list-style: disc inside;
+    padding-left: 14px;
+  }
 }
 
 .m-project_info-description{
@@ -97,11 +109,11 @@
 .m-project_info-features{
   $border: 2px solid rgba(255,255,255,.5);
 
-  >li:first-child{
-    border-top: $border;
-  }
-
   >li{
+    &:first-child{
+      border-top: $border;
+    }
+
     border-bottom: $border;
     padding: 10px 15px;
   }
