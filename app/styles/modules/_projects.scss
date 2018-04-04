@@ -21,14 +21,14 @@
 }
 
 // Imagem
-.m-project_desktop-image{
+.m-project_laptop-image{
   height: 200px;
   width: 200px;
 
   position: relative;
   align-self: center;
 
-  background: transparent url("../images/figures-svg.svg#icon-desktop") no-repeat;
+  background: transparent url("../images/figures-svg.svg#icon-laptop") no-repeat;
 }
 
 .m-project_mobile-image{
@@ -41,14 +41,13 @@
   background: transparent url("../images/figures-svg.svg#icon-mobile") no-repeat;
 }
 
-.m-project_desktop-image-inner{
-  border-radius: 5px;
-  height: 113px;
-  width: 168px;
+.m-project_laptop-image-inner{
+  height: 77px;
+  width: 136px;
 
   position: absolute;
-  top: 30px;
-  left: 16px;
+  top: 48px;
+  left: 32px;
 
   background: {
     position: 50% 50%;
