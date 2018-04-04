@@ -23,23 +23,23 @@
 
 // Imagem
 // ***************************************
-.m-project_laptop-image{
+.m-project_image{
   height: 200px;
   width: 200px;
 
   position: relative;
   align-self: center;
 
+  @include for-phone-only{
+    display: none;
+  }
+}
+
+.m-project_laptop-image{
   background: transparent url("../images/figures-svg.svg#icon-laptop") no-repeat;
 }
 
 .m-project_mobile-image{
-  height: 200px;
-  width: 200px;
-
-  position: relative;
-  align-self: center;
-
   background: transparent url("../images/figures-svg.svg#icon-mobile") no-repeat;
 }
 
@@ -86,18 +86,19 @@
   margin-bottom: 15px;
 
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .m-project_info-top_title{
   &:hover{
     text-decoration: underline;
   }
+
   > h2{
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
     font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
   }
 }
 
@@ -176,8 +177,10 @@ $m-math-bgcolor: #568DAC;
 }
 
 .m-math-project_image-inner{
-  background-color: lighten($m-math-bgcolor, 10%);
-  background-image: url("../images/figures-svg.svg#icon-math");
+  background: {
+    color: lighten($m-math-bgcolor, 10%);
+    image: url("../images/figures-svg.svg#icon-math");
+  };
 }
 
 // Projeto Me Conheça - Aplicação Web
@@ -189,8 +192,10 @@ $m-meconheca-web-ap-bgcolor: #e2ac4c;
 }
 
 .m-meconheca-web-app-project_image-inner{
-  background-color: lighten($m-meconheca-web-ap-bgcolor, 10%);
-  background-image: url("../images/figures-svg.svg#icon-comment-alt");
+  background: {
+    color: lighten($m-meconheca-web-ap-bgcolor, 10%);
+    image: url("../images/figures-svg.svg#icon-comment-alt");
+  };
 }
 
 // Projeto Me Conheça - Aplicativo Mobile
@@ -202,8 +207,10 @@ $m-meconheca-mobile-ap-bgcolor: #f77871;
 }
 
 .m-meconheca-mobile-app-project_image-inner{
-  background-color: lighten($m-meconheca-mobile-ap-bgcolor, 10%);
-  background-image: url("../images/figures-svg.svg#icon-comment-alt");
+  background: {
+    color: lighten($m-meconheca-mobile-ap-bgcolor, 10%);
+    image: url("../images/figures-svg.svg#icon-comment-alt");
+  };
 }
 
 // Projeto Organograma Dinâmico
