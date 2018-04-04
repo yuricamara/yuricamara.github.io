@@ -14,16 +14,6 @@
   color: white;
 }
 
-.m-project_info{
-  @include for-tablet-portrait-up{
-    width: 55%;
-  }
-
-  @include for-tablet-landscape-up{
-    width: 65%;
-  }
-}
-
 .m-project-wrapper{
   display: flex;
   flex-wrap: wrap;
@@ -32,6 +22,7 @@
 }
 
 // Imagem
+// ***************************************
 .m-project_laptop-image{
   height: 200px;
   width: 200px;
@@ -80,6 +71,17 @@
 }
 
 // Informações
+// ***************************************
+.m-project_info{
+  @include for-tablet-portrait-up{
+    width: 55%;
+  }
+
+  @include for-tablet-landscape-up{
+    width: 65%;
+  }
+}
+
 .m-project_info-title{
   margin-bottom: 15px;
 
