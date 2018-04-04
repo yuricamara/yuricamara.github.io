@@ -31,6 +31,16 @@
   background: transparent url("../images/figures-svg.svg#icon-desktop") no-repeat;
 }
 
+.m-project_mobile-image{
+  height: 200px;
+  width: 200px;
+
+  position: relative;
+  align-self: center;
+
+  background: transparent url("../images/figures-svg.svg#icon-mobile") no-repeat;
+}
+
 .m-project_desktop-image-inner{
   border-radius: 5px;
   height: 113px;
@@ -44,6 +54,18 @@
     position: 50% 50%;
     repeat: no-repeat;
     size: 35%;
+  };
+}
+
+.m-project_mobile-image-inner{
+  margin: 23px auto 0;
+  height: 145px;
+  width: 82px;
+
+  background: {
+    position: 50% 50%;
+    repeat: no-repeat;
+    size: 55%;
   };
 }
 
@@ -95,49 +117,42 @@
 
 // Projeto Math Exercises Builder
 // ******************************
-.m-math-project{
-  background-color: #568DAC;
-}
+$m-math-bgcolor: #568DAC;
 
-.m-math-project_image{
+.m-math-project{
+  background-color: $m-math-bgcolor;
 }
 
 .m-math-project_image-inner{
-  background-color: lighten(#568DAC, 10%);
+  background-color: lighten($m-math-bgcolor, 10%);
   background-image: url("../images/figures-svg.svg#icon-math");
 }
 
 // Projeto Me Conheça - Aplicação Web
 // ******************************
-.m-meconheca-web-app-project{
-  background-color: #e2ac4c;
-}
+$m-meconheca-web-ap-bgcolor: #e2ac4c;
 
-.m-meconheca-web-app-project_image{
+.m-meconheca-web-app-project{
+  background-color: $m-meconheca-web-ap-bgcolor;
 }
 
 .m-meconheca-web-app-project_image-inner{
+  background-color: lighten($m-meconheca-web-ap-bgcolor, 10%);
   background-image: url("../images/figures-svg.svg#icon-comment-alt");
 }
 
-
 // Projeto Me Conheça - Aplicativo Mobile
 // ******************************
-.m-meconheca-mobile-app-project{
-  background-color: #f77871;
-}
+$m-meconheca-mobile-ap-bgcolor: #f77871;
 
-.m-meconheca-mobile-app-project_image{
-  background: transparent url("../images/figures-svg.svg#icon-mobile") no-repeat;
+.m-meconheca-mobile-app-project{
+  background-color: $m-meconheca-mobile-ap-bgcolor;
 }
 
 .m-meconheca-mobile-app-project_image-inner{
-  height: 100%;
-
-  background: transparent url("../images/figures-svg.svg#icon-comment-alt") 50% 50% no-repeat;
-  background-size: 35%;
+  background-color: lighten($m-meconheca-mobile-ap-bgcolor, 10%);
+  background-image: url("../images/figures-svg.svg#icon-comment-alt");
 }
-
 
 // Projeto Organograma Dinâmico
 // ******************************
