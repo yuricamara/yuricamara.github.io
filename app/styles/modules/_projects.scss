@@ -14,10 +14,21 @@
   color: white;
 }
 
+.m-project_info{
+  @include for-tablet-portrait-up{
+    width: 55%;
+  }
+
+  @include for-tablet-landscape-up{
+    width: 65%;
+  }
+}
+
 .m-project-wrapper{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+
+  justify-content: space-around;
 }
 
 // Imagem
@@ -66,12 +77,6 @@
     repeat: no-repeat;
     size: 45px 45px;
   };
-}
-
-.m-project_info{
-  @include for-tablet-portrait-up{
-    width: 50%;
-  }
 }
 
 // Informações
