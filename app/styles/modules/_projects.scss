@@ -123,6 +123,8 @@
 // Informações
 // ***************************************
 .m-project_info{
+  width: 100%;
+
   @include for-tablet-portrait-up{
     width: 55%;
   }
