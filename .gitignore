@@ -1,2 +1,11 @@
-.idea
+.idea/
+.npm/
+.sass-cache/
+.tmp
+.vscode/
+app.yaml
+dist/
+node_modules
 Thumbs.db
+/app/images/figures-svg.svg
+/app/images/sprite.*.html

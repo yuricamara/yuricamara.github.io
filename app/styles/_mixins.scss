@@ -1,0 +1,77 @@
+/**
+ * Mixins
+ * --------------------------------------------------
+ */
+
+// Clearfix
+// --------------------------------------------------
+@mixin clearfix{
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Media Queries
+// --------------------------------------------------
+// Exemplo de uso:
+//  .classe{
+//    @include for-tablet-portrait-up{
+//      display: none;
+//    }
+//  }
+// Fonte:
+// https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+// Shapes
+// --------------------------------------------------
+@mixin circle($diameter){
+  height: $diameter;
+  width: $diameter;
+
+  border-radius: 50%;
+}
+
+// Box-shadom
+// --------------------------------------------------
+
+@mixin box-shadow {
+  box-shadow: 3px 2px 2px 0 rgba(0, 0, 0, 0.14);
+}
+
+// Flex Centralize
+// --------------------------------------------------
+@mixin flex-centralize{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Text Wrap
+// --------------------------------------------------
+@mixin text-wrap{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

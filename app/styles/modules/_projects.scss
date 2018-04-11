@@ -1,0 +1,239 @@
+/**
+ * Projects Module
+ * --------------------------------------------------
+ */
+
+.m-projects{
+  background-color: #f8f9fa;
+}
+
+.m-projects_wrapper .m-project{
+  &:nth-child(1){
+    $bgc: #568dac;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+  }
+  &:nth-child(2){
+    $bgc: #e2ac4c;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+
+  }
+  &:nth-child(3){
+    $bgc: #f77871;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+
+  }
+  &:nth-child(4){
+    $bgc: #a284c2;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+
+  }
+  &:nth-child(5){
+    $bgc: #404447;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+  }
+}
+
+.m-project{
+  margin-bottom: 20px;
+  padding: 70px $distance-min-lateral;
+
+  color: white;
+}
+
+.m-project-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+}
+
+// Imagem
+// ***************************************
+.m-project_image{
+  height: 200px;
+  width: 200px;
+
+  position: relative;
+  align-self: center;
+
+  @include for-phone-only{
+    display: none;
+  }
+}
+
+.m-project_laptop-image{
+  background: transparent url("../images/figures-svg.svg#icon-laptop") no-repeat;
+}
+
+.m-project_mobile-image{
+  background: transparent url("../images/figures-svg.svg#icon-mobile") no-repeat;
+}
+
+.m-project_laptop-image-inner{
+  height: 77px;
+  width: 136px;
+
+  position: absolute;
+  top: 48px;
+  left: 32px;
+
+  background: {
+    position: 50% 50%;
+    repeat: no-repeat;
+    size: 45px 45px;
+  };
+}
+
+.m-project_mobile-image-inner{
+  margin: 23px auto 0;
+  height: 145px;
+  width: 82px;
+
+  background: {
+    position: 50% 50%;
+    repeat: no-repeat;
+    size: 45px 45px;
+  };
+}
+
+// Informações
+// ***************************************
+.m-project_info{
+  @include for-tablet-portrait-up{
+    width: 55%;
+  }
+
+  @include for-tablet-landscape-up{
+    width: 65%;
+  }
+}
+
+.m-project_info-top{
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.m-project_info-top_title{
+  &:hover{
+    text-decoration: underline;
+  }
+
+  > h2{
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.m-project_info-top_links{
+  display: flex;
+  align-items: center;
+
+  text-indent: -9999px;
+}
+
+.m-project_info-top_link{
+  &--site{
+    height: 30px;
+    width: 30px;
+
+    background: transparent url("../images/figures-svg.svg#icon-external-link-alt") 0 0 no-repeat;
+  }
+
+  &--github{
+    height: 40px;
+    width: 40px;
+
+    background: transparent url("../images/figures-svg.svg#logo-git-hub--white") 0 0 no-repeat;
+  }
+}
+
+.m-project_info-tags{
+  margin-bottom: 20px;
+
+  display: flex;
+
+  text-transform: uppercase;
+  opacity: .6;
+
+  > li{
+    &:first-child{
+      list-style: none;
+      padding-left: 0;
+    }
+
+    list-style: disc inside;
+    padding-left: 14px;
+  }
+}
+
+.m-project_info-description{
+  margin-bottom: 55px;
+}
+
+.m-project_info-features{
+  $border: 2px solid rgba(255,255,255,.5);
+
+  >li{
+    &:first-child{
+      border-top: $border;
+    }
+
+    border-bottom: $border;
+    padding: 10px 15px;
+  }
+}
+
+// Projeto Email App
+// ******************************
+.m-email-app-project_image-inner{
+  background-image: url("../images/figures-svg.svg#icon-at");
+}
+
+// Projeto Math Exercises Builder
+// ******************************
+.m-math-project_image-inner{
+  background-image: url("../images/figures-svg.svg#icon-math");
+}
+
+// Projeto Me Conheça - Aplicação Web
+// ******************************
+.m-meconheca-web-app-project_image-inner{
+  background-image: url("../images/figures-svg.svg#icon-comment-alt");
+}
+
+// Projeto Me Conheça - Aplicativo Mobile
+// ******************************
+.m-meconheca-mobile-app-project_image-inner{
+  background-image: url("../images/figures-svg.svg#icon-comment-alt");
+}
+
+// Projeto Organograma Dinâmico
+// ******************************
+.m-chart-project_image-inner{
+  background-image: url("../images/figures-svg.svg#icon-sitemap");
+}
+

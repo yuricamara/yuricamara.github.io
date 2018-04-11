@@ -1,0 +1,31 @@
+/**
+ * Layout
+ * --------------------------------------------------
+ */
+
+// Conteúdo
+.l-header{
+  @include flex-centralize;
+
+  padding: 50px $distance-min-lateral;
+}
+
+.l-section{
+  padding: 100px 0;
+
+  clear: both;
+
+  @include for-tablet-portrait-up{
+    padding: 150px 0;
+  }
+}
+
+.l-footer{
+  padding: $distance-min-lateral;
+}
+
+// Ações
+.l-centralize{
+  margin: 0 auto;
+  max-width: 1200px;
+}

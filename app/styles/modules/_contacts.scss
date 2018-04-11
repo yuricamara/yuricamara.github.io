@@ -1,0 +1,32 @@
+/**
+ * Contacts Module
+ * --------------------------------------------------
+ */
+
+.m-contacts{
+
+}
+
+.m-contact-whatsapp{
+  cursor: text;
+}
+
+// Ícones
+// ******************************
+.m-contact_icon{
+  padding-left: 20px;
+
+  background: 0 0 no-repeat;
+}
+
+.m-contact_icon-address{
+  background-image: url("../images/figures-svg.svg#icon-map-marker-alt");
+}
+
+.m-contact_icon-email{
+  background-image: url("../images/figures-svg.svg#icon-at");
+}
+
+.m-contact_icon-whatsapp{
+  background-image: url("../images/figures-svg.svg#logo-whatsapp");
+}

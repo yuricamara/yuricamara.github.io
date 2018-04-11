@@ -1,0 +1,53 @@
+/**
+ * Services Module
+ * --------------------------------------------------
+ */
+
+.m-services_content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.m-service{
+  margin: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_title{
+    margin-bottom: 25px;
+  }
+
+  &_logo-wrap{
+    @include circle(180px);
+
+    $border-color: #f7f7f7;
+
+    border: 7px solid $border-color;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: darken($border-color, 5%);;
+  }
+
+  &_logo--mobile{
+    height: 150px;
+    width: 150px;
+
+    background: transparent url(../images/figures/android-ios.png) 0 15px no-repeat;
+    background-size: 100%;
+  }
+
+  &_logo--webapp{
+    height: 115px;
+    width: 100px;
+
+    background: transparent url(../images/figures/web-application.png) 0 0 no-repeat;
+    background-size: 100%;
+  }
+}
