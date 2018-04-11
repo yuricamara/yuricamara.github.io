@@ -7,6 +7,52 @@
   background-color: #f8f9fa;
 }
 
+.m-projects_wrapper .m-project{
+  &:nth-child(1){
+    $bgc: #568dac;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+  }
+  &:nth-child(2){
+    $bgc: #e2ac4c;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+
+  }
+  &:nth-child(3){
+    $bgc: #f77871;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+
+  }
+  &:nth-child(4){
+    $bgc: #a284c2;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+
+  }
+  &:nth-child(5){
+    $bgc: #404447;
+    background-color: $bgc;
+
+    .m-project_image-inner{
+      background-color: lighten($bgc, 10%);
+    }
+  }
+}
+
 .m-project{
   margin-bottom: 20px;
   padding: 70px $distance-min-lateral;
@@ -163,60 +209,31 @@
 
 // Projeto Email App
 // ******************************
-.m-email-app-project{
-  // at
-  background-color: #404447;
+.m-email-app-project_image-inner{
+  background-image: url("../images/figures-svg.svg#icon-at");
 }
 
 // Projeto Math Exercises Builder
 // ******************************
-$m-math-bgcolor: #568DAC;
-
-.m-math-project{
-  background-color: $m-math-bgcolor;
-}
-
 .m-math-project_image-inner{
-  background: {
-    color: lighten($m-math-bgcolor, 10%);
-    image: url("../images/figures-svg.svg#icon-math");
-  };
+  background-image: url("../images/figures-svg.svg#icon-math");
 }
 
 // Projeto Me Conheça - Aplicação Web
 // ******************************
-$m-meconheca-web-ap-bgcolor: #e2ac4c;
-
-.m-meconheca-web-app-project{
-  background-color: $m-meconheca-web-ap-bgcolor;
-}
-
 .m-meconheca-web-app-project_image-inner{
-  background: {
-    color: lighten($m-meconheca-web-ap-bgcolor, 10%);
-    image: url("../images/figures-svg.svg#icon-comment-alt");
-  };
+  background-image: url("../images/figures-svg.svg#icon-comment-alt");
 }
 
 // Projeto Me Conheça - Aplicativo Mobile
 // ******************************
-$m-meconheca-mobile-ap-bgcolor: #f77871;
-
-.m-meconheca-mobile-app-project{
-  background-color: $m-meconheca-mobile-ap-bgcolor;
-}
-
 .m-meconheca-mobile-app-project_image-inner{
-  background: {
-    color: lighten($m-meconheca-mobile-ap-bgcolor, 10%);
-    image: url("../images/figures-svg.svg#icon-comment-alt");
-  };
+  background-image: url("../images/figures-svg.svg#icon-comment-alt");
 }
 
 // Projeto Organograma Dinâmico
 // ******************************
-.m-chart-project{
-  // icon sitemap
-  background-color: #a284c2;
+.m-chart-project_image-inner{
+  background-image: url("../images/figures-svg.svg#icon-sitemap");
 }
 
