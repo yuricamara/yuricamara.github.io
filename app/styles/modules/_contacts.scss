@@ -3,8 +3,22 @@
  * --------------------------------------------------
  */
 
-.m-contacts{
+.m-contacts_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.m-contact{
+  margin: 10px 0;
+
+  color: #000;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.m-contact--email{
+  text-decoration: underline;
 }
 
 .m-contact-whatsapp{
@@ -14,7 +28,7 @@
 // Ícones
 // ******************************
 .m-contact_icon{
-  padding-left: 20px;
+  padding-left: 30px;
 
   background: 0 0 no-repeat;
 }
