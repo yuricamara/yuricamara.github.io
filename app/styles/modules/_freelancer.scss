@@ -39,3 +39,11 @@
     }
   }
 }
+
+.m-freelancer-buttons{
+  display: flex;
+
+  .c-btn:first-child{
+    margin-right: 20px;
+  }
+}

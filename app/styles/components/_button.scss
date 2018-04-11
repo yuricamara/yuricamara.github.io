@@ -13,6 +13,7 @@ $btn-height: 48px;
   display: block;
 
   font-size: 20px;
+  font-weight: bold;
 
   transition: background-color .15s ease-in-out;
 }
@@ -30,7 +31,6 @@ $btn-height: 48px;
 
   color: #fff;
   background-color: $background-color;
-  font-weight: bold;
 
   &:hover{
     background-color: darken($background-color, 5%);
@@ -40,4 +40,21 @@ $btn-height: 48px;
 .c-btn-icon-linkedin{
   background-image: url("../images/figures-svg.svg#logo-linkedin");
   background-position-y: -3px;
+}
+
+// Github
+// ***************************************************
+.c-btn-github{
+  $background-color: #ccc;
+
+  color: #000;
+  background-color: $background-color;
+
+  &:hover{
+    background-color: darken($background-color, 5%);
+  }
+}
+
+.c-btn-icon-github{
+  background-image: url("../images/figures-svg.svg#logo-git-hub--black");
 }
