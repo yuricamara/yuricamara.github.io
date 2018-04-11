@@ -81,8 +81,12 @@
   }
 }
 
-.m-project_laptop-image{
-  background: transparent url("../images/figures-svg.svg#icon-laptop") no-repeat;
+.m-project_laptop--black-image{
+  background: transparent url("../images/figures-svg.svg#icon-laptop--black") no-repeat;
+}
+
+.m-project_laptop--white-image{
+  background: transparent url("../images/figures-svg.svg#icon-laptop--white") no-repeat;
 }
 
 .m-project_mobile-image{
@@ -183,10 +187,18 @@
     &:first-child{
       list-style: none;
       padding-left: 0;
+      > span{
+        position: static;
+      }
     }
 
     list-style: disc inside;
-    padding-left: 14px;
+    padding-left: 10px;
+
+    > span{
+      position: relative;
+      left: -5px;
+    }
   }
 }
 
@@ -207,32 +219,24 @@
   }
 }
 
-// Projeto Email App
+// Logos
 // ******************************
 .m-email-app-project_image-inner{
   background-image: url("../images/figures-svg.svg#icon-at");
 }
 
-// Projeto Math Exercises Builder
-// ******************************
 .m-math-project_image-inner{
   background-image: url("../images/figures-svg.svg#icon-math");
 }
 
-// Projeto Me Conheça - Aplicação Web
-// ******************************
 .m-meconheca-web-app-project_image-inner{
   background-image: url("../images/figures-svg.svg#icon-comment-alt");
 }
 
-// Projeto Me Conheça - Aplicativo Mobile
-// ******************************
 .m-meconheca-mobile-app-project_image-inner{
   background-image: url("../images/figures-svg.svg#icon-comment-alt");
 }
 
-// Projeto Organograma Dinâmico
-// ******************************
 .m-chart-project_image-inner{
   background-image: url("../images/figures-svg.svg#icon-sitemap");
 }
