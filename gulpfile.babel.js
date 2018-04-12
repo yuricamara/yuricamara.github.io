@@ -66,7 +66,8 @@ gulp.task('fonts', () => {
 gulp.task('copy', () =>
   gulp.src([
     'app/*',
-    '!app/*.html'
+    'app/404.html',
+    '!app/index.html'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'))
