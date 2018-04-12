@@ -7,25 +7,15 @@
   background-color: #fff;
 }
 
-.m-offers_content{
-  @include clearfix;
+.m-offer{
+  margin-bottom: 30px;
   padding: 0 $distance-min-lateral;
 }
 
-.m-offer{
-  width: 100%;
-
-  float: left;
-
-  @include for-tablet-portrait-up{
-    width: 50%;
-  }
-  @include for-tablet-landscape-up{
-    width: 33.33%;
-  }
-  @include for-desktop-up{
-    width: 25%;
-  }
+.m-offers_content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+  grid-gap: 50px;
 }
 
 // Textos
@@ -40,7 +30,8 @@
 }
 
 .m-offer_informations{
-  padding-bottom: 70px;
+  max-width: 550px;
+  margin: 0 auto;
 
   text-align: center;
 }
