@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,700">
+  <!-- processHTML:css:build styles.min.css -->
+  <link rel="stylesheet" href="vendors/bower_components/normalize.css/normalize.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <!-- /processHTML -->
+
+  <!-- processHTML:template:tests
+  <link rel="stylesheet" href="/node_modules/mocha/mocha.css">
+  <link rel="stylesheet" href="css/report.css">
+  /processHTML -->
+
+  <title>Mail App</title>
+</head>
+<body>
+  <noscript>
+    <div class="m-noscript">
+      <h1 class="m-noscript_title">Javascript is required!</h1>
+      <p class="m-noscript_information">You must have Javascript enabled to run this app.</p>
+      <a class="m-noscript_link" href="https://www.google.com.br/search?q=how+to+enable+javascript+in+my+browser&amp;btnG=Pesquisar&amp;num=50&amp;newwindow=1&amp;es_sm=122&amp;gbv=1">
+        How to enable JavaScript in browser
+      </a>
+    </div>
+  </noscript>
+  <p id="loading-app" class="m-loading-app">
+    Loading...
+  </p>
+  <div id="app" class="l-wrap" hidden>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+      <symbol id="arrow-down-icon" viewBox="0 0 512 521">
+        <polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "/>
+      </symbol>
+
+      <symbol id="clips-icon" viewBox="0 0 512 512">
+        <path  d="M492.031,240L265.734,466.281c-56.156,56.125-147.5,56.125-203.641,0c-56.156-56.156-56.156-147.5,0-203.656l226.281-226.25 c43.656-43.688,114.719-43.688,158.406,0c43.656,43.656,43.656,114.719,0,158.375L266.109,375.375 c-15.047,15.281-35.156,23.719-56.641,23.813c-42.922,0.188-80.469-37.313-80.313-80.313c0.078-21.438,8.563-41.563,23.813-56.625 L333.625,81.625l22.625,22.625l-181.031,181c-9.016,9.031-14.016,20.969-14.063,33.75c-0.109,25.781,22.406,48.313,48.188,48.188 c12.766-0.031,24.75-5.031,33.766-14.063l181.047-181c31.188-31.188,31.188-81.938,0-113.125C392.938,27.813,342.188,27.813,311,59 L84.719,285.25c-43.672,43.656-43.672,114.719,0,158.406c43.656,43.656,114.719,43.656,158.391,0l226.297-226.281L492.031,240z"/>
+      </symbol>
+
+      <symbol id="hamburguer-icon" viewBox="0 0 400 300">
+        <path d="M401.001,52.812c0,8.576-3.08,15.53-7.426,15.53H9.275
+          c-4.346,0-7.636-6.954-7.636-15.53V15.28c0-8.577,3.29-15.53,7.636-15.53h384.3c4.346,0,7.425,6.954,7.425,15.53L401.001,52.812
+          L401.001,52.812z"/>
+        <path d="M401.001,167.993c0,8.577-3.735,15.53-8.081,15.53H8.62
+          c-4.346,0-7.87-6.953-7.87-15.53v-37.531c0-8.576,3.523-15.53,7.87-15.53h384.3c4.346,0,8.08,6.954,8.08,15.53L401.001,167.993
+          L401.001,167.993z"/>
+        <path d="M401.001,284.47c0,8.576-3.735,15.53-8.081,15.53H8.62
+          c-4.346,0-7.87-6.954-7.87-15.53v-37.531c0-8.576,3.523-15.53,7.87-15.53h384.3c4.346,0,8.08,6.954,8.08,15.53L401.001,284.47
+          L401.001,284.47z"/>
+      </symbol>
+
+      <symbol id="star-icon" viewBox="0 0 198.5 210">
+        <polygon points="100,10 40,198 190,78 10,78 160,198 "/>
+      </symbol>
+
+      <symbol id="trash-icon" viewBox="0 0 814 888.5">
+        <path d="M768.75,111c23.75,0,45,20,45,45s-21.25,45-45,45h-6.25l-135,687.5H190L56.25,201H45c-25,0-45-20-45-45s20-45,45-45H768.75z M372.5,218.5L353.75,201h-117.5l-18.75,17.5L295,296L372.5,218.5z M178.75,476l25,128.75l60-60l-77.5-76.25L178.75,476z M217.5,436 l77.5,77.5l77.5-77.5L295,359.75L217.5,436z M403.75,468.5l-76.25,76.25l76.25,77.5l77.5-77.5L403.75,468.5z M436.25,436l76.25,77.5 L590,436l-77.5-76.25L436.25,436z M403.75,404.75l77.5-77.5L403.75,251l-76.25,76.25L403.75,404.75z M186.25,251l-43.75,42.5 l17.5,85l26.25,26.25l77.5-77.5L186.25,251z M295,577.25l-77.5,77.5L295,731l77.5-76.25L295,577.25z M403.75,686l-76.25,77.5 L385,821h37.5l58.75-57.5L403.75,686z M512.5,731l77.5-76.25l-77.5-77.5l-76.25,77.5L512.5,731z M612.5,613.5l25-128.75 l-16.25-16.25L545,544.75L612.5,613.5z M661.25,366l12.5-63.75L621.25,251L545,327.25l76.25,77.5L661.25,366z M590,218.5L571.25,201 h-117.5l-17.5,17.5L512.5,296L590,218.5z M132.5,241l40-40H125L132.5,241z M228.75,728.5l17.5,92.5h75L228.75,728.5z M592.5,716 L486.25,821h85L592.5,716z M683.75,248.5l10-47.5H635L683.75,248.5z"/>
+      </symbol>
+
+      <symbol id="undo-icon" viewBox="0 0 512 512">
+        <path d="M447.9,368.2c0-16.8,3.6-83.1-48.7-135.7c-35.2-35.4-80.3-53.4-143.3-56.2V96L64,224l192,128v-79.8 c40,1.1,62.4,9.1,86.7,20c30.9,13.8,55.3,44,75.8,76.6l19.2,31.2H448C448,389.9,447.9,377.1,447.9,368.2z"/>
+      </symbol>
+    </svg>
+
+    <aside class="l-aside th-aside" role="complementary">
+      <div class="m-corner-up-right">
+        <!-- small screens-->
+        <img class="m-corner-up-right_img" src="images/contacts/me-desktop.jpg" srcset="images/contacts/me-desktop.jpg 1x, images/contacts/me-desktop@2x.jpg 2x" width="35" height="35" alt="User´s photo">
+
+        <!-- big screens-->
+        <button  class="m-btn-text m-corner-up-right_btn" type="button">
+          Compose mail
+        </button>
+      </div>
+
+      <div class="m-labels">
+        <h3 class="m-labels_title">
+          Labels
+        </h3>
+        <ul class="m-labels_itens">
+          <li>
+            <a id="label-clients" class="th-label-clients-pe m-labels_itens-link js-labels">Clients</a>
+          </li>
+          <li>
+            <a id="label-social" class="th-label-social-pe m-labels_itens-link js-labels">Social</a></li>
+          <li>
+            <a id="label-family" class="th-label-family-pe m-labels_itens-link js-labels">Family</a>
+          </li>
+          <li>
+            <a id="label-friends" class="th-label-friends-pe m-labels_itens-link js-labels">Friends</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <main id="main" class="l-main th-main" role="main">
+      <article id="mail-list-main" class="m-mail-list th-mail-list l-mail-list">
+        <header class="m-mail-list_header">
+          <div class="m-mail-list_header-content">
+            <div class="m-mail-list_header-menu">
+              <button class="m-mail-list_header-menu_btn" type="button" id="menu_main-actions" aria-expanded="false">
+                <span class="m-mail-list_header-menu_btn-hamburguer">
+                  <svg data-icon="hamburguer" version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="18" aria-labelledby="svgicon_hamburguer-title svgicon_hamburguer-desc">
+                    <title id="svgicon_hamburguer-title">Menu icon</title>
+                    <desc id="svgicon_hamburguer-desc">Click to choose an item</desc>
+                    <use xlink:href="#hamburguer-icon" />
+                  </svg>
+                </span>
+                <span class="m-mail-list_header-menu_btn-arrow-down m-btn-arrow-down" >
+                    <svg data-icon="arrow-down" version="1.1" xmlns="http://www.w3.org/2000/svg" width="17" height="13" aria-labelledby="svgicon_arrow-down-title svgicon_arrow-down-desc">
+                      <title id="svgicon_arrow-down-title">Menu icon</title>
+                      <desc id="svgicon_arrow-down-desc">Click to choose an item</desc>
+                      <use xlink:href="#arrow-down-icon" />
+                    </svg>
+                </span>
+              </button>
+              <ul hidden role="menu" aria-labelledby="menu_main-actions">
+                <li role="presentation">
+                  <a role="menuitem">
+                    Compose Mail
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a role="menuitem">
+                    Inbox
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a role="menuitem">
+                    Sent
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h2 class="m-mail-list_header-title">
+              Inbox <span  class="m-mail-list_header-title--unread">(14 unread)</span>
+            </h2>
+          </div>
+        </header>
+        <div id="mail-list" class="m-mail-list_wrap">
+          <!--  short-mails go here -->
+        </div>
+        <p id="mail-list-zero-mails" class="m-mail-list_zero-mails" hidden>No e-mail</p>
+      </article>
+      <!-- Opened E-mail goes here-->
+      <article class="m-mail-opened m-mail-opened--message">
+        <h3 class="m-mail-opened--message_paragraph">
+          Choose an e-mail to the side to open
+        </h3>
+      </article>
+    </main>
+</div>
+
+<!-- processHTML:remove -->
+<script src="vendors/bower_components/requirejs/require.js" data-main="js/main.js"></script>
+<!-- /processHTML -->
+
+<!-- processHTML:template:build
+<script src="scripts.min.js"></script>
+/processHTML -->
+
+<!-- processHTML:template:tests
+<div id="mocha"></div>
+<script data-main="js/specRunner.js" src="vendors/bower_components/requirejs/require.js"></script>
+/processHTML -->
+
+</body>
+</html>
