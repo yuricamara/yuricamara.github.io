@@ -6,5 +6,6 @@
 app.yaml
 node_modules
 Thumbs.db
-/app/images/figures-svg.svg
-/app/images/sprite.*.html
+figures-svg.svg
+sprite.*.html
+/dist
