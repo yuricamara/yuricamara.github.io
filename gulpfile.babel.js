@@ -217,12 +217,7 @@ gulp.task('serve:dist', ['default'], () =>
   })
 );
 
-gulp.task('deploy', ['default'], () =>
-  gulp.src('./dist/**/*')
-    .pipe(gulp.dest('./docs'))
-);
 
-// Build production files, the default task
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
