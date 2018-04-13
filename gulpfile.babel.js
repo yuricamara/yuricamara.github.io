@@ -98,7 +98,7 @@ gulp.task('styles', () => {
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/styles'))
+    .pipe(gulp.dest('dist'))
     .pipe(gulp.dest('.tmp/styles'));
 });
 
@@ -202,6 +202,22 @@ gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
   gulp.watch(['app/images/**/*'], reload);
 });
 
+gulp.task('rev', () =>
+  gulp.src([".tmp/styles/main.css", ".tmp/scripts/main.min.js"])
+  .pipe($.rev())
+  .pipe(gulp.dest('dist'))
+  .pipe($.rev.manifest())
+  .pipe(gulp.dest('dist'))
+);
+
+gulp.task("revreplace", ["rev"], function(){
+  var manifest = gulp.src("./dist/rev-manifest.json");
+
+  return gulp.src("dist/index.html")
+    .pipe($.revReplace({manifest: manifest}))
+    .pipe(gulp.dest("dist"));
+});
+
 // Build and serve the output from the dist build
 gulp.task('serve:dist', ['default'], () =>
   browserSync({
@@ -218,11 +234,11 @@ gulp.task('serve:dist', ['default'], () =>
   })
 );
 
-
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
     ['html', 'scripts', 'images', 'copy', 'svg', 'projetos-solo'],
+    'revreplace',
     cb
   )
 );
