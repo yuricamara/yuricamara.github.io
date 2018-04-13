@@ -174,6 +174,12 @@ gulp.task('html', () => {
 // Clean output directory
 gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
 
+gulp.task('projetos-solo', () => {
+  gulp.src('app/projetos-solo/**/*')
+    .pipe(gulp.dest('dist/projetos-solo'))
+    .pipe($.size({title: 'projetos-solo'}))
+});
+
 // Watch files for changes & reload
 gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
   browserSync({
@@ -216,7 +222,7 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['html', 'scripts', 'images', 'copy', 'svg'],
+    ['html', 'scripts', 'images', 'copy', 'svg', 'projetos-solo'],
     cb
   )
 );
