@@ -57,7 +57,7 @@ gulp.task('images', () =>
 );
 
 // Copy all files at the root level (app)
-gulp.task('copy', () =>
+gulp.task('copy', () => {
   gulp.src([
     'app/*',
     'app/404.html',
@@ -65,8 +65,11 @@ gulp.task('copy', () =>
   ], {
     dot: true
   }).pipe(gulp.dest('dist'))
-    .pipe($.size({title: 'copy'}))
-);
+    .pipe($.size({title: 'copy'}));
+
+  gulp.src('app/projetos-solo/**/*', { base: 'app/projetos-solo' })
+    .pipe(gulp.dest('dist/projetos-solo'));
+});
 
 // Compile and automatically prefix stylesheets
 gulp.task('styles', () => {
@@ -174,11 +177,6 @@ gulp.task('html', () => {
 // Clean output directory
 gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
 
-gulp.task('projetos-solo', () => {
-  gulp.src('app/projetos-solo/**/*', { base: 'app/projetos-solo' })
-    .pipe(gulp.dest('dist/projetos-solo'));
-});
-
 gulp.task('rev', () =>
   gulp.src([".tmp/styles/main.css", ".tmp/scripts/main.min.js"])
     .pipe($.rev())
@@ -236,7 +234,7 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['html', 'scripts', 'images', 'copy', 'svg', 'projetos-solo'],
+    ['html', 'scripts', 'images', 'copy', 'svg'],
     'revreplace',
     cb
   )
