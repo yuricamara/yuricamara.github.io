@@ -15,14 +15,19 @@
   color: #000;
   font-size: 22px;
   line-height: 1;
+  text-underline-position: under;
 }
 
 .m-contact--email{
   text-decoration: underline;
 }
 
-.m-contact-whatsapp{
+.m-contact--whatsapp{
   cursor: text;
+
+  @include for-phone-only{
+    text-decoration: underline;
+  }
 }
 
 // Ícones
