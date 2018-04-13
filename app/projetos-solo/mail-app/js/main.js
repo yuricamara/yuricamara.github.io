@@ -15,7 +15,7 @@ requirejs.config({
     shortMail: 'templates/short-mail.html',
 
     //Plugins
-    text:'../vendors/bower_components/text/text'
+    text:'../vendors/text'
   }
 });
 
