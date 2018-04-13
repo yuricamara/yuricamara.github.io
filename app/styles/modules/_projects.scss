@@ -70,14 +70,16 @@
 // Imagem
 // ***************************************
 .m-project_image{
-  height: 200px;
-  width: 200px;
+  display: none;
 
-  position: relative;
-  align-self: center;
+  @include for-tablet-landscape-up{
+    height: 200px;
+    width: 200px;
 
-  @include for-phone-only{
-    display: none;
+    display: block;
+
+    position: relative;
+    align-self: center;
   }
 }
 
@@ -124,10 +126,6 @@
 // ***************************************
 .m-project_info{
   width: 100%;
-
-  @include for-tablet-portrait-up{
-    width: 55%;
-  }
 
   @include for-tablet-landscape-up{
     width: 65%;

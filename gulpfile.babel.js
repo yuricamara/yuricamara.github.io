@@ -175,9 +175,24 @@ gulp.task('html', () => {
 gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
 
 gulp.task('projetos-solo', () => {
-  gulp.src('app/projetos-solo/**/*')
-    .pipe(gulp.dest('dist/projetos-solo'))
-    .pipe($.size({title: 'projetos-solo'}))
+  gulp.src('app/projetos-solo/**/*', { base: 'app/projetos-solo' })
+    .pipe(gulp.dest('dist/projetos-solo'));
+});
+
+gulp.task('rev', () =>
+  gulp.src([".tmp/styles/main.css", ".tmp/scripts/main.min.js"])
+    .pipe($.rev())
+    .pipe(gulp.dest('dist'))
+    .pipe($.rev.manifest())
+    .pipe(gulp.dest('dist'))
+);
+
+gulp.task("revreplace", ["rev"], () => {
+  const manifest = gulp.src("./dist/rev-manifest.json");
+
+  return gulp.src("dist/index.html")
+    .pipe($.revReplace({manifest: manifest}))
+    .pipe(gulp.dest("dist"));
 });
 
 // Watch files for changes & reload
@@ -200,22 +215,6 @@ gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
   gulp.watch(['app/images/**/*'], reload);
-});
-
-gulp.task('rev', () =>
-  gulp.src([".tmp/styles/main.css", ".tmp/scripts/main.min.js"])
-  .pipe($.rev())
-  .pipe(gulp.dest('dist'))
-  .pipe($.rev.manifest())
-  .pipe(gulp.dest('dist'))
-);
-
-gulp.task("revreplace", ["rev"], function(){
-  var manifest = gulp.src("./dist/rev-manifest.json");
-
-  return gulp.src("dist/index.html")
-    .pipe($.revReplace({manifest: manifest}))
-    .pipe(gulp.dest("dist"));
 });
 
 // Build and serve the output from the dist build
