@@ -3,7 +3,7 @@
  * --------------------------------------------------
  */
 
-// Tipografia
+// Fonte e Textos
 // *************************************
 html {
   color: #222;
@@ -39,6 +39,14 @@ p,li{
   line-height: 1.5;
 }
 
+address{
+  font-style: normal;
+}
+
+a{
+  text-decoration: none;
+}
+
 // Posicionamento, Distâncias e Dimensionamento
 // *************************************
 ul{
@@ -71,10 +79,6 @@ textarea {
 
 // Design
 // ************************************
-a{
-  text-decoration: none;
-}
-
 li{
   list-style: none;
 }

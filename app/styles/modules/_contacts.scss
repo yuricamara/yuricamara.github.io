@@ -9,8 +9,9 @@
   align-items: center;
 }
 
-.m-contact{
-  margin: 10px 0;
+.m-contact-address,
+.m-contact-email{
+  margin-top: 30px;
 
   color: #000;
   font-size: 22px;
@@ -18,15 +19,40 @@
   text-underline-position: under;
 }
 
-.m-contact--email{
+.m-contact-email{
   text-decoration: underline;
 }
 
-.m-contact--whatsapp{
-  cursor: text;
+.m-contact-whatsapp{
+  border-radius: 4px;
+  padding: 20px;
+  width: 240px;
 
-  @include for-phone-only{
-    text-decoration: underline;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #455a64;
+
+  &_data{
+    margin-bottom: 20px;
+    width: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_data-phone{
+    color: white;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  &_data-icon{
+    height: 40px;
+    width: 40px;
+    background: 0 0 url("../images/figures-svg.svg#logo-whatsapp") no-repeat;
   }
 }
 
@@ -44,9 +70,4 @@
 
 .m-contact_icon-email{
   background-image: url("../images/figures-svg.svg#icon-at");
-}
-
-.m-contact_icon-whatsapp{
-  background-image: url("../images/figures-svg.svg#logo-whatsapp");
-  padding: 5px 0 5px 35px;
 }
