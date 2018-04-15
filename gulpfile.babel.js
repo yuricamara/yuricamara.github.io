@@ -145,6 +145,7 @@ gulp.task('svg', ()=>{
       }
     }))
     .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('.tmp/images'))
 });
 
 // Scan your HTML for assets & optimize them
