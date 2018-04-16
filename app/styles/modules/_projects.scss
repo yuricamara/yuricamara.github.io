@@ -161,30 +161,24 @@
   }
 }
 
-.m-project_info-top_links{
+// Links
+// ***************************************
+.m-project_links{
   display: flex;
   align-items: center;
-
-  text-indent: -9999px;
 }
 
-.m-project_info-top_link{
-  &--site{
-    height: 30px;
-    width: 30px;
-
-    background: transparent url("../images/figures-svg.svg#icon-external-link-alt") 0 0 no-repeat;
-  }
-
-  &--github{
-    margin-left: 15px;
-    height: 40px;
-    width: 40px;
-
-    background: transparent url("../images/figures-svg.svg#logo-git-hub--white") 0 0 no-repeat;
-  }
+.m-project_link{
+  padding: 0 15px;
 }
 
+.m-project_link-icon{
+  height: 30px;
+  width: 30px;
+}
+
+// Tags
+// ***************************************
 .m-project_info-tags{
   margin-bottom: 20px;
 
@@ -206,10 +200,14 @@
   }
 }
 
+// Description
+// ***************************************
 .m-project_info-description{
   margin-bottom: 55px;
 }
 
+// Features
+// ***************************************
 .m-project_info-features{
   $border: 2px solid rgba(255,255,255,.5);
 

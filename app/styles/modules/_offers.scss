@@ -7,26 +7,39 @@
   background-color: #fff;
 }
 
-.m-offer{
-  margin-bottom: 30px;
-  padding: 0 $distance-min-lateral;
-}
-
 .m-offers_content{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
   grid-gap: 50px;
 }
 
-// Textos
-// ***********************************************
-.m-offer_title{
-  height: 100px;
-  padding-bottom: 25px;
+.m-offer{
+  padding: 0 $distance-min-lateral;
 
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 30px;
+  @include for-phone-only{
+    margin-bottom: 50px;
+  }
+
+  &:last-child{
+    @include for-phone-only {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.m-offer_icon{
+  margin-bottom: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+.m-offer_title{
+  margin-bottom: 15px;
 
   text-align: center;
 }
@@ -36,52 +49,4 @@
   margin: 0 auto;
 
   text-align: center;
-}
-
-// Ícones
-// ************************************************
-.m-offer_icon-wrap{
-  color: map_get($colors, dark);
-  font-size: 40px;
-  text-align: center;
-}
-
-.m-offer_icon{
-  background:{
-    position: 50% 0;
-    repeat: no-repeat;
-    size: 50px 50px;
-  }
-}
-
-.m-offer_icon-attendance{
-  background-image: url("../images/figures-svg.svg#icon-users");
-}
-
-.m-offer_icon-comments{
-  background-image: url("../images/figures-svg.svg#icon-comments");
-}
-
-.m-offer_icon-delivery{
-  background-image: url("../images/figures-svg.svg#icon-tasks");
-}
-
-.m-offer_icon-exclusivity{
-  background-image: url("../images/figures-svg.svg#icon-crosshairs");
-}
-
-.m-offer_icon-experience{
-  background-image: url("../images/figures-svg.svg#icon-star");
-}
-
-.m-offer_icon-invoice{
-  background-image: url("../images/figures-svg.svg#icon-invoice");
-}
-
-.m-offer_icon-termination{
-  background-image: url("../images/figures-svg.svg#icon-hand-paper");
-}
-
-.m-offer_icon-warranty{
-  background-image: url("../images/figures-svg.svg#icon-bug");
 }
