@@ -189,25 +189,19 @@
   margin-bottom: 20px;
 
   display: flex;
+  flex-wrap: wrap;
 
   text-transform: uppercase;
   opacity: .6;
 
   > li{
+    margin-left: 30px;
+
+    list-style-type: disc;
+
     &:first-child{
       list-style: none;
-      padding-left: 0;
-      > span{
-        position: static;
-      }
-    }
-
-    list-style: disc inside;
-    padding-left: 10px;
-
-    > span{
-      position: relative;
-      left: -5px;
+      margin-left: 0;
     }
   }
 }
