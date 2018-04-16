@@ -3,31 +3,33 @@
  * --------------------------------------------------
  */
 
-$btn-height: 48px;
-
 .c-btn{
   border-radius: 4px;
-  height: $btn-height;
+  height: 48px;
+  padding: 0 10px;
 
-  display: block;
-
-  font-size: 20px;
-  font-weight: bold;
-  line-height: $btn-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   transition: background-color .15s ease-in-out;
 }
 
 .c-btn-icon{
-  background-repeat:no-repeat;
-  text-indent: 50px;
+  margin-right: 10px;
+  height: 25px;
+  width: 25px;
+}
+
+.c-btn-icon-text{
+  font-size: 20px;
+  font-weight: bold;
 }
 
 // Linkedin
 // ***************************************************
 .c-btn-linkedin{
   $background-color: #007bb6;
-  width: 150px;
 
   color: #fff;
   background-color: $background-color;
@@ -37,16 +39,10 @@ $btn-height: 48px;
   }
 }
 
-.c-btn-icon-linkedin{
-  background-image: url("../images/figures-svg.svg#logo-linkedin");
-  background-position-y: -3px;
-}
-
 // Github
 // ***************************************************
 .c-btn-github{
   $background-color: #ccc;
-  width: 150px;
 
   color: #000;
   background-color: $background-color;
@@ -54,10 +50,6 @@ $btn-height: 48px;
   &:hover{
     background-color: darken($background-color, 5%);
   }
-}
-
-.c-btn-icon-github{
-  background-image: url("../images/figures-svg.svg#logo-git-hub--black");
 }
 
 // Whatsapp
