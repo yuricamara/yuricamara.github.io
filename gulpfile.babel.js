@@ -144,8 +144,7 @@ gulp.task('svg', ()=>{
         namespaceClassnames: false
       }
     }))
-    .pipe(gulp.dest('dist/images'))
-    .pipe(gulp.dest('.tmp/images'))
+    .pipe(gulp.dest('.tmp'))
 });
 
 // Scan your HTML for assets & optimize them
@@ -177,7 +176,7 @@ gulp.task('html', () => {
 gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
 
 gulp.task('rev', () =>
-  gulp.src([".tmp/styles/main.css", ".tmp/scripts/main.min.js"])
+  gulp.src([".tmp/styles/main.css", ".tmp/scripts/main.min.js", ".tmp/figures-svg.svg"])
     .pipe($.rev())
     .pipe(gulp.dest('dist'))
     .pipe($.rev.manifest())
