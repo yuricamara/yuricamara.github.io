@@ -1,0 +1,84 @@
+.m-nav{
+  margin: 0 auto;
+  max-width: 900px;
+
+  position: relative;
+}
+
+.m-nav_navbar-ul {
+  list-style-type:none;
+  position: absolute;
+}
+
+/*Create a horizontal list with spacing*/
+.m-nav_navbar-ul li {
+  display:inline-block;
+  float: left;
+  margin-right: 1px;
+}
+/*Style for menu links*/
+.m-nav_navbar-ul li a {
+  display:block;
+  min-width:140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  background: #2f3036;
+  text-decoration: none;
+}
+/*Hover state for top level links*/
+.m-nav_navbar-ul li:hover a {
+  background: #19c589;
+}
+/*Style for dropdown links*/
+.m-nav_navbar-ul li:hover ul a {
+  background: #f3f3f3;
+  color: #2f3036;
+  height: 40px;
+  line-height: 40px;
+}
+/*Hover state for dropdown links*/
+.m-nav_navbar-ul li:hover ul a:hover {
+  background: #19c589;
+  color: #fff;
+}
+
+.m-nav_show-menu {
+  text-decoration: none;
+  color: #fff;
+  background: #19c589;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+
+/*Hide checkbox*/
+.m-nav_input[type=checkbox]{
+  display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+.m-nav_input[type=checkbox]:checked ~ #menu{
+  display: block;
+}
+
+@media screen and (max-width : 760px){
+  .m-nav_navbar {
+    position: static;
+    display: none;
+  }
+
+  .m-nav_navbar-ul li {
+    margin-bottom: 1px;
+  }
+
+  .m-nav_navbar-ul ul li,
+  .m-nav_navbar-ul li a {
+    width: 100%;
+  }
+
+  .m-nav_show-menu {
+    display:block;
+  }
+}
