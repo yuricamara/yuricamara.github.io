@@ -3,54 +3,11 @@
  * --------------------------------------------------
  */
 
+$desktop-info-width: 65%;
+$desktop-figure-width: 100% - $desktop-info-width;
+
 .m-projects{
   background-color: #f8f9fa;
-}
-
-.m-projects_wrapper .m-project{
-  &:nth-child(1){
-    $bgc: #568dac;
-    background-color: $bgc;
-
-    .m-project_image-inner{
-      background-color: lighten($bgc, 10%);
-    }
-  }
-  &:nth-child(2){
-    $bgc: #e2ac4c;
-    background-color: $bgc;
-
-    .m-project_image-inner{
-      background-color: lighten($bgc, 10%);
-    }
-
-  }
-  &:nth-child(3){
-    $bgc: #f77871;
-    background-color: $bgc;
-
-    .m-project_image-inner{
-      background-color: lighten($bgc, 10%);
-    }
-
-  }
-  &:nth-child(4){
-    $bgc: #a284c2;
-    background-color: $bgc;
-
-    .m-project_image-inner{
-      background-color: lighten($bgc, 10%);
-    }
-
-  }
-  &:nth-child(5){
-    $bgc: #404447;
-    background-color: $bgc;
-
-    .m-project_image-inner{
-      background-color: lighten($bgc, 10%);
-    }
-  }
 }
 
 .m-project{
@@ -62,64 +19,109 @@
 
 .m-project-wrapper{
   display: flex;
-  flex-wrap: wrap;
+}
 
-  justify-content: space-around;
+// Backgrounds
+// ***************************************
+.m-projects_wrapper .m-project{
+  &:nth-child(1){
+    $bgc: #568dac;
+    background-color: $bgc;
+
+    svg[class$="screen"]{
+      background-color: lighten($bgc, 10%);
+    }
+  }
+  &:nth-child(2){
+    $bgc: #e2ac4c;
+    background-color: $bgc;
+
+    svg[class$="screen"]{
+      background-color: lighten($bgc, 10%);
+    }
+
+  }
+  &:nth-child(3){
+    $bgc: #f77871;
+    background-color: $bgc;
+
+    svg[class$="screen"]{
+      background-color: lighten($bgc, 10%);
+    }
+
+  }
+  &:nth-child(4){
+    $bgc: #a284c2;
+    background-color: $bgc;
+
+    svg[class$="screen"]{
+      background-color: lighten($bgc, 10%);
+    }
+
+  }
+  &:nth-child(5){
+    $bgc: #404447;
+    background-color: $bgc;
+
+    svg[class$="screen"]{
+      background-color: lighten($bgc, 10%);
+    }
+  }
 }
 
 // Imagem
 // ***************************************
-.m-project_image{
+.m-project_figure {
   display: none;
 
-  @include for-tablet-landscape-up{
-    height: 200px;
-    width: 200px;
-
+  @include for-tablet-landscape-up {
     display: block;
-
-    position: relative;
-    align-self: center;
+    width: $desktop-figure-width;
   }
 }
 
-.m-project_laptop--black-image{
-  background: transparent url("../images/figures-svg.svg#icon-laptop--black") no-repeat;
+.m-project_figure--wrapper{
+  margin: 0 auto;
+  position: relative;
 }
 
-.m-project_laptop--white-image{
-  background: transparent url("../images/figures-svg.svg#icon-laptop--white") no-repeat;
+.m-project_figure--wrapper-laptop{
+  width: 200px;
+
 }
 
-.m-project_mobile-image{
-  background: transparent url("../images/figures-svg.svg#icon-mobile") no-repeat;
+.m-project_figure--wrapper-phone{
+  width: 90px;
 }
 
-.m-project_laptop-image-inner{
-  height: 77px;
-  width: 136px;
+.m-project_figure-laptop{
+  height: 200px;
+  width: 200px;
+}
+
+.m-project_figure-phone{
+  height: 180px;
+  width: 90px;
+}
+
+.m-project_figure-laptop-screen{
+  padding: 19px 48px;
+  height: 40px;
+  width: 40px;
 
   position: absolute;
   top: 48px;
   left: 32px;
-
-  background: {
-    position: 50% 50%;
-    repeat: no-repeat;
-    size: 45px 45px;
-  };
 }
 
-.m-project_mobile-image-inner{
-  margin: 23px auto 0;
-  height: 145px;
-  width: 82px;
+.m-project_figure-phone-screen{
+  padding: 45px 17px;
+  height: 40px;
+  width: 40px;
 
-  background: {
-    position: 50% 50%;
-    repeat: no-repeat;
-    size: 45px 45px;
-  };
+  position: absolute;
+  top: 21px;
+  left: 8px;
 }
 
 // Informações
@@ -128,7 +130,7 @@
   width: 100%;
 
   @include for-tablet-landscape-up{
-    width: 65%;
+    width: $desktop-info-width;
   }
 }
 
@@ -219,27 +221,5 @@
     border-bottom: $border;
     padding: 10px 15px;
   }
-}
-
-// Logos
-// ******************************
-.m-email-app-project_image-inner{
-  background-image: url("../images/figures-svg.svg#icon-at");
-}
-
-.m-math-project_image-inner{
-  background-image: url("../images/figures-svg.svg#icon-math");
-}
-
-.m-meconheca-web-app-project_image-inner{
-  background-image: url("../images/figures-svg.svg#icon-comment-alt");
-}
-
-.m-meconheca-mobile-app-project_image-inner{
-  background-image: url("../images/figures-svg.svg#icon-comment-alt");
-}
-
-.m-chart-project_image-inner{
-  background-image: url("../images/figures-svg.svg#icon-sitemap");
 }
 

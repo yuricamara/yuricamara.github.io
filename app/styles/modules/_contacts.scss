@@ -9,21 +9,40 @@
   align-items: center;
 }
 
-.m-contact-address,
-.m-contact-email{
+.m-contact{
   margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+.m-contact_icon{
+  height: 30px;
+
+  &--email{
+    width: 30px;
+  }
+
+  &--address{
+    width: 22.5px;
+  }
+}
+
+.m-contact_text{
+  padding-left: 10px;
 
   color: #000;
   font-size: 22px;
   line-height: 1;
-  text-underline-position: under;
+
+  &--email{
+    text-decoration: underline;
+    text-underline-position: under;
+  }
 }
 
-.m-contact-email{
-  text-decoration: underline;
-}
-
-.m-contact-whatsapp{
+// Whatsapp
+.m-contact--whatsapp{
   border-radius: 4px;
   padding: 20px;
   width: 240px;
@@ -55,18 +74,3 @@
   }
 }
 
-// Ícones
-// ******************************
-.m-contact_icon{
-  padding-left: 30px;
-
-  background: 0 0 no-repeat;
-}
-
-.m-contact_icon-address{
-  background-image: url("../images/figures-svg.svg#icon-map-marker-alt");
-}
-
-.m-contact_icon-email{
-  background-image: url("../images/figures-svg.svg#icon-at");
-}
