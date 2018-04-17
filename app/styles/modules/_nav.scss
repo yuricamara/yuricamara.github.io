@@ -1,84 +1,132 @@
 .m-nav{
-  margin: 0 auto;
-  max-width: 900px;
+  width: 100%;
 
-  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  position: fixed;
+
+  @include for-tablet-landscape-up{
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+
+    background:
+      linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+      linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+      linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+      linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+      linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+      linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+  }
 }
 
-.m-nav_navbar-ul {
-  list-style-type:none;
-  position: absolute;
+.m-nav_items {
+  border: 1px solid #fff;
+  padding: 0 $distance-min-lateral;
+  max-width: 220px;
+  width: 100%;
+
+  background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+
+  @include for-tablet-landscape-up{
+    border: none;
+    padding: 0;
+    max-width: 1000px;
+    display: block !important; // CSS Display Inline existente neste elemento.
+  }
 }
 
-/*Create a horizontal list with spacing*/
-.m-nav_navbar-ul li {
-  display:inline-block;
-  float: left;
-  margin-right: 1px;
+.m-nav_items-list {
+  @include for-tablet-landscape-up{
+    display: flex;
+  }
 }
-/*Style for menu links*/
-.m-nav_navbar-ul li a {
-  display:block;
-  min-width:140px;
+
+.m-nav_items-list li {
+  &:first-child{
+    margin-top: 1px;
+  }
+
+  margin-bottom: 1px;
+
+  @include for-tablet-landscape-up{
+    &:first-child{
+      margin-top: 0;
+    }
+
+    margin-bottom: 0;
+    margin-right: 1px;
+    width: 16.666%;
+  }
+}
+
+.m-nav_items-list li a {
   height: 50px;
-  text-align: center;
+
+  display:block;
+
+  color: #fff;
   line-height: 50px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
-  background: #2f3036;
-  text-decoration: none;
-}
-/*Hover state for top level links*/
-.m-nav_navbar-ul li:hover a {
-  background: #19c589;
-}
-/*Style for dropdown links*/
-.m-nav_navbar-ul li:hover ul a {
-  background: #f3f3f3;
-  color: #2f3036;
-  height: 40px;
-  line-height: 40px;
-}
-/*Hover state for dropdown links*/
-.m-nav_navbar-ul li:hover ul a:hover {
-  background: #19c589;
-  color: #fff;
+
+  &::selection {
+    background: transparent;
+  }
+
+  &:hover {
+    background: #52edc7;
+  }
+
+  @include for-tablet-landscape-up{
+    height: $nav-heigth-visible;
+
+    text-align: center;
+  }
 }
 
-.m-nav_show-menu {
-  text-decoration: none;
-  color: #fff;
-  background: #19c589;
-  text-align: center;
-  padding: 10px 0;
-  display: none;
-}
+// Mobile Only
+// *************************************
+.m-nav_mobile-top{
+  padding: 0 $distance-min-lateral;
+  height: $nav-heigth-visible;
+  width: 100%;
 
-/*Hide checkbox*/
-.m-nav_input[type=checkbox]{
-  display: none;
-}
-/*Show menu when invisible checkbox is checked*/
-.m-nav_input[type=checkbox]:checked ~ #menu{
-  display: block;
-}
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-@media screen and (max-width : 760px){
-  .m-nav_navbar {
-    position: static;
+  background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+
+  @include for-tablet-landscape-up{
     display: none;
   }
+}
 
-  .m-nav_navbar-ul li {
-    margin-bottom: 1px;
-  }
+.m-nav_menu-toggle--open{
+  height: 40px;
+  width: 40px;
+}
 
-  .m-nav_navbar-ul ul li,
-  .m-nav_navbar-ul li a {
-    width: 100%;
-  }
-
-  .m-nav_show-menu {
-    display:block;
-  }
+.m-nav_menu-toggle--close{
+  height: 30px;
+  width: 30px;
 }

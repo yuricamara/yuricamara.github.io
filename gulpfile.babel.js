@@ -121,7 +121,7 @@ gulp.task('scripts', () =>
       .pipe($.sourcemaps.write())
       .pipe(gulp.dest('.tmp/scripts'))
       .pipe($.concat('main.min.js'))
-      .pipe($.uglify({preserveComments: 'some'}))
+      // .pipe($.uglify({preserveComments: 'some'}))
       // Output files
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
@@ -209,7 +209,7 @@ gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
 
   gulp.watch(['app/**/*.html'], reload);
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
+  gulp.watch(['app/scripts/**/*.js'], ['scripts', reload]);
   gulp.watch(['app/images/**/*'], reload);
 });
 

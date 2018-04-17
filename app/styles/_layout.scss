@@ -4,11 +4,6 @@
  */
 
 // Conteúdo
-.l-header{
-  @include flex-centralize;
-
-  padding: 50px $distance-min-lateral;
-}
 
 .l-section{
   padding: 100px 0;

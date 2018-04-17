@@ -3,6 +3,16 @@
  * --------------------------------------------------
  */
 
+.m-freelancer{
+  @include flex-centralize;
+
+  padding: 50px $distance-min-lateral;
+
+  @include for-tablet-landscape-up{
+    padding-top: $nav-heigth-visible + 50px;;
+  }
+}
+
 .m-freelancer-photo{
   @include circle(150px);
 

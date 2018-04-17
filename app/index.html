@@ -39,32 +39,43 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
   </head>
   <body>
-    <header class="th-header">
+    <header class="l-header th-header">
       <div class="m-nav">
-        <label for="show-menu" class="m-nav_show-menu">Show Menu</label>
-        <input class="m-nav_input" type="checkbox" id="show-menu" role="button">
-        <nav id="menu" class="m-nav_navbar">
-          <ul class="m-nav_navbar-ul">
+        <div class="m-nav_mobile-top">
+          <div class="m-nav_menu-toggle">
+            <svg id="m-nav_menu-toggle-open" class="m-nav_menu-toggle--open">
+              <use xlink:href="/figures-svg.svg#icon-hamburger"/>
+            </svg>
+            <svg id="m-nav_menu-toggle-close" class="m-nav_menu-toggle--close" style="display: none">
+              <use xlink:href="/figures-svg.svg#icon-cross"/>
+            </svg>
+          </div>
+        </div>
+        <nav id="m-nav_items" class="m-nav_items" style="display: none">
+          <ul class="m-nav_items-list">
             <li>
-              <a href="#">Home</a>
+              <a href="#">Início</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#">Serviços</a>
             </li>
             <li>
-              <a href="#">Portfolio</a>
+              <a href="#">Tecnologias</a>
             </li>
             <li>
-              <a href="#">News</a>
+              <a href="#">Destaques</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#">Projetos Solo</a>
+            </li>
+            <li>
+              <a href="#">Contato</a>
             </li>
           </ul>
         </nav>
       </div>
 
-      <div class="l-header">
+      <div class="m-freelancer">
         <img class="m-freelancer-photo"
           src="/images/photos/yuri-camara.jpg"
           alt="Foto de rosto do Yuri Câmara Fernandes" width="291" height="291"
