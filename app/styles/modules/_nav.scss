@@ -79,6 +79,8 @@
 
   color: #fff;
   line-height: 50px;
+  text-decoration: underline;
+  text-underline-position: under;
 
   &::selection {
     background: transparent;
