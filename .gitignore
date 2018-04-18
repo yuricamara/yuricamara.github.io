@@ -3,6 +3,7 @@
 .sass-cache/
 .tmp
 .vscode/
+.htaccess
 app.yaml
 node_modules
 Thumbs.db
