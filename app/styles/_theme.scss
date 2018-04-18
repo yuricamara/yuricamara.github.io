@@ -20,6 +20,10 @@
 }
 
 .th-section-title{
+  @include for-phone-only{
+    font-size: 38px;
+  }
+
   margin-bottom: 35px;
 
   font-weight: bold;
