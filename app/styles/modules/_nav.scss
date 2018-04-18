@@ -84,11 +84,11 @@
     background: transparent;
   }
 
-  &:hover {
-    background: #52edc7;
-  }
-
   @include for-tablet-landscape-up{
+    &:hover {
+      background: #52edc7;
+    }
+
     height: $nav-heigth-visible;
 
     text-align: center;
