@@ -48,10 +48,7 @@ gulp.task('lint', () =>
 // Optimize images
 gulp.task('images', () =>
   gulp.src(['app/images/**/*', '!app/images/**/*.svg', '!app/images/**/*.html'])
-    .pipe($.cache($.imagemin({
-      progressive: true,
-      interlaced: true
-    })))
+    .pipe($.cache($.imagemin()))
     .pipe(gulp.dest('dist/images'))
     .pipe($.size({title: 'images'}))
 );
