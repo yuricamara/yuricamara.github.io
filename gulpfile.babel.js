@@ -147,14 +147,22 @@ gulp.task('svg', ()=>{
     .pipe(gulp.dest('.tmp'))
 });
 
-// Scan your HTML for assets & optimize them
-gulp.task('html', () => {
+gulp.task('rev', () =>
+  gulp.src([".tmp/styles/main.css", ".tmp/scripts/main.min.js", ".tmp/figures-svg.svg"])
+    .pipe($.rev())
+    .pipe(gulp.dest('dist'))
+    .pipe($.rev.manifest())
+    .pipe(gulp.dest('dist'))
+);
+
+gulp.task('html', ['rev'], () => {
+  const manifest = gulp.src("./dist/rev-manifest.json");
+
   return gulp.src('app/index.html')
     .pipe($.useref({
       searchPath: '{.tmp,app}',
       noAssets: true
     }))
-
     // Minify any HTML
     .pipe($.if('*.html', $.htmlmin({
       removeComments: true,
@@ -169,27 +177,16 @@ gulp.task('html', () => {
     })))
     // Output files
     .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
-    .pipe(gulp.dest('dist'));
+    .pipe($.revReplace({manifest: manifest}))
+    .pipe($.stringReplace('/image/photos/', '/dist/images/photos/', {
+      logs:{ notReplaced :true }
+    }))
+    .pipe($.stringReplace('/figures-svg-', '/dist/figures-svg-'))
+    .pipe(gulp.dest("./"));
 });
 
 // Clean output directory
 gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
-
-gulp.task('rev', () =>
-  gulp.src([".tmp/styles/main.css", ".tmp/scripts/main.min.js", ".tmp/figures-svg.svg"])
-    .pipe($.rev())
-    .pipe(gulp.dest('dist'))
-    .pipe($.rev.manifest())
-    .pipe(gulp.dest('dist'))
-);
-
-gulp.task("revreplace", ["rev"], () => {
-  const manifest = gulp.src("./dist/rev-manifest.json");
-
-  return gulp.src("dist/index.html")
-    .pipe($.revReplace({manifest: manifest}))
-    .pipe(gulp.dest("dist"));
-});
 
 // Watch files for changes & reload
 gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
@@ -224,7 +221,7 @@ gulp.task('serve:dist', ['default'], () =>
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
-    server: 'dist',
+    server: './',
     port: 3001
   })
 );
@@ -232,8 +229,8 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['html', 'scripts', 'images', 'copy', 'svg'],
-    'revreplace',
+    ['scripts', 'images', 'copy', 'svg'],
+    'html',
     cb
   )
 );
