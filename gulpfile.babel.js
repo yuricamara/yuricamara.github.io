@@ -178,7 +178,7 @@ gulp.task('html', ['rev'], () => {
     // Output files
     .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
     .pipe($.revReplace({manifest: manifest}))
-    .pipe($.stringReplace('/image/photos/', '/dist/images/photos/', {
+    .pipe($.stringReplace('/images/photos/', '/dist/images/photos/', {
       logs:{ notReplaced :true }
     }))
     .pipe($.stringReplace('/figures-svg-', '/dist/figures-svg-'))
