@@ -24,20 +24,16 @@
 // You can read more about the new JavaScript features here:
 // https://babeljs.io/docs/learn-es2015/
 
-import path from 'path';
 import gulp from 'gulp';
 import del from 'del';
 import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
-import swPrecache from 'sw-precache';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import {output as pagespeed} from 'psi';
-import pkg from './package.json';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-// Lint JavaScript
 gulp.task('lint', () =>
   gulp.src(['app/scripts/**/*.js','!node_modules/**'])
     .pipe($.eslint())
@@ -45,7 +41,6 @@ gulp.task('lint', () =>
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
 );
 
-// Optimize images
 gulp.task('images', () =>
   gulp.src(['app/images/**/*', '!app/images/**/*.svg', '!app/images/**/*.html'])
     .pipe($.cache($.imagemin()))
@@ -58,7 +53,8 @@ gulp.task('copy', () => {
   gulp.src([
     'app/*',
     'app/404.html',
-    '!app/index.html'
+    '!app/index.html',
+    '!app/.htaccess'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'))
@@ -68,21 +64,7 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist/projetos-solo'));
 });
 
-// Compile and automatically prefix stylesheets
 gulp.task('styles', () => {
-  const AUTOPREFIXER_BROWSERS = [
-    'ie >= 10',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4.4',
-    'bb >= 10'
-  ];
-
-  // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     'app/styles/**/*.scss',
     'app/styles/**/*.css'
@@ -92,7 +74,6 @@ gulp.task('styles', () => {
     .pipe($.sass({
       precision: 10
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(gulp.dest('.tmp'))
     // Concatenate and minify styles
     .pipe($.if('*.css', $.cssnano()))
@@ -109,7 +90,7 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './app/scripts/main.js', './app/scripts/ie/ie.js'
+      './app/scripts/ie/ie.js', './app/scripts/main.js'
       // Other scripts
     ])
       .pipe($.newer('.tmp/scripts'))
@@ -182,10 +163,8 @@ gulp.task('html', ['rev'], () => {
     .pipe(gulp.dest("./"));
 });
 
-// Clean output directory
 gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
 
-// Watch files for changes & reload
 gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
   browserSync({
     notify: false,
@@ -207,7 +186,6 @@ gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
   gulp.watch(['app/images/**/*'], reload);
 });
 
-// Build and serve the output from the dist build
 gulp.task('serve:dist', ['default'], () =>
   browserSync({
     notify: false,
@@ -232,12 +210,8 @@ gulp.task('default', ['clean'], cb =>
   )
 );
 
-// Run PageSpeed Insights
 gulp.task('pagespeed', cb =>
   pagespeed('yuricamara.com.br', {
     strategy: 'mobile'
-    // By default we use the PageSpeed Insights free (no API key) tier.
-    // Use a Google Developer API key if you have one: http://goo.gl/RkN0vE
-    // key: 'YOUR_API_KEY'
   }, cb)
 );
