@@ -90,18 +90,18 @@ gulp.task('styles', () => {
     'app/styles/**/*.scss',
     'app/styles/**/*.css'
   ])
-    .pipe($.newer('.tmp/styles'))
+    .pipe($.newer('.tmp'))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       precision: 10
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-    .pipe(gulp.dest('.tmp/styles'))
+    .pipe(gulp.dest('.tmp'))
     // Concatenate and minify styles
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('.tmp/styles'));
+    .pipe(gulp.dest('.tmp'));
 });
 
 // Concatenate and minify JavaScript. Optionally transpiles ES2015 code to ES5.
@@ -148,7 +148,7 @@ gulp.task('svg', ()=>{
 });
 
 gulp.task('rev', () =>
-  gulp.src([".tmp/styles/main.css", ".tmp/scripts/main.min.js", ".tmp/figures-svg.svg"])
+  gulp.src([".tmp/main.css", ".tmp/scripts/main.min.js", ".tmp/figures-svg.svg"])
     .pipe($.rev())
     .pipe(gulp.dest('dist'))
     .pipe($.rev.manifest())

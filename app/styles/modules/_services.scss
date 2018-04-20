@@ -34,14 +34,14 @@
     align-items: center;
     justify-content: center;
 
-    background-color: darken($border-color, 5%);;
+    background-color: darken($border-color, 5%);
   }
 
   &_logo--mobile{
     height: 150px;
     width: 150px;
 
-    background: transparent url(../images/figures/android-ios.png) 0 15px no-repeat;
+    background: transparent url(./images/figures/android-ios.png) 0 15px no-repeat;
     background-size: 100%;
   }
 
@@ -49,7 +49,7 @@
     height: 115px;
     width: 100px;
 
-    background: transparent url(../images/figures/web-application.png) 0 0 no-repeat;
+    background: transparent url(./images/figures/web-application.png) 0 0 no-repeat;
     background-size: 100%;
   }
 }
