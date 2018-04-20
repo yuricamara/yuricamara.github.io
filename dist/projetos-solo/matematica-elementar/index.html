@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+      <meta charset="UTF-8"/>
+      <meta name="description" content="Aplicação construída com Javascript puro, sem uso de framework ou biblioteca."/>
+      <link rel="stylesheet" href="./assets/styles/main.css"/>
+      <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Pacifico'/>
+      <!--[if lt IE 9]>
+            <script src="./assets/browsers/IE/html5shiv.min.js"></script>
+      <![endif]-->
+      <title>Matemática Elementar - Construção e resolução de exercícios</title>
+</head>
+<body>
+	<noscript>
+			<style type="text/css">
+				.noscript-aviso {
+					color: #F01A1A;
+					font-size: 16px;
+					text-indent: 12px;
+					font-weight: bold;
+				}
+			</style>
+		<p class="noscript-aviso">O JavaScript tem que ser ativado para que você possa usar o Math Exercise Builder. Porém, aparentemente, o JavaScript está desativado ou é incompatível com o seu navegador. Ative o JavaScript alterando as opções do navegador e <a href="/projetos/math/index.htm">tente novamente</a>.</p>
+	</noscript>
+	<div class="wrapper">
+		<header class="header-bg">
+			<div class="header-fg">
+                <h1 class="title">
+                      Matemática Elementar<span class="subtitle">Construção e resolução de exercícios</span>
+                </h1>
+			</div><!--header-fg-->
+		</header><!--header-bg-->
+
+		<div class="content-A">
+			<div class="criarExercicios-A">
+				<h3 class="criarExercicios-A-titulo">
+					<span class="numero-questoes-A">3</span>Crie os Exercícios
+				</h3>
+				<input type="button" id="btnExercicios" class="btnExercicios" value="Novo Exercicio" tabindex="3"/>
+			</div><!--botao-A-->
+			<div class="operacao-A">
+				<h3 class="operacao-A-titulo">
+					<span class="numero-questoes-A">1</span>Escolha a Operação
+				</h3>
+				<div class="radios">
+					<input id="opr00" name="operacao" type="radio" value="+" tabindex="1" checked="checked" />
+                    <label for="opr00">Soma</label><br />
+				</div>
+				<div class="radios">
+					<input id="opr01" name="operacao" type="radio" value="-"/>
+                    <label for="opr01">Subtração</label><br />
+				</div>
+				<div class="radios">
+					<input id="opr02" name="operacao" type="radio" value="X"/>
+                    <label for="opr02">Multiplicação</label><br />
+				</div>
+				<div class="radios">
+					<input id="opr03" name="operacao" type="radio" value="/"/>
+                    <label for="opr03">Divisão</label><br />
+				</div>
+			</div><!--operacao-A-->
+			<div class="questoes-A">
+				<h3 class="questoes-A-titulo">
+					<span class="numero-questoes-A">2</span>Defina o Número de Questões
+				</h3>
+				<select name="nquestoes" id="nquest" class="num-questoes" tabindex="2">
+					<option selected="selected">10</option>
+					<option>20</option>
+					<option>30</option>
+				</select>
+			</div><!--questoes-A-->
+		</div><!--content-A-->
+		<div class="divisoria-1">
+		</div>
+		<div class="divisoria-2">
+		</div>
+		<div id="content-B" class="content-B">
+			<!--DOM-->
+		</div><!--content-B-->
+		<div id="content-B-anexo" class="resultado">
+			<input type="submit" id="btnRespostas" class="btnRespostas" value="Respostas" />
+			<p id="resultado-texto" class="resultado-texto">
+				<span class="resultado-destaque">Acertos:</span>
+				<span id="resultado-acertos"></span>
+				<br/>
+				<span class="resultado-destaque">Erros:</span>
+				<span id="resultado-erros"></span>
+				<br/>
+				<span class="resultado-destaque">Desempenho:</span>
+				<span id="resultado-desempenho"></span>
+			</p>
+		</div><!-- content-B-anexo -->
+		<div class="footer-bg">
+		</div><!--footer-bg-->
+	</div><!--wrapper-->
+	<script type="text/javascript" src="assets/scripts.js"></script>
+</body>
+</html>

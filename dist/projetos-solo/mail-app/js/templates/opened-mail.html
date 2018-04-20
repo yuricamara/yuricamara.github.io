@@ -1,0 +1,140 @@
+<article id="mail-({%=mail_number%})" class="m-mail-opened">
+
+  <!-- Acessibility reference -->
+  <h2 class="m-mail-opened_title">Opened email</h2>
+
+  <div class="m-mail-opened_header">
+    <div class="m-mail-opened_header_top">
+      <div class="m-mail-opened_header_top_left">
+        <svg class="m-mail-opened_header_icon-star" data-icon="star" version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" aria-labelledby="svgicon_star-title-({%=mail_number%})-opened svgicon_star-desc-({%=mail_number%})-opened">
+          <title id="svgicon_star-title-({%=mail_number%})-opened">Star icon</title>
+          <desc id="svgicon_star-desc-({%=mail_number%})-opened">Click to set or unset this e-mail as favourite</desc>
+          <a xlink:href="#">
+            <rect fill="transparent" width="15" height="15"></rect>
+            <use xlink:href="#star-icon" />
+          </a>
+        </svg>
+        <p class="m-mail-opened_header_title">({%=subject%})</p>
+      </div>
+      <div class="m-mail-opened_header_top_right">
+        <svg class="m-mail-opened_header_icon-answer" data-icon="answer" version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" aria-labelledby="svgicon_answer-title-({%=mail_number%})-opened svgicon_answer-desc-({%=mail_number%})-opened">
+          <title id="svgicon_answer-title-({%=mail_number%})-opened">Reply icon</title>
+          <desc id="svgicon_answer-desc-({%=mail_number%})-opened">Click to reply this e-mail</desc>
+          <use xlink:href="#undo-icon"></use>
+        </svg>
+        <svg class="m-mail-opened_header_icon-trash" data-icon="trash" version="1.1" xmlns="http://www.w3.org/2000/svg" width="13" height="12" aria-labelledby="svgicon_trash-title-({%=mail_number%})-opened svgicon_trash-desc-({%=mail_number%})-opened">
+          <title id="svgicon_trash-title-({%=mail_number%})-opened">Trash icon</title>
+          <desc id="svgicon_trash-desc-({%=mail_number%})-opened">Click to delete this e-mail</desc>
+          <use xlink:href="#trash-icon"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="m-mail-opened_header_bottom">
+      <div class="m-mail-opened_header_bottom_left">
+        <img class="m-mail-opened_header_sender-picture" src="images/contacts/({%=sender_name%})-desktop.jpg" srcset="images/contacts/({%=sender_name%})-desktop.jpg 1x, images/contacts/({%=sender_name%})-desktop@2x.jpg 2x"  width="35" height="35" alt="Mily´s photo">
+
+        <p class="m-mail-opened_header_exchange">
+          <strong class="m-mail-opened_header_exchange-sender">({%=sender_name%})</strong>to me
+        </p>
+
+        <div class="m-mail-opened_header_menu">
+          <button class="m-mail-opened_header_menu-btn" type="button" id="menu_main-actions-opened" aria-expanded="false">
+            <span class="m-mail-opened_header_menu-btn-arrow-down m-btn-arrow-down" >
+              <svg data-icon="arrow-down" version="1.1" xmlns="http://www.w3.org/2000/svg" width="17" height="13" aria-labelledby="svgicon_arrow-down-title-({%=mail_number%})-opened svgicon_arrow-down-desc-({%=mail_number%})-opened">
+                <title id="svgicon_arrow-down-title-({%=mail_number%})-opened">Menu icon</title>
+                <desc id="svgicon_arrow-down-desc-({%=mail_number%})-opened">Click to choose an item</desc>
+                <use xlink:href="#arrow-down-icon" />
+              </svg>
+            </span>
+          </button>
+          <ul hidden role="menu" aria-labelledby="menu_main-actions">
+            <li role="presentation">
+              <a role="menuitem">
+                Compose Mail
+              </a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem">
+                Inbox
+              </a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem">
+                Sent
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="m-mail-opened_header_bottom_right">
+        <svg class="m-mail-opened_header_icon-clips" data-icon="clips" version="1.1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" aria-labelledby="svgicon_clips-title-({%=mail_number%})-opened svgicon_clips-desc-({%=mail_number%})-opened">
+          <title id="svgicon_clips-title-({%=mail_number%})-opened">Clips icon</title>
+          <desc id="svgicon_clips-desc-({%=mail_number%})-opened">This e-mail has attachments</desc>
+          <use xlink:href="#clips-icon" />
+        </svg>
+
+        <p class="m-mail-opened_header_attachments-qty">(2)</p>
+
+        <time class="m-mail-opened_header_date" datetime="2014-09-20T23:30">
+          Today, ({%=month_string%}) ({%=day%}), ({%=time%})
+        </time>
+      </div>
+    </div>
+  </div>
+
+  <div class="m-mail-opened_body">
+    <p class="m-mail-opened_body_mail-content">
+      ({%=content_long%})
+    </p>
+  </div>
+
+  <div class="m-mail-opened_footer">
+    <div class="m-mail-opened_footer-attachments">
+      <p class="m-mail-opened_footer-attachments_qty">
+        <strong>Attachments</strong> (2 files, 13.6 <abbr title="Kilobyte">KB</abbr>)
+      </p>
+
+      <!-- Fst Attachment-->
+      <div class="m-mail-opened_footer-attachments_item">
+        <div class="m-mail-opened_footer-attachments_item-left">
+          <abbr class="m-mail-opened_footer-attachments_item-extension" title="HyperText Markup Language">HTML</abbr>
+          <p class="m-mail-opened_footer-attachments_item-desc">
+            <strong>index.html</strong> (3.4 <abbr class="m-mail-opened_footer-attachments_item-desc-" title="Kilobyte">KB</abbr>)
+          </p>
+        </div>
+        <ul class="m-mail-opened_footer-attachments_options">
+          <li class="m-mail-opened_footer-attachments_options-share"><a href="#">Share</a></li>
+          <li class="m-mail-opened_footer-attachments_options-view"><a href="#">View</a></li>
+          <li class="m-mail-opened_footer-attachments_options-download"><a download>Download</a></li>
+        </ul>
+      </div>
+
+      <!-- Snd Attachment-->
+      <div class="m-mail-opened_footer-attachments_item">
+        <div class="m-mail-opened_footer-attachments_item-left">
+          <abbr class="m-mail-opened_footer-attachments_item-extension" title="HyperText Markup Language">CSS</abbr>
+          <p class="m-mail-opened_footer-attachments_item-desc">
+            <strong>style.html</strong> (10.2 <abbr class="m-mail-opened_footer-attachments_item-desc-" title="Kilobyte">KB</abbr>)
+          </p>
+        </div>
+        <ul class="m-mail-opened_footer-attachments_options">
+          <li class="m-mail-opened_footer-attachments_options-share"><a href="#">Share</a></li>
+          <li class="m-mail-opened_footer-attachments_options-view"><a href="#">View</a></li>
+          <li class="m-mail-opened_footer-attachments_options-download"><a download>Download</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="m-mail-opened_footer-actions">
+      <button class="m-mail-opened_footer-actions_btn-reply m-btn-text" type="button">
+        <span class="m-mail-opened_footer-actions_btn-reply-content">
+          <svg class="m-mail-opened_footer-actions_icon-reply" data-icon="reply" version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+            <use xlink:href="#undo-icon"></use>
+          </svg>
+          <span class="m-mail-opened_footer-actions_btn-reply-text">Reply</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</article>
