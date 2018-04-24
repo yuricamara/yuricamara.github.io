@@ -21,11 +21,12 @@
 
 .th-section-title{
   @include for-phone-only{
-    font-size: 38px;
+    font-size: 32px;
   }
 
   margin-bottom: 35px;
 
+  font-size: 38px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
