@@ -10,6 +10,7 @@
 }
 
 .m-service{
+  height: 275px;
   margin: 0 15px;
 
   display: flex;
@@ -26,7 +27,7 @@
     $border-color: #f7f7f7;
 
     border: 7px solid $border-color;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 
     display: flex;
     align-items: center;
