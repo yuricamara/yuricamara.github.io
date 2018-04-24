@@ -6,7 +6,7 @@
 .m-freelancer{
   @include flex-centralize;
 
-  padding: $nav-heigth-visible + 50px $distance-min-lateral 50px;
+  padding: $nav-heigth-visible + 50px $distance-min-lateral 60px;
 }
 
 .m-freelancer-photo{
@@ -34,7 +34,6 @@
   }
 
   &_description{
-    margin-bottom: 50px;
     max-width: 540px;
 
     font-family: $font-stack-secundary;
@@ -43,13 +42,5 @@
     @include for-tablet-portrait-up{
       font-size: 22px;
     }
-  }
-}
-
-.m-freelancer-buttons{
-  display: flex;
-
-  .c-btn:first-child{
-    margin-right: 20px;
   }
 }
