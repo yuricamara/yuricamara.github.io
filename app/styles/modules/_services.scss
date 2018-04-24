@@ -10,15 +10,13 @@
 }
 
 .m-service{
-  margin: 15px;
+  margin: 0 15px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &_title{
-    margin-bottom: 25px;
-
     text-align: center;
   }
 
