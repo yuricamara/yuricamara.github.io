@@ -133,13 +133,16 @@ gulp.task('html', ['rev'], () => {
       removeStyleLinkTypeAttributes: true,
       removeOptionalTags: true
     })))
+    // Substitui href após minificação
+    .pipe($.stringReplace(
+      new RegExp('href=\/[^\/"]+','gi'),
+      hrefMatched => {
+        return hrefMatched.replace(/href=/, 'href=/dist');
+      }
+    ))
     // Output files
     .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
     .pipe($.revReplace({manifest: manifest}))
-    .pipe($.stringReplace('/images/photos/', '/dist/images/photos/', {
-      logs:{ notReplaced :true }
-    }))
-    .pipe($.stringReplace('/figures-svg-', '/dist/figures-svg-'))
     .pipe(gulp.dest("./"));
 });
 
