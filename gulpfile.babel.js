@@ -1,9 +1,5 @@
 'use strict';
 
-// Babel handles this without us having to do anything. It just works.
-// You can read more about the new JavaScript features here:
-// https://babeljs.io/docs/learn-es2015/
-
 import gulp from 'gulp';
 import del from 'del';
 import runSequence from 'run-sequence';
@@ -21,18 +17,16 @@ gulp.task('lint', () =>
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
 );
 
-gulp.task('images', () =>
+gulp.task('images:dist', () =>
   gulp.src(['app/images/**/*', '!app/images/**/*.svg', '!app/images/**/*.html'])
     .pipe($.cache($.imagemin()))
     .pipe(gulp.dest('dist/images'))
     .pipe($.size({title: 'images'}))
 );
 
-// Copy all files at the root level (app)
-gulp.task('copy', () => {
+gulp.task('copy:dist', () => {
   gulp.src([
-    'app/*',
-    'app/404.html',
+    'app/*.*',
     '!app/index.html',
     '!app/.htaccess'
   ], {
@@ -40,8 +34,8 @@ gulp.task('copy', () => {
   }).pipe(gulp.dest('dist'))
     .pipe($.size({title: 'copy'}));
 
-  gulp.src('app/projetos-solo/**/*', { base: 'app/projetos-solo' })
-    .pipe(gulp.dest('dist/projetos-solo'));
+  gulp.src('app/scripts/polyfills/*.js', { base: 'app/scripts' })
+    .pipe(gulp.dest('dist/scripts'));
 });
 
 gulp.task('styles', () => {
@@ -62,15 +56,12 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('.tmp'));
 });
 
-// Concatenate and minify JavaScript. Optionally transpiles ES2015 code to ES5.
-// to enable ES2015 support remove the line `"only": "gulpfile.babel.js",` in the
-// `.babelrc` file.
 gulp.task('scripts', () =>
     gulp.src([
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './app/scripts/ie/ie.js', './app/scripts/main.js'
+      './app/scripts/*.js'
       // Other scripts
     ])
       .pipe($.newer('.tmp/scripts'))
@@ -113,7 +104,7 @@ gulp.task('rev', () =>
     .pipe(gulp.dest('dist'))
 );
 
-gulp.task('html', ['rev'], () => {
+gulp.task('html:dist', ['rev'], () => {
   const manifest = gulp.src("./dist/rev-manifest.json");
 
   return gulp.src('app/index.html')
@@ -187,8 +178,8 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['scripts', 'images', 'copy', 'svg'],
-    'html',
+    ['scripts', 'images:dist', 'copy:dist', 'svg'],
+    'html:dist',
     cb
   )
 );
