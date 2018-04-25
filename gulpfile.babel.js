@@ -133,16 +133,16 @@ gulp.task('html', ['rev'], () => {
       removeStyleLinkTypeAttributes: true,
       removeOptionalTags: true
     })))
-    // Substitui href após minificação
-    .pipe($.stringReplace(
-      new RegExp('href=\/[^\/"]+','gi'),
-      hrefMatched => {
-        return hrefMatched.replace(/href=/, 'href=/dist');
-      }
-    ))
     // Output files
     .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
     .pipe($.revReplace({manifest: manifest}))
+    // Substitui href após minificação e revReplace
+    .pipe($.stringReplace(
+      new RegExp('(href|src)=\/[^\/\s]+','gi'),
+      hrefMatched => {
+        return hrefMatched.replace(/=/, '=/dist');
+      }
+    ))
     .pipe(gulp.dest("./"));
 });
 
