@@ -86,12 +86,17 @@
   }
 }
 
-.m-nav_menu-toggle--open{
-  height: 40px;
-  width: 40px;
+.m-nav_menu-toggle{
+  cursor: pointer;
+  &--open{
+    height: 40px;
+    width: 40px;
+  }
+
+  &--close{
+    height: 30px;
+    width: 30px;
+  }
 }
 
-.m-nav_menu-toggle--close{
-  height: 30px;
-  width: 30px;
-}
+
