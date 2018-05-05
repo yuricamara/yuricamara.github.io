@@ -8,6 +8,9 @@
   max-width: 800px;
 }
 
-.m-about_list > li{
-  list-style-type: circle;
+.m-about_list {
+  padding: 0 $distance-min-lateral;
+  > li{
+    list-style-type: circle;
+  }
 }
