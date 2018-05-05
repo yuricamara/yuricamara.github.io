@@ -32,15 +32,15 @@
       font-size: 48px;
     }
   }
+}
 
-  &_description{
-    max-width: 540px;
+.m-freelancer-positioning{
+  max-width: 800px;
 
-    font-family: $font-stack-secundary;
-    font-size: 18px;
-    line-height: 36px;
-    @include for-tablet-portrait-up{
-      font-size: 22px;
-    }
+  font-family: $font-stack-secundary;
+  font-size: 18px;
+  line-height: 36px;
+  @include for-tablet-portrait-up{
+    font-size: 22px;
   }
 }
