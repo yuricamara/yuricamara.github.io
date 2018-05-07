@@ -1,10 +1,11 @@
 {
-  // Toggle Menu
-  // ******************************
+  const d = document;
 
-  const $navItems = document.getElementById('m-nav_items');
-  const $menuToggleOpen = document.getElementById('m-nav_menu-toggle-open');
-  const $menuToggleClose = document.getElementById('m-nav_menu-toggle-close');
+  // Nav
+  // ******************************
+  const $navItems = d.getElementById('m-nav_items');
+  const $menuToggleOpen = d.getElementById('m-nav_menu-toggle-open');
+  const $menuToggleClose = d.getElementById('m-nav_menu-toggle-close');
 
   let isNavItemsVisible = false;
 
@@ -22,11 +23,26 @@
     isNavItemsVisible = false;
   };
 
+  const onNavItemsClick = e => {
+    hideNavItems();
+
+    const navElement = e.target || e.srcElement;
+    const goToElement = navElement.id.replace('nav', 'm');
+
+    d.getElementById(goToElement).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
+  // Btn Menu Toggle
   $menuToggleOpen.addEventListener('click', showNavItems, false);
-
   $menuToggleClose.addEventListener('click', hideNavItems, false);
-  $navItems.addEventListener('click', hideNavItems, false);
 
+  // Nav Items
+  $navItems.addEventListener('click', onNavItemsClick, false);
+
+  //On scroll
   window.addEventListener('scroll', () => {
     if(isNavItemsVisible){
       hideNavItems();

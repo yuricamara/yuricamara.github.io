@@ -63,7 +63,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
   </head>
   <body>
-    <header class="l-header th-header">
+    <header id="m-header" class="l-header th-header">
       <div class="m-nav">
         <div class="m-nav_mobile-top">
           <div class="m-nav_menu-toggle">
@@ -84,17 +84,17 @@
         <nav id="m-nav_items" class="m-nav_items" style="display: none">
           <ul class="m-nav_items-list">
             <li>
-              <a href="#inicio">
+              <a id="nav-header">
                 Início
               </a>
             </li>
             <li>
-              <a href="#sobre">
+              <a id="nav-about">
                 Sobre
               </a>
             </li>
             <li>
-              <a href="#servicos">
+              <a id="nav-services">
                 Serviços
               </a>
             </li>
@@ -122,7 +122,7 @@
         </nav>
       </div>
 
-      <div id="inicio" class="m-freelancer">
+      <div class="m-freelancer">
         <img class="m-freelancer-photo"
           src="/images/photos/yuri-camara.jpg"
           alt="Foto de rosto do Yuri Câmara" width="291" height="291"
@@ -139,7 +139,7 @@
       </div>
     </header>
     <main class="l-main">
-      <section id="sobre" class="m-about">
+      <section id="m-about" class="m-about">
         <div class="l-section l-centralize">
           <h1 class="th-section-title">
             Sobre
@@ -157,7 +157,7 @@
           </div>
         </div>
       </section>
-      <section id="servicos" class="m-services">
+      <section id="m-services" class="m-services">
         <div class="l-section l-centralize">
           <h1 class="th-section-title">
             Serviços
@@ -817,6 +817,7 @@
     </footer>
 
     <!-- build:js /main.min.js -->
+    <script src="/scripts/polyfills/smoothscroll.min.js"></script>
     <script src="/scripts/ie.js"></script>
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
