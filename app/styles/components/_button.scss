@@ -14,32 +14,24 @@
 
   box-shadow: 0 3px 3px 0 rgba(0,0,0,.1);
   transition: background-color .15s ease-in-out;
-
-  &.c-btn--circle{
-    border-radius: 50%;
-    padding: 0;
-    height: 64px;
-    width: 64px;
-
-    justify-content: center;
-  }
 }
 
 .c-btn-icon{
-  svg{
-    height: 30px;
-    width: 30px;
-  }
+  margin-right: 10px;
+  height: 25px;
+  width: 25px;
 }
 
 .c-btn-icon-text{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 // Linkedin
 // ***************************************************
 .c-btn-linkedin{
+  margin-right: 25px;
+
   $background-color: #007bb6;
 
   color: #fff;
