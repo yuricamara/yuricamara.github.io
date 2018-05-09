@@ -149,13 +149,14 @@ $desktop-figure-width: 100% - $desktop-info-width;
 .m-project_info-top_title{
   &:hover{
     color: inherit;
-    text-decoration: underline;
   }
+
+  color: white;
+  text-decoration: underline;
 
   > h2{
     padding-right: 15px;
 
-    color: white;
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
@@ -181,6 +182,26 @@ $desktop-figure-width: 100% - $desktop-info-width;
 .m-project_link-icon{
   height: 30px;
   width: 30px;
+}
+
+
+// Github
+// ***************************************
+.m-project_github{
+  display: flex;
+  align-items: center;
+}
+
+.m-project_github-icon{
+  height: 30px;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.m-project_github-text{
+  color: #fff;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 // Tags
