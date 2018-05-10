@@ -16,6 +16,12 @@
   margin-top: 20px;
 }
 
+.m-blog_post-icon{
+  margin-left: 20px;
+  height: 25px;
+  width: 25px;
+}
+
 .m-blog_content{
   margin: 0 auto;
   max-width: 700px;
@@ -52,6 +58,13 @@
 }
 
 .m-blog_post-title{
+  span{
+    width: 95%;
+  }
+
+  display: flex;
+  justify-content: space-between;
+
   font-size: 24px;
   font-weight: bold;
 }
