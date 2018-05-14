@@ -153,18 +153,18 @@ $desktop-figure-width: 100% - $desktop-info-width;
 
   color: white;
   text-decoration: underline;
+}
 
-  > h2{
-    padding-right: 15px;
+.m-project_info-top_title-text{
+  padding-right: 15px;
 
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-underline-position: under;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-underline-position: under;
 
-    @include for-tablet-landscape-up{
-      font-size: 28px;
-    }
+  @include for-tablet-landscape-up{
+    font-size: 28px;
   }
 }
 
@@ -184,6 +184,11 @@ $desktop-figure-width: 100% - $desktop-info-width;
   width: 30px;
 }
 
+.m-project_link-text{
+  color: #fff;
+  text-decoration: underline;
+  text-underline-position: under;
+}
 
 // Github
 // ***************************************
@@ -198,11 +203,6 @@ $desktop-figure-width: 100% - $desktop-info-width;
   width: 30px;
 }
 
-.m-project_github-text{
-  color: #fff;
-  text-decoration: underline;
-  text-underline-position: under;
-}
 
 // Tags
 // ***************************************
