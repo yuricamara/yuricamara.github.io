@@ -3,7 +3,7 @@
  * --------------------------------------------------
  */
 
-$desktop-info-width: 65%;
+$desktop-info-width: 70%;
 $desktop-figure-width: 100% - $desktop-info-width;
 
 .m-projects{
@@ -98,42 +98,40 @@ $desktop-figure-width: 100% - $desktop-info-width;
 }
 
 .m-project_figure--wrapper-laptop{
-  width: 200px;
-
+  width: 130px;
 }
 
 .m-project_figure--wrapper-phone{
-  width: 90px;
+  width: 65px;
 }
 
 .m-project_figure-laptop{
-  height: 200px;
-  width: 200px;
+  height: 130px;
+  width: 130px;
 }
 
 .m-project_figure-phone{
-  height: 180px;
-  width: 90px;
+  height: 130px;
+  width: 65px;
 }
 
 .m-project_figure-laptop-screen{
-  padding: 19px 48px;
-  height: 40px;
-  width: 40px;
-
+  padding: 11px 30px;
+  height: 28px;
+  width: 28px;
   position: absolute;
-  top: 48px;
-  left: 32px;
+  top: 31px;
+  left: 21px;
 }
 
 .m-project_figure-phone-screen{
-  padding: 45px 17px;
-  height: 40px;
-  width: 40px;
+  padding: 32px 11px;
+  height: 30px;
+  width: 30px;
 
   position: absolute;
-  top: 21px;
-  left: 8px;
+  top: 15px;
+  left: 7px;
 }
 
 // Informações
