@@ -71,6 +71,14 @@ $desktop-figure-width: 100% - $desktop-info-width;
       background-color: lighten($bgc, 10%);
     }
   }
+  &:nth-child(6){
+    $bgc: #CCC;
+    background-color: $bgc;
+
+    svg[class$="screen"]{
+      background-color: lighten($bgc, 10%);
+    }
+  }
 }
 
 // Imagem
