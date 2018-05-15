@@ -1,6 +1,6 @@
 /**
  * Projects Module
- * --------------------------------------------------
+ * -------------------------------------------------
  */
 
 $desktop-info-width: 70%;
@@ -89,6 +89,14 @@ $desktop-figure-width: 100% - $desktop-info-width;
   @include for-tablet-landscape-up {
     display: block;
     width: $desktop-figure-width;
+  }
+}
+
+.m-project_figure--laptop-and-phone{
+  .m-project_figure--wrapper-phone{
+    position: relative;
+    bottom: 60px;
+    left: 10px;
   }
 }
 
