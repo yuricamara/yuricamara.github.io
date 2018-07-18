@@ -3,14 +3,27 @@
  * --------------------------------------------------
  */
 
+.m-about{
+  color: #000;
+  background-color: #FFF;
+}
+
 .m-about_content{
   margin: 0 auto;
   max-width: 750px;
+
+  &-text{
+    font-size: 24px;
+  }
 }
 
-.m-about_list {
-  padding: 0 30px;
-  > li{
-    list-style-type: circle;
-  }
+.m-about-freelancer-photo{
+  @include circle(150px);
+
+  border: 4px solid #fff;
+  margin: 0 auto;
+
+  display: block;
+
+  box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15);
 }

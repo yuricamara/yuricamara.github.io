@@ -7,15 +7,14 @@ $desktop-info-width: 70%;
 $desktop-figure-width: 100% - $desktop-info-width;
 
 .m-projects{
-  background-color: #fff;
+  background-color: #056f73;
+}
+
+.m-projects-section{
+  padding-bottom: 0;
 }
 
 .m-project{
-  &:first-child{
-    margin-top: 0;
-  }
-
-  margin-top: 20px;
   padding: 50px $distance-min-lateral;
 
   color: white;

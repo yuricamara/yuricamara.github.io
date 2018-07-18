@@ -11,6 +11,9 @@
 ;
 
 @import
+  './layout',
+  './scaffold',
+  './theme',
   './components/bar',
   './components/button',
   'modules/about',
@@ -23,8 +26,5 @@
   'modules/projects',
   'modules/services',
   'modules/technologies',
-  'modules/testimonials',
-  './layout',
-  './scaffold',
-  './theme'
+  'modules/testimonials'
 ;

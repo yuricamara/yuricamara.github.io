@@ -69,3 +69,19 @@
     background-color: darken($background-color, 5%);
   }
 }
+
+// Contato
+// ***************************************************
+.c-btn-contact{
+  $background-color: #f26424;
+  padding: 0 15px;
+  width: 135px;
+
+  color: #fff;
+  text-align: center;
+  background-color: $background-color;
+
+  &:hover{
+    background-color: darken($background-color, 5%);
+  }
+}
