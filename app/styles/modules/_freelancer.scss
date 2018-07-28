@@ -4,34 +4,44 @@
  */
 
 .m-freelancer{
-  height: 500px;
-
-  background: #164e81 url(/images/figures/banner.jpg) right no-repeat;
+  background: #164e81;
 }
 
 .m-freelancer-info{
-  padding-top: 70px;
+  @include for-tablet-landscape-up{
+    background: #164e81 url(/images/figures/banner.jpg) 109% bottom no-repeat;
+  }
+  padding: 120px 13px 70px;
+  margin: 0 auto;
+  max-width: 1250px;
 
   color: white;
   &_name{
     margin-bottom: 10px;
 
     font-family: $font-stack-primary;
-    font-size: 36px;
+    font-size: 42px;
     font-weight: bold;
     @include for-tablet-portrait-up{
       font-size: 48px;
     }
   }
-}
 
-.m-freelancer-positioning{
-  max-width: 800px;
+  &_positioning{
+    margin-bottom: 40px;
 
-  font-family: $font-stack-secundary;
-  font-size: 18px;
-  line-height: 36px;
-  @include for-tablet-portrait-up{
-    font-size: 22px;
+    font-family: $font-stack-secundary;
+    font-size: 18px;
+    line-height: 28px;
+
+    @include for-tablet-portrait-up{
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    @include for-tablet-landscape-up{
+      width: 50%;
+    }
   }
 }
+

@@ -12,6 +12,7 @@
   justify-content: space-between;
   align-items: center;
 
+  cursor: pointer;
   box-shadow: 0 3px 3px 0 rgba(0,0,0,.1);
   transition: background-color .15s ease-in-out;
 }
@@ -74,14 +75,26 @@
 // ***************************************************
 .c-btn-contact{
   $background-color: #f26424;
+  height: 50px;
   padding: 0 15px;
-  width: 135px;
+  width: 110px;
 
   color: #fff;
   text-align: center;
   background-color: $background-color;
 
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+
   &:hover{
     background-color: darken($background-color, 5%);
+  }
+
+  @include for-tablet-portrait-up{
+    height: 60px;
+    width: 150px;
+
+    font-size: 28px;
   }
 }

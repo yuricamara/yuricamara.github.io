@@ -1,5 +1,5 @@
 .m-nav{
-  height: 50px;
+  height: $nav-heigth-visible;
   width: 100%;
 
   position: fixed;
@@ -11,40 +11,37 @@
 
 .m-nav-wrapper{
   height: 100%;
+  padding: 0 $distance-min-lateral;
+  margin: 0 auto;
+  max-width: 1110px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @include for-tablet-landscape-up{
-    margin: 0 auto;
-    max-width: 1200px;
-
     justify-content: normal;
   }
 }
 
+// Logo
+// ***************************************
 .m-nav_logo{
-  height: 40px;
-  padding-left: $distance-min-lateral;
-
-  @include for-tablet-landscape-up{
-    padding-left: 0;
-  }
+  height: 50px;
 }
 
+// Navegação
+// ***************************************
 .m-nav_items {
   width: 100%;
 
   position: absolute;
   right: 0;
-  top: 50px;
+  top: $nav-heigth-visible;
 
   background-color: #164e81;
 
   @include for-tablet-landscape-up{
-    max-width: 1000px;
-
     display: block !important; // CSS Display Inline existente neste elemento.
 
     position: static;
@@ -57,13 +54,6 @@
   @include for-tablet-landscape-up{
     padding: 0;
     display: flex;
-    justify-content: center;
-  }
-}
-
-.m-nav_items-list li {
-  @include for-tablet-landscape-up{
-    margin-right: 1px;    
   }
 }
 
@@ -85,7 +75,6 @@
     }
 
     border-top: 0;
-    height: auto;
     padding: 0 1.5vw;
 
     text-align: center;
@@ -96,22 +85,10 @@
   }
 }
 
-// Mobile Only
+// Botão Hamburguer
 // *************************************
-.m-nav_mobile-top{
-  padding-right: $distance-min-lateral;
-  height: $nav-heigth-visible;
-  width: 100%;
 
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  @include for-tablet-landscape-up{
-    display: none;
-  }
-}
-
+// Mobile Only
 .m-nav_menu-toggle{
   cursor: pointer;
   &--open{
@@ -122,6 +99,10 @@
   &--close{
     height: 30px;
     width: 30px;
+  }
+
+  @include for-tablet-landscape-up{
+    display: none;
   }
 }
 
