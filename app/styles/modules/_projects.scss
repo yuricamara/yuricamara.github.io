@@ -24,62 +24,6 @@ $desktop-figure-width: 100% - $desktop-info-width;
   display: flex;
 }
 
-// Backgrounds
-// ***************************************
-.m-projects_wrapper .m-project{
-  &:nth-child(1){
-    $bgc: #91b3bc;
-    background-color: $bgc;
-
-    svg[class$="screen"]{
-      background-color: lighten($bgc, 10%);
-    }
-  }
-  &:nth-child(2){
-    $bgc: #5b7d87;
-    background-color: $bgc;
-
-    svg[class$="screen"]{
-      background-color: lighten($bgc, 10%);
-    }
-
-  }
-  &:nth-child(3){
-    $bgc: #45415e;
-    background-color: $bgc;
-
-    svg[class$="screen"]{
-      background-color: lighten($bgc, 10%);
-    }
-
-  }
-  &:nth-child(4){
-    $bgc: #2b4251;
-    background-color: $bgc;
-
-    svg[class$="screen"]{
-      background-color: lighten($bgc, 10%);
-    }
-
-  }
-  &:nth-child(5){
-    $bgc: #2e323c;
-    background-color: $bgc;
-
-    svg[class$="screen"]{
-      background-color: lighten($bgc, 10%);
-    }
-  }
-  &:nth-child(6){
-    $bgc: #2b2b2b;
-    background-color: $bgc;
-
-    svg[class$="screen"]{
-      background-color: lighten($bgc, 10%);
-    }
-  }
-}
-
 // Imagem
 // ***************************************
 .m-project_figure {

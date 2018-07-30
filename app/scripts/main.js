@@ -48,4 +48,10 @@
       hideNavItems();
     }
   }, false);
+
+  // Projetos
+  // ******************************
+  new Glide('.glide', {
+    type: 'carousel'
+  }).mount();
 }
