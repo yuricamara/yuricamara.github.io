@@ -51,9 +51,5 @@
 
   // Projetos
   // ******************************
-  new Glide('.glide', {
-    type: 'carousel'
-  }).mount();
-
   MicroModal.init();
 }
