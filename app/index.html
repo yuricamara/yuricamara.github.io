@@ -301,83 +301,51 @@
                   <li class="glide__slide">
                     <!-- AskForFood App -->
                     <div class="m-project m-email-app-project">
-                      <div class="m-project-wrapper l-centralize">
-                        <div class="m-project_figure m-project_figure--laptop-and-phone">
-                          <div class="m-project_figure--wrapper m-project_figure--wrapper-laptop">
-                            <svg class="m-project_figure-laptop"
-                                 role="presentation"
-                            >
-                              <use xlink:href="/figures-svg.svg#icon-laptop"/>
-                            </svg>
-                            <svg class="m-project_figure-laptop-screen"
-                                 role="presentation"
-                            >
-                              <use xlink:href="/figures-svg.svg#icon-utensils"/>
-                            </svg>
-                          </div>
-                          <div class="m-project_figure--wrapper m-project_figure--wrapper-phone">
-                            <svg class="m-project_figure-phone"
-                                 role="presentation"
-                            >
-                              <use xlink:href="/figures-svg.svg#icon-mobile"/>
-                            </svg>
-                            <svg class="m-project_figure-phone-screen"
-                                 role="presentation"
-                            >
-                              <use xlink:href="/figures-svg.svg#icon-utensils"/>
-                            </svg>
-                          </div>
-                        </div>
+                      <div class="m-project-wrapper">
                         <div class="m-project_info">
                           <div class="m-project_info-top">
-                            <a class="m-project_info-top_title"
-                               href="//yuricamara.com.br/askforfood/" target="_blank"
-                            >
-                              <h2 class="m-project_info-top_title-text">
-                                AskForFood
-                              </h2>
-                            </a>
-                            <div class="m-project_links">
-                              <a class="m-project_link" href="//yuricamara.com.br/askforfood/" target="_blank">
-                                <svg class="m-project_link-icon"
-                                     role="img"
-                                >
-                                  <title>Ir para o site do projeto</title>
-                                  <use xlink:href="/figures-svg.svg#icon-external-link-alt"/>
-                                </svg>
-                              </a>
-                              <a class="m-project_link" href="//play.google.com/store/apps/details?id=br.com.askforfood" target="_blank">
-                                <svg class="m-project_link-icon"
-                                     role="img"
-                                >
-                                  <title>Ir para a página do aplicativo no Google Play</title>
-                                  <use xlink:href="/figures-svg.svg#logo-android--white"/>
-                                </svg>
-                              </a>
-                            </div>
+                            <h2 class="m-project_info-top_title-text">
+                              AskForFood
+                            </h2>
                           </div>
                           <ul class="m-project_info-tags">
                             <li>
-                              <span>Aplicativo</span>
+                              <span>MarketPlace</span>
                             </li>
                             <li>
-                              <span>Sistema Web</span>
+                              <span>Refeições</span>
                             </li>
                             <li>
                               <span>2018</span>
                             </li>
                           </ul>
-                          <p class="m-project_info-description">
-                            Marketplace para restaurantes.
-                          </p>
-                          <ul class="m-project_info-features">
-                            <li>
-                              Propriedade de Yuri Câmara
-                            </li>
-                            <li>
-                              <b>Projeto em desenvolvimento</b>
-                            </li>
-                          </ul>
+                          <img class="m-project_figure" src="/images/figures/askforfood.png" alt="">
+                          <div class="m-project_links">
+                            <a class="m-project_link" href="//yuricamara.com.br/askforfood/" target="_blank">
+                              <svg class="m-project_link-icon"
+                                   role="img"
+                              >
+                                <title>Ir para o site do projeto</title>
+                                <use xlink:href="/figures-svg.svg#icon-external-link-alt"/>
+                              </svg>
+                            </a>
+                            <a class="m-project_link" href="//play.google.com/store/apps/details?id=br.com.askforfood" target="_blank">
+                              <svg class="m-project_link-icon"
+                                   role="img"
+                              >
+                                <title>Ir para a página do aplicativo no Google Play</title>
+                                <use xlink:href="/figures-svg.svg#logo-android--white"/>
+                              </svg>
+                            </a>
+                            <a class="m-project_link" data-micromodal-trigger="modal-1">
+                              <svg class="m-project_link-icon"
+                                   role="img"
+                              >
+                                <title>Mais informaçõess</title>
+                                <use xlink:href="/figures-svg.svg#icon-info"/>
+                              </svg>
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -949,10 +917,35 @@
         </div>
       </section>
     </footer>
-
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">
+              Micromodal
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content" id="modal-1-content">
+            <p class="m-project_info-description">
+              Marketplace para restaurantes.
+            </p>
+            <ul class="m-project_info-features">
+              <li>
+                Propriedade de Yuri Câmara
+              </li>
+              <li>
+                <b>Projeto em desenvolvimento</b>
+              </li>
+            </ul>
+          </main>
+        </div>
+      </div>
+    </div>
     <!-- build:js /main.min.js -->
     <script src="/scripts/polyfills/smoothscroll.min.js"></script>
     <script src="/scripts/plugins/glide.min.js"></script>
+    <script src="/scripts/plugins/micromodal.min.js"></script>
     <script src="/scripts/ie.js"></script>
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
