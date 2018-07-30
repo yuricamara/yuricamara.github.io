@@ -30,11 +30,22 @@ $desktop-figure-width: 100% - $desktop-info-width;
   justify-content: center;
 }
 
+.m-projects_content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.m-projects_content-item{
+
+}
+
 // Imagem
 // ***************************************
 .m-project_figure {
-  height: 280px;
-  margin-bottom: 30px;
+  width: 100%;
+
+  object-fit: contain;
 }
 
 .m-project_figure--laptop-and-phone{
@@ -90,9 +101,15 @@ $desktop-figure-width: 100% - $desktop-info-width;
 // Informações
 // ***************************************
 .m-project_info{
+  padding: 20px 20px 0;;
+  width: 300px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-color: rgba(0,0,0,.1);
+  position: relative;
 }
 
 .m-project_info-top{
@@ -104,8 +121,6 @@ $desktop-figure-width: 100% - $desktop-info-width;
 }
 
 .m-project_info-top_title-text{
-  padding-right: 15px;
-
   font-size: 24px;
   font-weight: bold;
   line-height: 1.4;
@@ -120,8 +135,16 @@ $desktop-figure-width: 100% - $desktop-info-width;
 // Links
 // ***************************************
 .m-project_links{
+  height: 50px;
+  width: 300px;
+
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(0,0,0, 0.5);
 }
 
 .m-project_link{
@@ -156,7 +179,7 @@ $desktop-figure-width: 100% - $desktop-info-width;
 // Tags
 // ***************************************
 .m-project_info-tags{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   display: flex;
   flex-wrap: wrap;
