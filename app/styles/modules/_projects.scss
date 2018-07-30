@@ -165,8 +165,7 @@ $desktop-figure-width: 100% - $desktop-info-width;
 // Github
 // ***************************************
 .m-project_github{
-  display: flex;
-  align-items: center;
+  color: #FFF;
 }
 
 .m-project_github-icon{
@@ -174,7 +173,6 @@ $desktop-figure-width: 100% - $desktop-info-width;
   margin-right: 10px;
   width: 30px;
 }
-
 
 // Tags
 // ***************************************

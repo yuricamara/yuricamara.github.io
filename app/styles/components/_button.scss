@@ -28,6 +28,21 @@
   font-weight: bold;
 }
 
+// Email
+// ***************************************************
+.c-btn-email{
+  $background-color: #d54b3e;
+  padding: 0 15px;
+
+  color: #fff;
+  text-align: center;
+  background-color: $background-color;
+
+  &:hover{
+    background-color: darken($background-color, 5%);
+  }
+}
+
 // Linkedin
 // ***************************************************
 .c-btn-linkedin{
