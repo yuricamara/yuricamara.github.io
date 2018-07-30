@@ -3,7 +3,8 @@
 \**************************/
 
 .modal {
-  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .modal__overlay {
@@ -20,7 +21,6 @@
 
 .modal__container {
   background-color: #fff;
-  padding: 30px;
   max-width: 500px;
   max-height: 100vh;
   border-radius: 4px;
@@ -29,74 +29,63 @@
 }
 
 .modal__header {
+  padding: 30px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  background-color: aquamarine;
 }
 
 .modal__title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 600;
-  font-size: 1.25rem;
+  font-weight: bold;
+  font-size: 24px;
   line-height: 1.25;
-  color: #00449e;
-  box-sizing: border-box;
 }
 
 .modal__close {
-  background: transparent;
   border: 0;
+  font-size: 24px;
+  background: transparent;
 }
 
-.modal__header .modal__close:before { content: "\2715"; }
+.modal__header .modal__close:before {
+  content: "\2715";
+}
 
 .modal__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding: 30px;
+
+  color: rgba(0,0,0,.8);
+  background-color: #c4c4d6;
+}
+
+.modal__content-description{
+  margin-bottom: 20px;
+
+  font-size: 18px;
   line-height: 1.5;
-  color: rgba(0,0,0,.8);
 }
 
-.modal__btn {
-  font-size: .875rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  background-color: #e6e6e6;
-  color: rgba(0,0,0,.8);
-  border-radius: .25rem;
-  border-style: none;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-appearance: button;
-  text-transform: none;
-  overflow: visible;
-  line-height: 1.15;
-  margin: 0;
-  will-change: transform;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  transition: -webkit-transform .25s ease-out;
-  transition: transform .25s ease-out;
-  transition: transform .25s ease-out,-webkit-transform .25s ease-out;
+.modal__content-features{
+  $border: 2px solid #000;
+
+  >li{
+    &:first-child{
+      border-top: $border;
+    }
+
+    border-bottom: $border;
+    padding: 10px 15px;
+  }
 }
 
-.modal__btn:focus, .modal__btn:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+.modal__content-link{
+  color: #000;
+  text-decoration: underline;
+  text-underline-position: under;
 }
-
-.modal__btn-primary {
-  background-color: #00449e;
-  color: #fff;
-}
-
-
 
 /**************************\
   Demo Animation Style

@@ -197,25 +197,3 @@ $desktop-figure-width: 100% - $desktop-info-width;
     }
   }
 }
-
-// Description
-// ***************************************
-.m-project_info-description{
-  margin-bottom: 30px;
-}
-
-// Features
-// ***************************************
-.m-project_info-features{
-  $border: 2px solid rgba(255,255,255,.5);
-
-  >li{
-    &:first-child{
-      border-top: $border;
-    }
-
-    border-bottom: $border;
-    padding: 10px 15px;
-  }
-}
-

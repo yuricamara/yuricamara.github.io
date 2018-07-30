@@ -57,6 +57,10 @@ a{
   text-decoration: none;
 }
 
+:focus{
+  outline: none;
+}
+
 // Posicionamento, Distâncias e Dimensionamento
 // *************************************
 ul{
