@@ -8,25 +8,36 @@
   background-color: #0c5178;
 }
 
+.m-services-wrapper{
+  padding: 0 $distance-min-lateral;
+}
+
 .m-services_content{
+  margin: 0 auto;
+  max-width: 170px;
+
+  @include for-tablet-portrait-up{
+    max-width: 450px;
+  }
+
+  @include for-tablet-landscape-up{
+    max-width: 900px;
+  }
+
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .m-service{
-  &:first-child{
-    margin-bottom: 30px;
-  }
-
-  margin: 0 $distance-min-lateral;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  position: relative;
+
   &_title{
-    margin-bottom: 20px;
+    margin: 20px 0 40px;
 
     text-align: center;
   }
@@ -38,13 +49,29 @@
     text-indent: 20px;
   }
 
+  &_open-modal{
+    @include circle(30px);
+    $border-color: #f7f7f7;
+
+    border: 5px solid $border-color;
+
+    position: absolute;
+    bottom: 60%;
+
+    color: #000;
+    font-size: 42px;
+    line-height: 30px;
+    text-align: center;
+
+    background-color: darken($border-color, 5%);
+  }
+
   &_logo-wrap{
-    @include circle(110px);
+    @include circle(150px);
 
     $border-color: #f7f7f7;
 
     border: 7px solid $border-color;
-    margin-bottom: 20px;
 
     display: flex;
     align-items: center;
@@ -52,18 +79,48 @@
 
     background-color: darken($border-color, 5%);
   }
+}
 
-  &_logo--mobile{
-    height: 85px;
-    width: 85px;
+.m-service--agencies{
+  .m-service_logo{
+    height: 115px;
+    width: 50px;
+
+    background: transparent url(images/figures/startup.png) 0 0 no-repeat;
+    background-size: 100%;
+  }
+  .m-service_logo-wrap{
+    opacity: 0.5;
+  }
+}
+
+.m-service--mobile{
+  .m-service_logo{
+    height: 125px;
+    width: 125px;
 
     background: transparent url(./images/figures/android-ios.png) 0 10px no-repeat;
     background-size: 100%;
   }
+}
 
-  &_logo--webapp{
-    height: 75px;
-    width: 65px;
+.m-service--startup{
+  .m-service_logo{
+    height: 115px;
+    width: 50px;
+
+    background: transparent url(images/figures/startup.png) 0 0 no-repeat;
+    background-size: 100%;
+  }
+  .m-service_logo-wrap{
+    opacity: 0.5;
+  }
+}
+
+.m-service--webapp{
+  .m-service_logo{
+    height: 105px;
+    width: 95px;
 
     background: transparent url(./images/figures/web-application.png) 0 0 no-repeat;
     background-size: 100%;

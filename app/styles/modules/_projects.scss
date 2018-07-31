@@ -125,15 +125,11 @@ $project_max-width: 330px;
 }
 
 .m-project_info-top_title-text{
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   line-height: 1.4;
   text-transform: uppercase;
   text-underline-position: under;
-
-  @include for-tablet-landscape-up{
-    font-size: 24px;
-  }
 }
 
 // Links
@@ -182,7 +178,7 @@ $project_max-width: 330px;
 // Tags
 // ***************************************
 .m-project_info-tags{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   display: flex;
   flex-wrap: wrap;
