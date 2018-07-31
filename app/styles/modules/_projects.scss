@@ -5,6 +5,7 @@
 
 $desktop-info-width: 70%;
 $desktop-figure-width: 100% - $desktop-info-width;
+$project_max-width: 330px;
 
 .m-projects{
   background-color: #0c5178;
@@ -100,9 +101,12 @@ $desktop-figure-width: 100% - $desktop-info-width;
 
 // Informações
 // ***************************************
+
+
+
 .m-project_info{
   padding: 20px 20px 0;;
-  width: 300px;
+  max-width: $project_max-width;
 
   display: flex;
   flex-direction: column;
@@ -128,7 +132,7 @@ $desktop-figure-width: 100% - $desktop-info-width;
   text-underline-position: under;
 
   @include for-tablet-landscape-up{
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
@@ -136,7 +140,7 @@ $desktop-figure-width: 100% - $desktop-info-width;
 // ***************************************
 .m-project_links{
   height: 50px;
-  width: 300px;
+  width: $project_max-width;
 
   display: flex;
   align-items: center;
