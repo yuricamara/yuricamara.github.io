@@ -69,15 +69,11 @@
   &_logo-wrap{
     @include circle(150px);
 
-    $border-color: #f7f7f7;
-
-    border: 7px solid $border-color;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: darken($border-color, 5%);
   }
 }
 
@@ -89,7 +85,11 @@
     background: transparent url(images/figures/startup.png) 0 0 no-repeat;
     background-size: 100%;
   }
+
   .m-service_logo-wrap{
+    $border-color: #f7f7f7;
+    border: 7px solid $border-color;
+    background-color: darken($border-color, 5%);
     opacity: 0.5;
   }
 }
@@ -102,6 +102,12 @@
     background: transparent url(./images/figures/android-ios.png) 0 10px no-repeat;
     background-size: 100%;
   }
+
+  .m-service_logo-wrap{
+    $border-color: #f7f7f7;
+    border: 7px solid $border-color;
+    background-color: darken($border-color, 5%);
+  }
 }
 
 .m-service--startup{
@@ -113,6 +119,9 @@
     background-size: 100%;
   }
   .m-service_logo-wrap{
+    $background-color: #27c8dc;
+    border: 7px solid lighten($background-color, 5%);
+    background-color: $background-color;
     opacity: 0.5;
   }
 }
@@ -124,5 +133,11 @@
 
     background: transparent url(./images/figures/web-application.png) 0 0 no-repeat;
     background-size: 100%;
+  }
+
+  .m-service_logo-wrap{
+    $border-color: #f7f7f7;
+    border: 7px solid $border-color;
+    background-color: darken($border-color, 5%);
   }
 }
