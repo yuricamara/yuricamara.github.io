@@ -11,11 +11,13 @@
   @include for-tablet-landscape-up{
     background: #164e81 url(/images/figures/banner.jpg) 109% bottom no-repeat;
   }
-  padding: 120px 13px 70px;
+
+  padding: 120px $distance-min-lateral 70px;
   margin: 0 auto;
   max-width: 1250px;
 
   color: white;
+
   &_name{
     margin-bottom: 10px;
 
@@ -31,13 +33,6 @@
     margin-bottom: 40px;
 
     font-family: $font-stack-secundary;
-    font-size: 18px;
-    line-height: 28px;
-
-    @include for-tablet-portrait-up{
-      font-size: 24px;
-      line-height: 36px;
-    }
 
     @include for-tablet-landscape-up{
       width: 50%;
