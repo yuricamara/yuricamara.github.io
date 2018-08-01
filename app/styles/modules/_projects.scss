@@ -67,7 +67,7 @@ $project_max-width: 330px;
 }
 
 .m-project_figure--wrapper-phone{
-  width: 65px;
+  width: 170px;
 }
 
 .m-project_figure-laptop{
@@ -76,8 +76,8 @@ $project_max-width: 330px;
 }
 
 .m-project_figure-phone{
-  height: 130px;
-  width: 65px;
+  height: 340px;
+  width: 100%;
 }
 
 .m-project_figure-laptop-screen{
@@ -101,9 +101,6 @@ $project_max-width: 330px;
 
 // Informações
 // ***************************************
-
-
-
 .m-project_info{
   padding: 20px 20px 0;;
   max-width: $project_max-width;
@@ -112,8 +109,8 @@ $project_max-width: 330px;
   flex-direction: column;
   align-items: center;
 
-  background-color: rgba(0,0,0,.1);
   position: relative;
+  background-color: rgba(0,0,0,.1);
 }
 
 .m-project_info-top{
@@ -178,7 +175,7 @@ $project_max-width: 330px;
 // Tags
 // ***************************************
 .m-project_info-tags{
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 
   display: flex;
   flex-wrap: wrap;
