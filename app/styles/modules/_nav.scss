@@ -67,8 +67,6 @@
   color: #fff;
   -webkit-tap-highlight-color: rgba(82,237,199,.5);
 
-  cursor: pointer;
-
   @include for-tablet-landscape-up{
     &:hover {
       background: #52edc7;
@@ -90,7 +88,6 @@
 
 // Mobile Only
 .m-nav_menu-toggle{
-  cursor: pointer;
   &--open{
     height: 40px;
     width: 40px;
