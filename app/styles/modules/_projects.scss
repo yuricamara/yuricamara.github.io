@@ -16,8 +16,6 @@ $project_max-width: 330px;
 }
 
 .m-project{
-  padding: 50px $distance-min-lateral;
-
   color: white;
 }
 
@@ -27,6 +25,9 @@ $project_max-width: 330px;
 }
 
 .m-project-wrapper{
+  height: 300px;
+  width: 300px;
+
   display: flex;
   justify-content: center;
 }
@@ -37,94 +38,52 @@ $project_max-width: 330px;
   justify-content: center;
 }
 
-.m-projects_content-item{
+// Backgrounds
+// **************************************
 
-}
+.m-project-wrapper{
+  background: transparent none 0 0 /100% no-repeat;
 
-// Imagem
-// ***************************************
-.m-project_figure {
-  width: 100%;
-
-  object-fit: contain;
-}
-
-.m-project_figure--laptop-and-phone{
-  display: flex;
-
-  .m-project_figure--wrapper-phone{
-    margin-right: 20px;
+  .m-project--askforfood &{
+    background-image: url(/images/figures/askforfood.png);
   }
-}
-
-.m-project_figure--wrapper{
-  margin: 0 auto;
-  position: relative;
-}
-
-.m-project_figure--wrapper-laptop{
-  width: 130px;
-}
-
-.m-project_figure--wrapper-phone{
-  width: 170px;
-}
-
-.m-project_figure-laptop{
-  height: 130px;
-  width: 130px;
-}
-
-.m-project_figure-phone{
-  height: 340px;
-  width: 100%;
-}
-
-.m-project_figure-laptop-screen{
-  padding: 11px 30px;
-  height: 28px;
-  width: 28px;
-  position: absolute;
-  top: 31px;
-  left: 21px;
-}
-
-.m-project_figure-phone-screen{
-  padding: 32px 11px;
-  height: 30px;
-  width: 30px;
-
-  position: absolute;
-  top: 15px;
-  left: 7px;
+  .m-project--emailapp & {
+    background-image: url(/images/figures/projetos/email-interface.png);
+  }
+  .m-project--chart & {
+    background-image: url(/images/figures/projetos/organograma.png);
+  }
+  .m-project--math & {
+    background-image: url(/images/figures/projetos/matematica.png);
+  }
+  .m-project--meconheca & {
+    background-image: url(/images/figures/projetos/meconheca.png);
+  }
 }
 
 // Informações
 // ***************************************
 .m-project_info{
-  padding: 20px 20px 0;;
-  max-width: $project_max-width;
+  padding: 0 $distance-min-lateral;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  position: relative;
-  background-color: rgba(0,0,0,.1);
+  background-color: rgba(0,0,0,.5);
 }
 
 .m-project_info-top{
-  margin-bottom: 10px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 20px;
 }
 
 .m-project_info-top_title-text{
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1.4;
+  text-align: center;
   text-transform: uppercase;
   text-underline-position: under;
 }
@@ -132,29 +91,26 @@ $project_max-width: 330px;
 // Links
 // ***************************************
 .m-project_links{
-  height: 50px;
-  width: calc(100% - 40px);
-
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  position: absolute;
-  bottom: 20px;
-  background-color: rgba(0,0,0, 0.5);
+  flex-direction: column;
 }
 
 .m-project_link{
-  padding: 0 15px;
+  display: flex;
+  align-items: center;
 }
 
 .m-project_link-icon{
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  margin-right: 5px;
+  width: 25px;
 }
 
 .m-project_link-text{
   color: #fff;
+  font-size: 16px;
+  font-style: italic;
   text-decoration: underline;
   text-underline-position: under;
 }
@@ -166,31 +122,10 @@ $project_max-width: 330px;
   text-decoration: underline;
 }
 
-.m-project_github-icon{
-  height: 30px;
-  margin-right: 10px;
-  width: 30px;
-}
-
 // Tags
 // ***************************************
 .m-project_info-tags{
-  margin-bottom: 30px;
-
-  display: flex;
-  flex-wrap: wrap;
-
-  text-transform: uppercase;
-  opacity: .6;
-
-  > li{
-    margin-left: 30px;
-
-    list-style-type: disc;
-
-    &:first-child{
-      list-style: none;
-      margin-left: 0;
-    }
-  }
+  font-size: 16px;
+  font-style: italic;
+  line-height: 24px;
 }
