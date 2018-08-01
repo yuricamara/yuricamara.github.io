@@ -133,7 +133,7 @@ $project_max-width: 330px;
 // ***************************************
 .m-project_links{
   height: 50px;
-  width: $project_max-width;
+  width: calc(100% - 40px);
 
   display: flex;
   align-items: center;
