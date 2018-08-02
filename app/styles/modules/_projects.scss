@@ -74,7 +74,7 @@ $project_max-width: 330px;
 
   position: relative;
 
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.4);
 }
 
 .m-project_info-top_title-text{
@@ -89,14 +89,14 @@ $project_max-width: 330px;
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  position: absolute;
-  bottom: 10px;
 }
 
 .m-project_link{
   display: flex;
   align-items: center;
+
+  color: #FFF;
+  text-decoration: underline;
 }
 
 .m-project_link-icon{
@@ -106,7 +106,7 @@ $project_max-width: 330px;
 }
 
 .m-project_link-text{
-  color: #ddd;
+  color: #FFF;
   font-size: 14px;
   font-style: italic;
   line-height: 28px;
