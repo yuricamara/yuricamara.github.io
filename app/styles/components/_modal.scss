@@ -31,11 +31,21 @@
 .modal__header {
   padding: 30px;
 
+  background-color: #164e81;
+}
+
+.modal__header-top{
+  margin-bottom: 5px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  background-color: #164e81;
+.modal__header-bottom p{
+  color: #FFF;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .modal__title {
