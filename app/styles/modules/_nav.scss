@@ -69,7 +69,8 @@
 
   @include for-tablet-landscape-up{
     &:hover {
-      background: #52edc7;
+      border-radius: 5px;
+      background: #01b9ff;
     }
 
     border-top: 0;

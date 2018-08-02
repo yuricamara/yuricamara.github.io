@@ -2,6 +2,14 @@
   background-color: #404447;
 }
 
+.m-bottom_section{
+  padding: 60px 0;
+
+  @include for-tablet-landscape-up{
+    padding: 120px 0;
+  }
+}
+
 .m-bottom_social-buttons{
   margin-bottom: 20px;
 
@@ -11,9 +19,6 @@
 
 .m-bottom-rights{
   color: white;
+  font-size: 18px;
   text-align: center;
-}
-
-.m-bottom_section{
-  padding: 40px 0;
 }
