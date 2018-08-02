@@ -8,7 +8,7 @@ $desktop-figure-width: 100% - $desktop-info-width;
 $project_max-width: 330px;
 
 .m-projects{
-  background-color: #0c5178;
+  background-color: #e9e9e9;
 }
 
 .m-projects-section{
@@ -21,7 +21,7 @@ $project_max-width: 330px;
 
 .m-projects_wrapper{
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1100px;
 }
 
 .m-project-wrapper{
@@ -72,20 +72,15 @@ $project_max-width: 330px;
   align-items: center;
   justify-content: center;
 
+  position: relative;
+
   background-color: rgba(0,0,0,.5);
 }
 
-.m-project_info-top{
-  margin-bottom: 20px;
-}
-
 .m-project_info-top_title-text{
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.4;
+  font-size: 18px;
   text-align: center;
   text-transform: uppercase;
-  text-underline-position: under;
 }
 
 // Links
@@ -94,6 +89,9 @@ $project_max-width: 330px;
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  position: absolute;
+  bottom: 10px;
 }
 
 .m-project_link{
@@ -102,17 +100,16 @@ $project_max-width: 330px;
 }
 
 .m-project_link-icon{
-  height: 25px;
+  height: 20px;
   margin-right: 5px;
-  width: 25px;
+  width: 20px;
 }
 
 .m-project_link-text{
-  color: #fff;
-  font-size: 16px;
+  color: #ddd;
+  font-size: 14px;
   font-style: italic;
-  text-decoration: underline;
-  text-underline-position: under;
+  line-height: 28px;
 }
 
 // Github
