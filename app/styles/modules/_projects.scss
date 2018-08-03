@@ -104,8 +104,14 @@ $project_max-width: 330px;
 }
 
 .m-project_link{
+  padding: 8px 10px 3px;
+
   display: flex;
   align-items: center;
+
+  &:first-child{
+    margin-bottom: 10px;
+  }
 }
 
 .m-project_link-icon{
@@ -118,9 +124,6 @@ $project_max-width: 330px;
   color: #badcfc;
   font-size: 16px;
   line-height: 1;
-  &:first-child{
-    margin-bottom: 15px;
-  }
 }
 
 // Github
