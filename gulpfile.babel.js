@@ -27,7 +27,7 @@ gulp.task('images:dist', () =>
 gulp.task('copy:dist', () => {
   gulp.src([
     'app/*.*',
-    'app/micromodal.min.js',
+    'app/*.js',
     '!app/index.html',
     '!app/.htaccess'
   ], {
