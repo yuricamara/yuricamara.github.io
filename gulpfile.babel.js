@@ -27,6 +27,7 @@ gulp.task('images:dist', () =>
 gulp.task('copy:dist', () => {
   gulp.src([
     'app/*.*',
+    'app/micromodal.min.js',
     '!app/index.html',
     '!app/.htaccess'
   ], {
@@ -34,7 +35,7 @@ gulp.task('copy:dist', () => {
   }).pipe(gulp.dest('dist'))
     .pipe($.size({title: 'copy'}));
 
-  gulp.src(['app/scripts/polyfills/*.js', 'app/scripts/plugins/*.js'] , { base: 'app/scripts' })
+  gulp.src(['app/scripts/polyfills/*.js'] , { base: 'app/scripts' })
     .pipe(gulp.dest('dist/scripts'));
 });
 
@@ -50,7 +51,7 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe(gulp.dest('.tmp'))
     // Concatenate and minify styles
-    .pipe($.if('*.css', $.purifycss(['./app/scripts/**/*.js', './app/index.html'])))
+    .pipe($.if('*.css', $.purifycss(['./app/*.js','./app/scripts/**/*.js', './app/index.html'])))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
