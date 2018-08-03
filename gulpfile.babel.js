@@ -50,7 +50,7 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe(gulp.dest('.tmp'))
     // Concatenate and minify styles
-    .pipe($.if('*.css', $.purifycss(['./app/scripts/main.js', './app/index.html'])))
+    .pipe($.if('*.css', $.purifycss(['./app/scripts/**/*.js', './app/index.html'])))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
