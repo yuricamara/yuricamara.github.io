@@ -30,19 +30,19 @@
 // Email
 // ***************************************************
 .c-btn-email{
-  $background-color: #d54b3e;
+  border: 2px solid;
   padding: 0 15px;
 
   display: none;
 
-  color: #fff;
+  color: #d54b3e;
   font-size: 16px;
+  font-weight: bold;
   text-align: center;
 
-  background-color: $background-color;
-
   &:hover{
-    background-color: darken($background-color, 5%);
+    color: #FFF;
+    background-color: #d54b3e;
   }
 
   @include for-tablet-landscape-up{
@@ -83,19 +83,19 @@
 // Whatsapp
 // ***************************************************
 .c-btn-whatsapp{
-  $background-color: #25D366;
+  border: 2px solid;
   padding: 0 15px;
 
   display: none;
 
-  color: #fff;
+  color: #25D366;
   font-size: 16px;
+  font-weight: bold;
   text-align: center;
 
-  background-color: $background-color;
-
   &:hover{
-    background-color: darken($background-color, 5%);
+    color: #FFF;
+    background-color: #25D366;
   }
 
   @include for-tablet-landscape-up{
