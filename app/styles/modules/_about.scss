@@ -19,10 +19,14 @@
   }
 
   &-text{
-    text-indent: 40px;
+    text-align: center;
+    text-indent: 0;
 
     @include for-tablet-landscape-up{
       margin-right: 40px;
+
+      text-align: left;
+      text-indent: 40px;
     }
   }
 }

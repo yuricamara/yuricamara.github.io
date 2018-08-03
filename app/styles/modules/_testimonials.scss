@@ -31,8 +31,12 @@
   margin-bottom: 40px;
   padding: 0 $distance-min-lateral;
 
-  font-size: 20px;
+  font-size: 18px;
   quotes: "“" "”" "‘" "’";
+
+  @include for-tablet-portrait-up{
+    font-size: 20px;
+  }
 }
 
 .m-testimonials_author{
@@ -42,14 +46,18 @@
 
 .m-testimonials_author-informations{
   &_name{
+    margin-bottom: 5px;
+
     font-size: 20px;
     font-weight: bold;
     line-height: 1;
   }
 
   &_job{
+    margin-bottom: 10px;
+
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1;
   }
 
   &_date,
@@ -57,6 +65,10 @@
     color: rgba(0,0,0,.54);
     font-size: 16px;
     line-height: 1;
+  }
+
+  &_date{
+    margin-bottom: 5px;
   }
 }
 

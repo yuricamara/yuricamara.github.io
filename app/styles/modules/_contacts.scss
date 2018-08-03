@@ -85,8 +85,6 @@
   }
 
   &_data{
-    margin-bottom: 20px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -94,7 +92,13 @@
 
   &_data-text{
     font-size: 20px;
+    text-decoration: underline;
+    text-underline-position: initial;
     line-height: 1;
+    
+    @include for-tablet-landscape-up{
+      text-decoration: none;
+    }
   }
 
   &_data-icon{

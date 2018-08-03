@@ -67,8 +67,12 @@
   display: flex;
   justify-content: space-between;
 
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
+
+  @include for-tablet-landscape-up{
+    font-size: 22px;
+  }
 }
 
 .m-blog_post-logo--medium{

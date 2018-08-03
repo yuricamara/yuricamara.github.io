@@ -42,9 +42,12 @@ $project_max-width: 330px;
   justify-content: center;
 }
 
+.m-projects_content-item {
+  margin: 10px;
+}
+
 // Backgrounds
 // **************************************
-
 .m-project-wrapper{
   background: transparent none 0 0 /100% no-repeat;
 
@@ -82,7 +85,7 @@ $project_max-width: 330px;
 }
 
 .m-project_info-top {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .m-project_info-top_title-text{
@@ -114,7 +117,10 @@ $project_max-width: 330px;
 .m-project_link-text{
   color: #badcfc;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1;
+  &:first-child{
+    margin-bottom: 15px;
+  }
 }
 
 // Github

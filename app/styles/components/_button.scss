@@ -33,14 +33,22 @@
   $background-color: #d54b3e;
   padding: 0 15px;
 
+  display: none;
+
   color: #fff;
-  text-align: center;
   font-size: 16px;
+  text-align: center;
 
   background-color: $background-color;
 
   &:hover{
     background-color: darken($background-color, 5%);
+  }
+
+  @include for-tablet-landscape-up{
+    margin-top: 20px;
+
+    display: flex;
   }
 }
 
@@ -78,14 +86,22 @@
   $background-color: #25D366;
   padding: 0 15px;
 
+  display: none;
+
   color: #fff;
-  text-align: center;
   font-size: 16px;
+  text-align: center;
 
   background-color: $background-color;
 
   &:hover{
     background-color: darken($background-color, 5%);
+  }
+
+  @include for-tablet-landscape-up{
+    margin-top: 20px;
+
+    display: flex;
   }
 }
 
