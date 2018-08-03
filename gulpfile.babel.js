@@ -34,7 +34,7 @@ gulp.task('copy:dist', () => {
   }).pipe(gulp.dest('dist'))
     .pipe($.size({title: 'copy'}));
 
-  gulp.src('app/scripts/polyfills/*.js', { base: 'app/scripts' })
+  gulp.src(['app/scripts/polyfills/*.js', 'app/scripts/plugins/*.js'] , { base: 'app/scripts' })
     .pipe(gulp.dest('dist/scripts'));
 });
 
