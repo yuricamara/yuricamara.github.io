@@ -1,5 +1,5 @@
 .m-nav{
-  height: $nav-heigth-visible;
+  height: $nav-heigth-mobile;
   width: 100%;
 
   position: fixed;
@@ -7,6 +7,10 @@
 
   background-color: #164e81;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+
+  @include for-tablet-landscape-up{
+    height: $nav-heigth-desktop;
+  }
 }
 
 .m-nav-wrapper{
@@ -27,7 +31,11 @@
 // Logo
 // ***************************************
 .m-nav_logo{
-  height: 50px;
+  height: 30px;
+
+  @include for-tablet-landscape-up{
+    height: 50px;
+  }
 }
 
 // Navegação
@@ -37,11 +45,13 @@
 
   position: absolute;
   right: 0;
-  top: $nav-heigth-visible;
+  top: $nav-heigth-mobile;
 
   background-color: #164e81;
 
   @include for-tablet-landscape-up{
+    top: $nav-heigth-desktop;
+
     display: block !important; // CSS Display Inline existente neste elemento.
 
     position: static;
@@ -90,13 +100,13 @@
 // Mobile Only
 .m-nav_menu-toggle{
   &--open{
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
   }
 
   &--close{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
   }
 
   @include for-tablet-landscape-up{
