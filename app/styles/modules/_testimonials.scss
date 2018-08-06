@@ -4,7 +4,11 @@
  */
 
 .m-testimonials_content{
-  margin: 0 auto;
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  margin: 0 auto 50px;
   max-width: 700px;
 
   display: flex;
@@ -62,6 +66,8 @@
 
   &_date,
   &_source{
+    display: block;
+
     color: rgba(0,0,0,.54);
     font-size: 16px;
     line-height: 1;
