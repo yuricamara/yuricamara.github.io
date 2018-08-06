@@ -66,11 +66,15 @@
 
   &_date,
   &_source{
-    display: block;
-
     color: rgba(0,0,0,.54);
     font-size: 16px;
     line-height: 1;
+  }
+
+  &_source{
+    display: block;
+
+    text-decoration: underline;
   }
 
   &_date{
