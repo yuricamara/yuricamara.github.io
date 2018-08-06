@@ -14,8 +14,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  text-indent: 20px;
 }
 
 .m-testimonials_phrase{
@@ -37,9 +35,12 @@
 
   font-size: 18px;
   quotes: "“" "”" "‘" "’";
+  text-align: center;
 
   @include for-tablet-portrait-up{
     font-size: 20px;
+    text-align: left;
+    text-indent: 20px;
   }
 }
 
@@ -84,4 +85,6 @@
 
 .m-testimonials_author-photo{
   @include circle(80px);
+
+  margin-right: 20px;
 }
