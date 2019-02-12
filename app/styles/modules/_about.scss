@@ -35,6 +35,12 @@
   }
 }
 
+.m-about-group{
+  @include for-tablet-portrait-up {
+    font-size: 24px;
+  }
+}
+
 .m-about-freelancer-photo{
   @include circle(150px);
 
