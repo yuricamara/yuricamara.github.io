@@ -151,13 +151,12 @@
           <h1 class="m-promo_title">
             Promoção Quem Divulga
           </h1>
-          <p class="m-promo_descr">
-            Divulgue meu trabalho e ganhe <span class="m-promo_prize">R$130</span>
-          </p>
-          <ul class="m-promo_obs">
-            <li>* Após assinatura de contrato para novos projetos. Não é válida para manutenção de projetos existentes.</li>
-            <li>* Para apenas uma pessoa, pela qual o contratante disser que tomou conhecimento do meu trabalho.</li>
-          </ul>
+          <div class="m-promo_infos">
+            <p class="m-promo_descr">
+              Divulgue meu trabalho e ganhe <span class="m-promo_prize">R$130</span>
+            </p>
+            <a class="m-promo_open-modal" data-micromodal-trigger="modal-promo">+</a>
+          </div>
         </section>
         <section id="m-about" class="m-about">
           <div class="l-section l-centralize">
@@ -851,6 +850,26 @@
               <li>
                 Painel de controle com perguntas e informações criadas com opção para edição, ordenação e remoção.
               </li>
+            </ul>
+          </main>
+        </div>
+      </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-promo" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-mc-sistema-title">
+          <header class="modal__header">
+            <div class="modal__header-top">
+              <h2 class="modal__title" id="modal-promo-title">
+                Regras da Promoção Quem Divulga
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+          </header>
+          <main class="modal__content" id="modal-promo-content">
+            <ul class="modal__content-description">
+              <li>Válida após assinatura de contrato para novos projetos. Não é válida para manutenção de projetos existentes.</li>
+              <li>Válida para apenas uma pessoa, pela qual o contratante disser que tomou conhecimento do meu trabalho.</li>
             </ul>
           </main>
         </div>
