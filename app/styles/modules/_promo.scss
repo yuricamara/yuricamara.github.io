@@ -5,42 +5,45 @@
 
 .m-promo{
   @include flex-centralize;
-  padding: 20px 13px;
+  padding: 40px 13px;
 
   background-color: #141414;
   color: #FFF;
 }
 
 .m-promo_title,
-.m-promo_descr{
-  line-height: 34px
+.m-promo_open-modal{
+  line-height: 1;
 }
 
 .m-promo_title{
+  margin-bottom: 10px;
+
   color: red;
-  font-size: 20px;
+  font-weight: normal;
+  text-transform: none;
 }
 
 .m-promo_descr{
-  margin-right: 8px;
+  margin-bottom: 15px;
 
-  font-size: 20px;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .m-promo_prize{
   color: #dd0;
+  font-weight: normal;
 }
 
 .m-promo_infos{
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .m-promo_open-modal{
-  height: 22px;
-  width: 22px;
-  border-radius: 50%;
-  font-size: 22px;
-  line-height: 22px;
-  text-align: center;
-  background-color: #164e81;}
+  color: #2196F3;
+  text-decoration: underline;
+  font-size: 18px;
+}
