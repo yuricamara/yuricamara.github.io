@@ -34,6 +34,7 @@
   height: 30px;
 
   @include for-tablet-landscape-up{
+    padding-right: 1.2vw;
     height: 50px;
   }
 }
@@ -84,7 +85,7 @@
     }
 
     border-top: 0;
-    padding: 0 1.5vw;
+    padding: 0 1.2vw;
 
     text-align: center;
   }
