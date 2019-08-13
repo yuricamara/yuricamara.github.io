@@ -53,6 +53,82 @@
 }
 
 // Whatsapp
+@keyframes animate {
+  0% {
+    transform: scale(.5);
+    opacity: 0
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0
+  }
+}
+
+.m-contact_whatsapp-fab{
+  height: 70px;
+  width: 70px;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%,-50%);
+
+  background: #0cba59;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include for-phone-only{
+    height: 60px;
+    width: 60px;
+    transform: translate(-40%,-40%);
+  }
+
+  &:before, &:after{
+    @include for-desktop-up{
+      content: '';
+      display: block;
+      position: absolute;
+      border: 1px solid #0cba59;
+      left: -20px;
+      right: -20px;
+      top: -20px;
+      bottom: -20px;
+      border-radius: 50%;
+      animation: animate 1.5s linear infinite;
+      opacity: 0;
+      z-index: -999999;
+    }
+  }
+
+  &:after{
+    animation-delay: .5s;
+  }
+
+  &_data-icon{
+    height: 35px;
+    width: 35px;
+
+    @include for-phone-only{
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  &_data-text{
+    width: 0;
+
+    text-indent: -9999px;
+  }
+}
+
 .m-contact--box{
   border-radius: 4px;
   padding: 20px;
@@ -95,7 +171,7 @@
     text-decoration: underline;
     text-underline-position: initial;
     line-height: 1;
-    
+
     @include for-tablet-landscape-up{
       text-decoration: none;
     }
