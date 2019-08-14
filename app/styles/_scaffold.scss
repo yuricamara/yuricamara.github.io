@@ -38,7 +38,7 @@ ul,li,a,img,p,q,blockquote{
   font-size: 16px; // valor mínimo (SEO)
 }
 
-p{
+p, a{
   font-size: 18px;
   line-height: 28px;
 
@@ -46,6 +46,12 @@ p{
     font-size: 24px;
     line-height: 36px;
   }
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+  text-underline-position: under;
 }
 
 li{
@@ -58,12 +64,6 @@ address{
 
 button{
   cursor: pointer;
-}
-
-a{
-  cursor: pointer;
-  text-decoration: none;
-  text-underline-position: under;
 }
 
 :focus{
