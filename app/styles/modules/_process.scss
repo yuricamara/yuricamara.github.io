@@ -27,9 +27,11 @@
   text-transform: uppercase;
 }
 
-.m-process_content .description{
-  font-size: 14px;
-  line-height: 1.4;
+.m-process_content .description{}
+
+.m-process_content .free{
+  color: #d54b3e;
+  font-weight: bold;
 }
 
 .m-process_content li {
@@ -54,5 +56,7 @@
 }
 
 .m-process_content li strong {
+  margin-bottom: 5px;
+
   font-size: 18px;
 }
