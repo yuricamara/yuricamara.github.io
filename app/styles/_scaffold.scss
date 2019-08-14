@@ -39,11 +39,11 @@ ul,li,a,img,p,q,blockquote{
 }
 
 p, a{
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.4;
 
   @include for-tablet-portrait-up{
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
