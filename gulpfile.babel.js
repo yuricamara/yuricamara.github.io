@@ -148,11 +148,10 @@ gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
     logPrefix: 'WSK',
     // Allow scroll syncing across breakpoints
     scrollElementMapping: ['main', '.mdl-layout'],
-    // Run as an https by uncommenting 'https: true'
-    // Note: this uses an unsigned certificate which on first access
-    //       will present a certificate warning in the browser.
-    // https: true,
+    https: true,
     server: ['.tmp', 'app'],
+    online: true,
+    tunnel: 'yuricamara',
     port: 3000
   });
 
