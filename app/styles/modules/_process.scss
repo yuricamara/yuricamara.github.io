@@ -4,7 +4,11 @@
  */
 
 .m-process{
-  background-color: #ebebeb;
+  background-color: #fdfdfd;
+  border: {
+    bottom: 1px solid #ddd;
+    top: 1px solid #ddd;
+  }
 }
 
 .m-process_wrapper{

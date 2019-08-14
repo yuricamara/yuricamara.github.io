@@ -52,8 +52,12 @@
   }
 }
 
+.m-contact_section-title{
+  background-color: #fff;
+}
+
 // Whatsapp
-@keyframes animate {
+@keyframes whatsapp {
   0% {
     transform: scale(.5);
     opacity: 0
@@ -86,8 +90,8 @@
   justify-content: center;
 
   @include for-phone-only{
-    height: 60px;
-    width: 60px;
+    height: 55px;
+    width: 55px;
     transform: translate(-40%,-40%);
   }
 
@@ -102,7 +106,7 @@
       top: -20px;
       bottom: -20px;
       border-radius: 50%;
-      animation: animate 1.5s linear infinite;
+      animation: whatsapp 1.5s linear infinite;
       opacity: 0;
       z-index: -999999;
     }
@@ -113,8 +117,8 @@
   }
 
   &_data-icon{
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
 
     @include for-phone-only{
       height: 30px;
