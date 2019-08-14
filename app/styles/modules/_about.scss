@@ -10,12 +10,11 @@
 
 .m-about_content{
   margin: 0 auto;
-  max-width: 860px;
+  max-width: 700px;
   padding: 0 $distance-min-lateral;
 
   @include for-tablet-landscape-up{
-    display: flex;
-    flex-direction: row-reverse;
+    max-width: 860px;
   }
 
   &-text{
@@ -49,5 +48,10 @@
 
   display: block;
 
-  box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15);
+  @include for-tablet-landscape-up{
+    margin: 0 50px 20px 0;
+
+    float: left;
+    shape-outside: circle();
+  }
 }
