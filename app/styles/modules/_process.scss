@@ -1,0 +1,58 @@
+/**
+ * Process Module
+ * --------------------------------------------------
+ */
+
+.m-process{
+  background-color: #ebebeb;
+}
+
+.m-process_wrapper{
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.m-process_content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.m-process_content .title{
+  display: flex;
+  flex-direction: column;
+
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.m-process_content .description{
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.m-process_content li {
+  width: 260px;
+  height: 200px;
+  margin: 60px 12px 24px;
+  padding: 40px 16px;
+
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.06);
+}
+
+.m-process_content li span {
+  margin-bottom: 20px;
+
+  color: #868686;
+  font-size: 18px;
+  transition: 100ms ease-in-out;
+}
+
+.m-process_content li:hover span {
+  color: #164e81;
+}
+
+.m-process_content li strong {
+  font-size: 18px;
+}
