@@ -23,8 +23,9 @@
     margin-bottom: 10px;
 
     font-family: $font-stack-primary;
-    font-size: 42px;
+    font-size: 40px;
     font-weight: bold;
+
     @include for-tablet-portrait-up{
       font-size: 48px;
     }

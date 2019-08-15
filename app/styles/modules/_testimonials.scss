@@ -33,12 +33,10 @@
   margin-bottom: 40px;
   padding: 0 $distance-min-lateral;
 
-  font-size: 18px;
   quotes: "“" "”" "‘" "’";
   text-align: center;
 
   @include for-tablet-portrait-up{
-    font-size: 20px;
     text-align: left;
     text-indent: 20px;
   }
