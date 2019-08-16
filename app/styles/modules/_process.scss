@@ -48,7 +48,7 @@
   margin: 60px 12px 24px;
   padding: 40px 16px;
 
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.06);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.06);
 }
 
 .m-process_content li span {
@@ -59,8 +59,8 @@
   transition: 100ms ease-in-out;
 }
 
-.m-process_content li:hover span {
-  color: #164e81;
+.m-process_content li:hover .title > span {
+  color: #f26424;
 }
 
 .m-process_content li strong {

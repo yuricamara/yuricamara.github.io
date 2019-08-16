@@ -95,6 +95,10 @@
     transform: translate(-40%,-40%);
   }
 
+  @include for-desktop-up{
+    transform: translate(-100%,-100%);
+  }
+
   &:before, &:after{
     @include for-desktop-up{
       content: '';
