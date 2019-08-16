@@ -161,7 +161,7 @@ gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
   gulp.watch(['app/images/**/*'], reload);
 });
 
-gulp.task('serve:dist', ['default'], () =>
+gulp.task('serve:dist', ['dist'], () =>
   browserSync({
     notify: false,
     logPrefix: 'WSK',
@@ -176,7 +176,7 @@ gulp.task('serve:dist', ['default'], () =>
   })
 );
 
-gulp.task('default', ['clean'], cb =>
+gulp.task('dist', ['clean'], cb =>
   runSequence(
     'styles',
     ['scripts', 'images:dist', 'copy:dist', 'svg'],
