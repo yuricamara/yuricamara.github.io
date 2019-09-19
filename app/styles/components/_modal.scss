@@ -94,10 +94,18 @@
 }
 
 .modal__content-link{
-  color: #000;
-  font-size: 18px;
-  text-decoration: underline;
-  text-underline-position: under;
+  color: rgba(0,0,0,.8);
+  font-size: 16px;
+}
+
+
+.modal_content-list > li {
+  &:first-child{
+    margin-top: 0;
+  }
+  margin-top: 5px;
+
+  list-style: circle inside;
 }
 
 /**************************\
