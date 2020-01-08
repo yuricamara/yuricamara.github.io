@@ -1,11 +1,11 @@
 'use strict';
 
-import gulp from 'gulp';
-import del from 'del';
-import runSequence from 'run-sequence';
-import browserSync from 'browser-sync';
-import gulpLoadPlugins from 'gulp-load-plugins';
-import {output as pagespeed} from 'psi';
+const gulp = require('gulp') ;
+const del = require('del') ;
+const runSequence = require('run-sequence') ;
+const browserSync = require('browser-sync') ;
+const gulpLoadPlugins = require('gulp-load-plugins') ;
+const psi = require('psi') ;
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -68,7 +68,6 @@ gulp.task('scripts', () =>
     ])
       .pipe($.newer('.tmp/scripts'))
       .pipe($.sourcemaps.init())
-      .pipe($.babel())
       .pipe($.sourcemaps.write())
       .pipe(gulp.dest('.tmp/scripts'))
       .pipe($.concat('main.min.js'))
@@ -151,7 +150,7 @@ gulp.task('serve', ['scripts', 'styles', 'svg'], () => {
     https: true,
     server: ['.tmp', 'app'],
     online: true,
-    tunnel: 'yuricamara',
+    // tunnel: 'yuricamara',
     port: 3000
   });
 
@@ -186,7 +185,7 @@ gulp.task('dist', ['clean'], cb =>
 );
 
 gulp.task('pagespeed', cb =>
-  pagespeed('yuricamara.com.br', {
+  psi('yuricamara.com.br', {
     strategy: 'mobile'
   }, cb)
 );
