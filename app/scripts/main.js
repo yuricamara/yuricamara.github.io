@@ -51,5 +51,7 @@
 
   // Projetos
   // ******************************
-  MicroModal.init();
+  MicroModal.init({
+    disableScroll: true
+  });
 }
