@@ -1,0 +1,33 @@
+/**************************\
+  Portfólio Modal Styles
+\**************************/
+.portmodal__overlay{
+  padding: 16px 0;
+}
+
+.portmodal__container{
+  background-color: #fff;
+  height: 100%;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 16px 32px;
+  width: 100%;
+}
+
+.portmodal__close{
+  &:before {
+    content: "\2715";
+  }
+
+  border: 0;
+  font-size: 78px;;
+  background: transparent;
+  color: #ababab;
+}
+
+.portmodal__header{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 30px;
+}

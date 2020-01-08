@@ -87,15 +87,15 @@ $project_max-width: 330px;
   background-color: rgba(0,0,0,.5);
 }
 
-.m-project_info-top {
-  margin-bottom: 10px;
-}
-
 .m-project_info-top_title-text{
   font-size: 18px;
-  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+}
+
+.m-project_info-top_desc{
+  text-align: center;
+  font-size: 16px;
 }
 
 // Links

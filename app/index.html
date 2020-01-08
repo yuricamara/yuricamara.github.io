@@ -364,29 +364,22 @@
 
                 <!-- AskForFood -->
                 <li class="m-projects_content-item">
-                  <div class="m-project m-project--askforfood">
+                  <a class="m-project m-project--askforfood"
+                     data-micromodal-trigger="modal-askforfood"
+                  >
                     <div class="m-project-wrapper">
                       <div class="m-project_info">
                         <div class="m-project_info-top">
                           <h2 class="m-project_info-top_title-text">
-                            AskForFood / 2018
+                            AskForFood
                           </h2>
-                        </div>
-                        <div class="m-project_links">
-                          <a class="m-project_link" href="//play.google.com/store/apps/details?id=br.com.askforfood" target="_blank">
-                            <p class="m-project_link-text">
-                              Aplicativo
-                            </p>
-                          </a>
-                          <a class="m-project_link" href="//yuricamara.com.br/marketplace/" target="_blank">
-                            <p class="m-project_link-text">
-                              Aplicação web responsiva
-                            </p>
-                          </a>
+                          <p class="m-project_info-top_desc">
+                            <i>Market Place</i>
+                          </p>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </li>
 
                 <!-- Brincando com Texto -->
@@ -484,33 +477,6 @@
                           <a class="m-project_link" href="//github.com/yuricamara/organograma-dinamico" target="_blank" rel="noopener">
                             <p class="m-project_link-text">
                               Aplicação desktop (código).
-                            </p>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Matemática Elementar -->
-                <li class="m-projects_content-item">
-                  <div class="m-project m-project--math">
-                    <div class="m-project-wrapper l-centralize">
-                      <div class="m-project_info">
-                        <div class="m-project_info-top">
-                          <h2 class="m-project_info-top_title-text">
-                            Matemática Elementar / 2012
-                          </h2>
-                        </div>
-                        <div class="m-project_links">
-                          <a class="m-project_link" href="//yuricamara.com.br/matematica-elementar" target="_blank">
-                            <p class="m-project_link-text">
-                              Aplicação desktop
-                            </p>
-                          </a>
-                          <a class="m-project_link" href="//github.com/yuricamara/matematica-elementar" target="_blank" rel="noopener">
-                            <p class="m-project_link-text">
-                              Aplicação desktop (código)
                             </p>
                           </a>
                         </div>
@@ -831,13 +797,43 @@
         </section>
       </footer>
     </div>
+
+    <!-- Modais do Portfólio -->
+    <!------------------------->
+    <div class="modal micromodal-slide" id="modal-askforfood" aria-hidden="true">
+      <div class="portmodal__overlay modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="portmodal__container" role="dialog" aria-modal="true" aria-labelledby="modal-mc-app-title">
+          <div class="portmodal__header">
+            <button class="portmodal__close" aria-label="Close modal" data-micromodal-close></button>
+          </div>
+          <header>
+            <div class="modal__header-top">
+              <h2 class="modal__title">
+                AskForFood
+              </h2>
+            </div>
+            <div class="modal__header-bottom">
+              <p>Market Place</p>
+            </div>
+          </header>
+          <main class="modal__content">
+            <p class="modal__content-description">
+              Aplicativo da startup <a class="modal__content-link" href="http://meconheca.com.br" target="_blank" rel="noopener">Me Conheça,</a> para interação pelos usuários via chat com as perguntas e informações criadas no aplicação administrativo para posterior criação e tratamento de indicadores.
+            </p>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modais do Portfólio (antigo) -->
+    <!------------------------->
     <div class="modal micromodal-slide" id="modal-mc-app" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-mc-app-title">
           <header class="modal__header">
             <div class="modal__header-top">
               <h2 class="modal__title" id="modal-mc-app-title">
-                Me Conheça / 2017
+                Me Conheça
               </h2>
               <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </div>
@@ -915,6 +911,9 @@
         </div>
       </div>
     </div>
+
+    <!-- Modais dos Serviços -->
+    <!------------------------->
     <div class="modal micromodal-slide" id="modal-apps" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-mc-sistema-title">
@@ -991,6 +990,9 @@
         </div>
       </div>
     </div>
+
+    <!-- Modais do Sobre -->
+    <!------------------------->
     <div class="modal micromodal-slide" id="modal-startup-experience" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-mc-sistema-title">
