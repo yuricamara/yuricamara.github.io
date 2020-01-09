@@ -19,7 +19,8 @@ gulp.task('lint', () =>
 
 gulp.task('images:dist', () =>
   gulp.src(['app/images/**/*', '!app/images/**/*.svg', '!app/images/**/*.html'])
-    .pipe($.cache($.imagemin()))
+    // FIXME (imagemin): "Error: O sistema n�o pode encontrar o caminho especificado"
+    // .pipe($.cache($.imagemin()))
     .pipe(gulp.dest('dist/images'))
     .pipe($.size({title: 'images'}))
 );
@@ -44,14 +45,19 @@ gulp.task('styles', () => {
     'app/styles/**/*.scss',
     'app/styles/**/*.css'
   ])
+    // SASS
+    // *************************************
     .pipe($.newer('.tmp'))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       precision: 10
     }).on('error', $.sass.logError))
     .pipe(gulp.dest('.tmp'))
-    // Concatenate and minify styles
-    .pipe($.if('*.css', $.purifycss(['./app/*.js','./app/scripts/**/*.js', './app/index.html'])))
+
+    // Concatenate and minify CSS
+    // ***************************************
+    // FIXME: remoção abusiva de CSS
+    // .pipe($.if('*.css', $.purifycss(['./app/*.js','./app/scripts/**/*.js', './app/index.html'])))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
