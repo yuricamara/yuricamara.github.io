@@ -49,11 +49,6 @@
     }
   }, false);
 
-  // Projetos
-  // ******************************
-  MicroModal.init({
-    disableScroll: true
-  });
 
   // Lazy Loading Images
   // ******************************
@@ -81,23 +76,45 @@
 
   // Swipper
   // ******************************
-  const mySwiper = new Swiper ('.swiper-container', {
-    spaceBetween: 5,
-    centeredSlides: true,
+  createSwiper = () => {
+    return new Swiper ('.swiper-container', {
+      spaceBetween: 5,
+      centeredSlides: true,
 
-    lazy: true,
-    grabCursor: true,
-    keyboard: {
-      enabled: true,
-    },
+      lazy: true,
+      grabCursor: true,
+      keyboard: {
+        enabled: true,
+      },
 
-    pagination: {
-      el: '.swiper-pagination',
-    },
+      pagination: {
+        el: '.swiper-pagination',
+      },
 
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  };
+
+  // Modais
+  // ******************************
+  let swiper;
+
+  MicroModal.init({
+    onShow: modal => {
+      console.info(`${modal.id} is shown`);
+
+      if (modal.id === 'modal-askforfood'){
+        swiper = createSwiper();
+      }
     },
-  })
+    onClose: modal => {
+      console.info(`${modal.id} is hidden`);
+      swiper.destroy();
+    },
+    disableScroll: true
+  });
+
 }
