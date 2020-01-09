@@ -106,9 +106,9 @@
     onShow: modal => {
       console.info(`${modal.id} is shown`);
 
-      // if (modal.id === 'modal-askforfood'){
-      //   swiper = createSwiper();
-      // }
+      if (modal.id === 'modal-gtr-checkdelivery'){
+        swiper = createSwiper();
+      }
     },
     onClose: modal => {
       console.info(`${modal.id} is hidden`);
