@@ -1,5 +1,16 @@
 .swiper-container {
-  margin-bottom: 70px;
-  width: 600px;
-  height: 300px;
+  margin: 0 0 70px 30px;
+  height: 640px;
+  width: 320px;
+
+  @include for-tablet-landscape-up{
+    margin: 0 0 70px;
+    float: left;
+  }
+}
+
+.swiper-slide img{
+  margin: 0 auto;
+  width: 100%;
+  display: block;
 }

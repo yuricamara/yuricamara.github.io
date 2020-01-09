@@ -117,7 +117,9 @@
         swiper.destroy();
       }
     },
-    disableScroll: true
+    disableScroll: true,
+    awaitOpenAnimation: true,
+    awaitCloseAnimation: true
   });
 }
 

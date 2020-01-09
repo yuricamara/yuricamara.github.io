@@ -11,8 +11,11 @@
   border-radius: 4px;
   overflow-y: auto;
   box-sizing: border-box;
-  margin: 16px 32px;
   width: 100%;
+
+  @include for-tablet-portrait-up{
+    margin: 16px 32px;
+  }
 }
 
 .portmodal__close{
@@ -38,6 +41,7 @@
 
 .portmodal__title{
   margin-bottom: 25px;
+  padding: 0 30px;
 
   text-align: center;
   text-transform: uppercase;
@@ -50,10 +54,21 @@
 }
 
 .portmodal__video{
-  margin: 0 auto;
+  margin: 0 auto 70px;
+  display: block;
+  height: 600px;
+  width: 320px;
 }
 
 // Descrição
+.portmodal-desc{
+  padding: 0 30px;
+
+  @include for-tablet-landscape-up{
+    padding: 0;
+  }
+}
+
 .portmodal-desc-section{
   border-bottom: 1px solid #ECF0F1;
   padding-bottom: 15px;
@@ -105,6 +120,8 @@
 // Botões
 .portmodal-btn-wrap{
   margin-bottom: 90px;
+  padding-left: 30px;
+
   display: flex;
 }
 
@@ -117,7 +134,8 @@
     width: 95px;
   }
   &.c-btn-close{
-    margin: 0 auto;
+    margin: 0 auto 30px;
     width: 85px;
+    clear: left;
   }
 }
