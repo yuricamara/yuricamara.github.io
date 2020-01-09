@@ -67,6 +67,8 @@
 }
 
 .modal__content {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 30px;
 
   color: rgba(0,0,0,.8);
