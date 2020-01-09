@@ -106,7 +106,10 @@
     onShow: modal => {
       console.info(`${modal.id} is shown`);
 
-      if (modal.id === 'modal-gtr-checkdelivery'){
+      if (
+        modal.id === 'modal-gtr-checkdelivery' ||
+        modal.id === 'modal-gtr-mobile'
+      ){
         swiper = createSwiper();
       }
     },
@@ -114,7 +117,11 @@
       console.info(`${modal.id} is hidden`);
 
       if(swiper){
-        swiper.destroy();
+        if(swiper instanceof Array){
+          swiper.forEach(sw => sw.destroy());
+        } else {
+          swiper.destroy();
+        }
       }
     },
     disableScroll: true,
