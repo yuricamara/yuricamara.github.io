@@ -810,10 +810,10 @@
     <div class="modal micromodal-slide" id="modal-askforfood" aria-hidden="true">
       <div class="portmodal__overlay modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="portmodal__container" role="dialog" aria-modal="true" aria-labelledby="modal-mc-app-title">
-          <div class="portmodal__header">
+          <div class="portmodal__top">
             <button class="portmodal__close" aria-label="Close modal" data-micromodal-close></button>
           </div>
-          <header>
+          <header class="portmodal__header">
             <h2 class="portmodal__title">
               AskForFood
             </h2>
@@ -822,23 +822,25 @@
             </p>
           </header>
           <main class="modal__content">
+<!--
+            &lt;!&ndash; Swiper&ndash;&gt;
             <div class="swiper-container">
               <div class="swiper-wrapper">
-                <!-- Slides -->
+                &lt;!&ndash; Slides &ndash;&gt;
                 <div class="swiper-slide">
                   <img data-src="/images/figures/projetos/gtr-checkdelivery/1.jpeg" class="swiper-lazy">
-                  <!-- Preloader image -->
+                  &lt;!&ndash; Preloader image &ndash;&gt;
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
                 <div class="swiper-slide">
                   <img data-src="/images/figures/projetos/gtr-checkdelivery/2.jpeg" class="swiper-lazy">
-                  <!-- Preloader image -->
+                  &lt;!&ndash; Preloader image &ndash;&gt;
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 
                 </div>
                 <div class="swiper-slide">
                   <img data-src="/images/figures/projetos/gtr-checkdelivery/3.jpeg" class="swiper-lazy">
-                  <!-- Preloader image -->
+                  &lt;!&ndash; Preloader image &ndash;&gt;
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
               </div>
@@ -848,9 +850,101 @@
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
             </div>
-            <p class="modal__content-description">
-              Aplicativo da startup <a class="modal__content-link" href="http://meconheca.com.br" target="_blank" rel="noopener">Me Conheça,</a> para interação pelos usuários via chat com as perguntas e informações criadas no aplicação administrativo para posterior criação e tratamento de indicadores.
-            </p>
+-->
+
+            <!-- Descrição -->
+            <div class="portmodal-desc">
+              <div class="portmodal-desc-section">
+                <div class="portmodal-desc_title-wrap">
+                  <svg class="portmodal-desc_icon"
+                       role="presentation"
+                  >
+                    <use xlink:href="/figures-svg.svg#icon-user"/>
+                  </svg>
+                  <h4 class="portmodal-desc_title">Cliente</h4>
+                </div>
+                <p class="portmodal-desc_text">
+                  Nenhum
+                </p>
+              </div>
+              <div class="portmodal-desc-section">
+                <div class="portmodal-desc_title-wrap">
+                  <svg class="portmodal-desc_icon"
+                       role="presentation"
+                  >
+                    <use xlink:href="/figures-svg.svg#icon-calendar"/>
+                  </svg>
+                  <h4 class="portmodal-desc_title">Data de conclusão</h4>
+                </div>
+                <p class="portmodal-desc_text">
+                  Em desenvolvimento.
+                </p>
+              </div>
+              <div class="portmodal-desc-section">
+                <div class="portmodal-desc_title-wrap">
+                  <svg class="portmodal-desc_icon"
+                       role="presentation"
+                  >
+                    <use xlink:href="/figures-svg.svg#icon-align-left"/>
+                  </svg>
+                  <h4 class="portmodal-desc_title">Descrição</h4>
+                </div>
+                <p class="portmodal-desc_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas velit tempus turpis fringilla tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras massa augue, imperdiet nec nisl blandit, finibus pellentesque ante. Vivamus mauris orci, dapibus in consequat molestie, placerat ut turpis. Suspendisse vel nisi non magna dignissim mattis. Nullam mollis, enim eu pulvinar dictum, massa ligula
+                </p>
+              </div>
+              <div class="portmodal_features">
+                <ul>
+                  <li>
+                    <svg class="portmodal-desc_icon"
+                         role="presentation"
+                    >
+                      <use xlink:href="/figures-svg.svg#icon-check-square"/>
+                    </svg>
+                    <p>
+                      Sistema Responsivo
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="portmodal-btn-wrap">
+              <!-- Botão Android-->
+              <a class="portmodal-btn c-btn c-btn-android"
+                 href="//play.google.com/store/apps/details?id=br.com.askforfood" target="_blank" rel="noopener"
+              >
+                <svg class="c-btn-icon"
+                     role="presentation"
+                >
+                  <use xlink:href="/figures-svg.svg#logo-android--white"/>
+                </svg>
+                <span class="c-btn-icon-text">
+                    Aplicativo
+                  </span>
+              </a>
+              <!-- Botão Sistema -->
+              <a class="portmodal-btn c-btn c-btn-system"
+                 href="//yuricamara.com.br/marketplace/" target="_blank" rel="noopener"
+              >
+                <svg class="c-btn-icon"
+                     role="presentation"
+                >
+                  <use xlink:href="/figures-svg.svg#icon-globe"/>
+                </svg>
+                <span class="c-btn-icon-text">
+                  Sistema
+                </span>
+              </a>
+            </div>
+            <!-- Botão Fechar-->
+            <a class="portmodal-btn c-btn c-btn-close" aria-label="Close modal" data-micromodal-close
+            >
+              <span class="c-btn-icon-text">
+                Fechar
+              </span>
+            </a>
           </main>
         </div>
       </div>

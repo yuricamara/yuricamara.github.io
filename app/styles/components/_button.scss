@@ -5,7 +5,7 @@
 
 .c-btn{
   border-radius: 4px;
-  height: 48px;
+  height: 45px;
   padding: 0 10px;
 
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .c-btn-icon-text{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -67,12 +67,56 @@
   }
 }
 
+// Android
+// ***************************************************
+.c-btn-android{
+  $background-color: #a4ca39;
+
+  color: #fff;
+  background-color: $background-color;
+
+  &:hover{
+    background-color: darken($background-color, 5%);
+  }
+}
+
 // Github
 // ***************************************************
 .c-btn-github{
   $background-color: #ccc;
 
   color: #000;
+  background-color: $background-color;
+
+  &:hover{
+    background-color: darken($background-color, 5%);
+  }
+}
+
+// System
+// ***************************************************
+.c-btn-system{
+  $background-color: #164e81;
+
+  color: #FFF;
+  background-color: $background-color;
+
+  &:hover{
+    background-color: darken($background-color, 5%);
+  }
+}
+
+// Close
+// ***************************************************
+.c-btn-close{
+  &:before {
+    content: "\2715";
+    font-size: 28px;
+  }
+
+  $background-color: #f26424;
+
+  color: #FFF;
   background-color: $background-color;
 
   &:hover{

@@ -26,10 +26,14 @@
   color: #ababab;
 }
 
-.portmodal__header{
+.portmodal__top{
   display: flex;
   justify-content: flex-end;
   padding: 20px 30px;
+}
+
+.portmodal__header{
+  margin-bottom: 40px;
 }
 
 .portmodal__title{
@@ -43,4 +47,73 @@
 
 .portmodal__subtitle{
   text-align: center;
+}
+
+// Descrição
+.portmodal-desc-section{
+  border-bottom: 1px solid #ECF0F1;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.portmodal-desc_icon{
+  margin-right: 7px;
+  height: 14px;
+  width: 14px;
+}
+
+.portmodal-desc_title-wrap{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.portmodal-desc_title{
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight:bold;
+}
+
+.portmodal-desc_text{
+  color: #aaa;
+  font-size: 15px;
+}
+
+.portmodal_features{
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ECF0F1;
+
+  ul {
+    padding-bottom: 20px;
+  }
+
+  li{
+    display: flex;
+    align-items: center;
+  }
+
+  p{
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+// Botões
+.portmodal-btn-wrap{
+  margin-bottom: 90px;
+  display: flex;
+}
+
+.portmodal-btn{
+  &.c-btn-android{
+    margin-right: 15px;
+    width: 110px;
+  }
+  &.c-btn-system{
+    width: 95px;
+  }
+  &.c-btn-close{
+    margin: 0 auto;
+    width: 85px;
+  }
 }
