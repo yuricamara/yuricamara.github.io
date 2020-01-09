@@ -76,7 +76,7 @@
 
   // Swipper
   // ******************************
-  createSwiper = () => {
+  const createSwiper = () => {
     return new Swiper ('.swiper-container', {
       spaceBetween: 5,
       centeredSlides: true,
@@ -84,17 +84,17 @@
       lazy: true,
       grabCursor: true,
       keyboard: {
-        enabled: true,
+        enabled: true
       },
 
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination'
       },
 
       navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+        prevEl: '.swiper-button-prev'
+      }
     });
   };
 
@@ -106,15 +106,18 @@
     onShow: modal => {
       console.info(`${modal.id} is shown`);
 
-      if (modal.id === 'modal-askforfood'){
-        swiper = createSwiper();
-      }
+      // if (modal.id === 'modal-askforfood'){
+      //   swiper = createSwiper();
+      // }
     },
     onClose: modal => {
       console.info(`${modal.id} is hidden`);
-      swiper.destroy();
+
+      if(swiper){
+        swiper.destroy();
+      }
     },
     disableScroll: true
   });
-
 }
+
