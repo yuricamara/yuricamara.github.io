@@ -2,7 +2,7 @@
   const d = document;
 
   // Nav
-  // ******************************
+  // ==============================
   const $navItems = d.getElementById('m-nav_items');
   const $menuToggleOpen = d.getElementById('m-nav_menu-toggle-open');
   const $menuToggleClose = d.getElementById('m-nav_menu-toggle-close');
@@ -51,12 +51,13 @@
 
 
   // Lazy Loading Images
+  // ==============================
+  // HTML
   // ******************************
   const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
   if ("IntersectionObserver" in window) {
     // Não suportado no IE
-
     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -74,8 +75,28 @@
     });
   }
 
-  // Swipper
+  // CSS
   // ******************************
+  const lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
+  if ("IntersectionObserver" in window) {
+    // Não suportado no IE
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
+
+  // Swipper
+  // ==============================
   const createSwiper = () => {
     return new Swiper ('.swiper-container', {
       spaceBetween: 5,
@@ -99,7 +120,7 @@
   };
 
   // Modais
-  // ******************************
+  // ==============================
   let swiper;
 
   MicroModal.init({
