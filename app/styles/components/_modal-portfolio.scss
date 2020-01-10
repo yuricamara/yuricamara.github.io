@@ -123,6 +123,10 @@
   padding-left: 30px;
 
   display: flex;
+
+  @include for-tablet-landscape-up{
+    padding: 0;
+  }
 }
 
 .portmodal-btn{
