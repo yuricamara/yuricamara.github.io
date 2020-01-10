@@ -45,6 +45,10 @@ $project_max-width: 330px;
 // Backgrounds
 // **************************************
 .m-project-wrapper{
+  background: url(./images/figures/projetos/askforfood.png) transparent none 0 0 /100% no-repeat;
+}
+
+.m-project-wrapper.visible{
   background: transparent none 0 0 /100% no-repeat;
 
   .m-project--askforfood &{
@@ -55,6 +59,12 @@ $project_max-width: 330px;
   }
   .m-project--emailapp & {
     background-image: url(./images/figures/projetos/email-interface.png);
+  }
+  .m-project--gtr-checkdelivery & {
+    background-image: url(./images/figures/projetos/gtr-checkdelivery.jpeg);
+  }
+  .m-project--gtr-mobile & {
+    background-image: url(./images/figures/projetos/gtr-mobile.png);
   }
   .m-project--chart & {
     background-image: url(./images/figures/projetos/organograma.png);
