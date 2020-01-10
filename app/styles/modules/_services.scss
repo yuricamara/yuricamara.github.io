@@ -84,7 +84,7 @@
 }
 
 .m-service--agencies{
-  .m-service_logo{
+  .m-service_logo.visible{
     height: 97px;
     width: 105px;
 
@@ -101,7 +101,7 @@
 }
 
 .m-service--mobile{
-  .m-service_logo{
+  .m-service_logo.visible{
     height: 125px;
     width: 125px;
 
@@ -117,7 +117,7 @@
 }
 
 .m-service--startup{
-  .m-service_logo{
+  .m-service_logo.visible{
     height: 115px;
     width: 50px;
 
@@ -133,7 +133,7 @@
 }
 
 .m-service--webapp{
-  .m-service_logo{
+  .m-service_logo.visible{
     height: 70px;
     width: 105px;
 
