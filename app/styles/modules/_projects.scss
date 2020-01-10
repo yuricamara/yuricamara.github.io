@@ -45,11 +45,12 @@ $project_max-width: 330px;
 // Backgrounds
 // **************************************
 .m-project-wrapper{
-  background: url(./images/figures/projetos/askforfood.png) transparent none 0 0 /100% no-repeat;
+  background: url(./images/placeholders/mobile.svg) center no-repeat;
+  background-size: 50%;
 }
 
 .m-project-wrapper.visible{
-  background: transparent none 0 0 /100% no-repeat;
+  background-size: 100%;
 
   .m-project--askforfood &{
     background-image: url(./images/figures/projetos/askforfood.png);
