@@ -134,11 +134,10 @@ gulp.task('html:dist', ['rev'], () => {
     .pipe($.revReplace({manifest: manifest}))
     // Substitui href após minificação e revReplace
     .pipe($.stringReplace(
-      '/images','/dist/images'
-      // new RegExp('(href|src|srcset)="?\/[^\/\s"]+','gi'),
-      // hrefMatched => {
-      //   return hrefMatched.replace(/\//, '/dist/');
-      // }
+      new RegExp('(href|src|srcset)="?\/[^\/\s"]+','gi'),
+      hrefMatched => {
+        return hrefMatched.replace(/\//, '/dist/');
+      }
     ))
     .pipe(gulp.dest("./"));
 });
