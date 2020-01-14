@@ -134,7 +134,7 @@ gulp.task('html:dist', ['rev'], () => {
     .pipe($.revReplace({manifest: manifest}))
     // Substitui href após minificação e revReplace
     .pipe($.stringReplace(
-      new RegExp('(href|src)=\/[^\/\s]+','gi'),
+      new RegExp('(href|src|srcset)=\/[^\/\s]+','gi'),
       hrefMatched => {
         return hrefMatched.replace(/=/, '=/dist');
       }
