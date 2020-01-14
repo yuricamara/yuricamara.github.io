@@ -101,6 +101,10 @@
   font-size: 15px;
 }
 
+.portmodal-desc_text--indent{
+  text-indent: 30px;
+}
+
 .portmodal_features{
   margin-bottom: 30px;
   border-bottom: 1px solid #ECF0F1;
@@ -138,10 +142,6 @@
 }
 
 .portmodal-btn{
-  &.c-btn-android{
-    margin-right: 15px;
-    width: 110px;
-  }
   &.c-btn-system{
     width: 95px;
   }
@@ -150,4 +150,17 @@
     width: 140px;
     clear: left;
   }
+}
+
+.c-btn-android{
+  margin-right: 15px;
+  width: 110px;
+}
+
+.portmodal-btn--mc-user{
+  width: 155px;
+}
+
+.portmodal-btn--mc-adm{
+  width: 180px;
 }
