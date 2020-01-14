@@ -13,6 +13,10 @@
   box-sizing: border-box;
   width: 100%;
   margin: 16px;
+
+  @include for-tablet-landscape-up{
+    width: 868px;
+  }
 }
 
 .portmodal__close{
@@ -21,9 +25,13 @@
   }
 
   border: 0;
-  font-size: 78px;;
+  font-size: 52px;
   background: transparent;
   color: #ababab;
+
+  @include for-tablet-portrait-up {
+    font-size: 78px;
+  }
 }
 
 .portmodal__top{
