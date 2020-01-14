@@ -18,9 +18,7 @@ gulp.task('lint', () =>
 );
 
 gulp.task('images:dist', () =>
-  gulp.src(['app/images/**/*', '!app/images/**/*.svg', '!app/images/**/*.html'])
-    // FIXME (imagemin): "Error: O sistema n�o pode encontrar o caminho especificado"
-    // .pipe($.cache($.imagemin()))
+  gulp.src(['app/images/**/*', '!app/images/**/*.html'])
     .pipe(gulp.dest('dist/images'))
     .pipe($.size({title: 'images'}))
 );
