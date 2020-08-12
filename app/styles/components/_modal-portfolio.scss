@@ -160,14 +160,10 @@
 
 // Botões
 .portmodal-btn-wrap{
-  margin-bottom: 90px;
-  padding-left: 30px;
+  margin-bottom: 70px;
 
   display: flex;
-
-  @include for-tablet-landscape-up{
-    padding: 0;
-  }
+  justify-content: center;
 }
 
 .portmodal-btn{
