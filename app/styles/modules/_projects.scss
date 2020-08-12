@@ -58,6 +58,9 @@ $project_max-width: 330px;
   .m-project--brincando & {
     background-image: url(./images/figures/projetos/brincando.png);
   }
+  .m-project--chart & {
+    background-image: url(./images/figures/projetos/organograma.png);
+  }
   .m-project--emailapp & {
     background-image: url(./images/figures/projetos/email-interface.png);
   }
@@ -67,14 +70,14 @@ $project_max-width: 330px;
   .m-project--gtr-mobile & {
     background-image: url(./images/figures/projetos/gtr-mobile.png);
   }
-  .m-project--chart & {
-    background-image: url(./images/figures/projetos/organograma.png);
-  }
   .m-project--math & {
     background-image: url(./images/figures/projetos/matematica.png);
   }
   .m-project--meconheca & {
     background-image: url(./images/figures/projetos/meconheca.png);
+  }
+  .m-project--transfer & {
+    background-image: url(./images/figures/projetos/transfer.png);
   }
 }
 

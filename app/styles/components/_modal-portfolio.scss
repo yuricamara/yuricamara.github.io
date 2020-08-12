@@ -71,6 +71,27 @@
   max-width: 320px;
 }
 
+.portmodal__video-landscape-container{
+  position:relative;
+  padding-bottom:56.25%; // aspect ratio of 16*9
+  padding-top:30px;
+  margin: 0 30px;
+  height:0;
+  overflow:hidden;
+
+  @include for-tablet-landscape-up{
+    margin: 0;
+  }
+}
+
+.portmodal__video-landscape{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
 // Descrição
 .portmodal-desc{
   padding: 0 30px;
@@ -171,4 +192,13 @@
 
 .portmodal-btn--mc-adm{
   width: 180px;
+}
+
+.portmodal-whatsapp-number{
+  display: inline-block;
+
+  color: #aaa;
+  font-size: 15px;
+  text-decoration: underline;
+  text-indent: initial;
 }
