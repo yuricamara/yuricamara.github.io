@@ -36,8 +36,7 @@
 
     <title>Yuri Câmara | Desenvolvimento de Aplicativos (iOS e Android) e Aplicações Web Responsivas</title>
 
-    <!--<link href="/plugins/swiper.min.css" rel="stylesheet">-->
-    <link href="https://unpkg.com/swiper/css/swiper.min.css" rel="stylesheet" >
+    <link href="/plugins/swiper.min.css" rel="stylesheet">
     <link href="/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
 
@@ -1849,10 +1848,11 @@
     </div>
 
     <!-- Plugins -->
-    <!--<script src="/plugins/swiper.min.js"></script>-->
-    <!--<script src="/plugins/micromodal.min.js"></script>-->
-     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://unpkg.com/swiper@5.2.1/js/swiper.min.js"></script>
+    <script>!window.Swiper && document.write('<script src="/plugins/swiper.min.js"><\/script>')</script>
+
+    <script src="https://unpkg.com/micromodal@0.4.6/dist/micromodal.min.js"></script>
+    <script>!window.MicroModal && document.write('<script src="/plugins/micromodal.min.js"><\/script>')</script>
     <!-- build:js /main.min.js -->
     <script src="/scripts/ie.js"></script>
     <script src="/scripts/main.js"></script>
