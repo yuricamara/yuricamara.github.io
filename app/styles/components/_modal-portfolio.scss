@@ -128,6 +128,12 @@
 .portmodal-desc_text{
   color: #aaa;
   font-size: 15px;
+  a{
+    color: inherit;
+    font-size: inherit;
+
+    text-decoration: underline;
+  }
 }
 
 .portmodal-desc_text--indent{
