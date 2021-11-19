@@ -204,3 +204,21 @@
   text-decoration: underline;
   text-indent: initial;
 }
+
+.swiper {
+  margin-bottom: 10px;
+  width: 320px;
+  height: 640px;
+
+  @include for-tablet-landscape-up{
+    margin-bottom: 0;
+  }
+}
+
+.exibihition{
+  margin-bottom: 30px;
+
+  @include for-tablet-landscape-up{
+    display: flex;
+  }
+}

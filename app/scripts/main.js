@@ -98,7 +98,7 @@
   // Swipper
   // ==============================
   const createSwiper = () => {
-    return new Swiper ('.swiper-container', {
+    return new Swiper ('.swiper', {
       spaceBetween: 5,
       centeredSlides: true,
 
@@ -125,8 +125,6 @@
 
   MicroModal.init({
     onShow: modal => {
-      console.info(`${modal.id} is shown`);
-
       if (
         modal.id === 'modal-gtr-checkdelivery' ||
         modal.id === 'modal-gtr-mobile'
@@ -134,9 +132,7 @@
         swiper = createSwiper();
       }
     },
-    onClose: modal => {
-      console.info(`${modal.id} is hidden`);
-
+    onClose: () => {
       if(swiper){
         if(swiper instanceof Array){
           swiper.forEach(sw => sw.destroy());
