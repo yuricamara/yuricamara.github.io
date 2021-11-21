@@ -1,0 +1,22 @@
+/**
+ * Technologies Module
+ * --------------------------------------------------
+ */
+
+.m-technologies{
+  background-color: #ebebeb;
+}
+
+.m-technologies_content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  svg{
+    height: 50px;
+    margin: 25px 20px 25px;
+    width: 200px;
+
+    align-self: center;
+  }
+}

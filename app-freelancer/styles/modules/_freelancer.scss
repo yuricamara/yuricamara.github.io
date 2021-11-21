@@ -1,0 +1,44 @@
+/**
+ * Freelancer Module
+ * --------------------------------------------------
+ */
+
+.m-freelancer{
+  background: #164e81;
+}
+
+.m-freelancer-info{
+  @include for-tablet-landscape-up{
+    background: #164e81 url(./images/figures/banner.jpg) 109% bottom no-repeat;
+    background-size: 550px;
+  }
+
+  padding: 120px $distance-min-lateral 70px;
+  margin: 0 auto;
+  max-width: 1250px;
+
+  color: white;
+
+  &_name{
+    margin-bottom: 10px;
+
+    font-family: $font-stack-primary;
+    font-size: 40px;
+    font-weight: bold;
+
+    @include for-tablet-portrait-up{
+      font-size: 48px;
+    }
+  }
+
+  &_positioning{
+    margin-bottom: 40px;
+
+    font-family: $font-stack-secundary;
+
+    @include for-tablet-landscape-up{
+      width: 50%;
+    }
+  }
+}
+

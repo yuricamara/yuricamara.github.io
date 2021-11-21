@@ -1,0 +1,26 @@
+.m-bottom{
+  background-color: #404447;
+}
+
+.m-bottom_section{
+  padding: 60px 0;
+
+  @include for-tablet-landscape-up{
+    padding: 120px 0;
+  }
+}
+
+.m-bottom_social-buttons{
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.m-bottom-rights{
+  padding: 0 $distance-min-lateral;
+
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}

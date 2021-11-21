@@ -1,0 +1,149 @@
+/**
+ * Services Module
+ * --------------------------------------------------
+ */
+
+.m-services{
+  color: #FFF;
+  background-color: #CCCC99;
+}
+
+.m-services_content{
+  margin: 0 auto;
+  max-width: 170px;
+
+  @include for-tablet-portrait-up{
+    max-width: 450px;
+  }
+
+  @include for-tablet-landscape-up{
+    max-width: 900px;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.m-service{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  &_title{
+    margin: 20px 0 40px;
+
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+    @include for-tablet-landscape-up{
+      font-size: 22px;
+    }
+  }
+
+  &_desc{
+    max-width: 680px;
+    width: 100%;
+
+    text-indent: 20px;
+  }
+
+  &_open-modal{
+    @include circle(30px);
+    $border-color: #f7f7f7;
+
+    border: 5px solid $border-color;
+
+    position: absolute;
+    bottom: 60%;
+
+    color: #000;
+    font-size: 42px;
+    line-height: 30px;
+    text-align: center;
+
+    background-color: darken($border-color, 5%);
+  }
+
+  &_logo-wrap{
+    @include circle(150px);
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
+
+.m-services-section-title {
+  color: #333;
+}
+
+.m-service--agencies{
+  .m-service_logo.visible{
+    height: 97px;
+    width: 105px;
+
+    background: transparent url(./images/figures/network.jpg) 0 0 no-repeat;
+    background-size: 100%;
+  }
+
+  .m-service_logo-wrap{
+    $border-color: #FFF;
+    border: 7px solid $border-color;
+    background-color: #FFF;
+    opacity: 0.5;
+  }
+}
+
+.m-service--mobile{
+  .m-service_logo.visible{
+    height: 125px;
+    width: 125px;
+
+    background: transparent url(./images/figures/android-ios.png) 0 10px no-repeat;
+    background-size: 100%;
+  }
+
+  .m-service_logo-wrap{
+    $border-color: #f7f7f7;
+    border: 7px solid $border-color;
+    background-color: darken($border-color, 5%);
+  }
+}
+
+.m-service--startup{
+  .m-service_logo.visible{
+    height: 115px;
+    width: 50px;
+
+    background: transparent url(images/figures/startup.png) 0 0 no-repeat;
+    background-size: 100%;
+  }
+  .m-service_logo-wrap{
+    $background-color: #27c8dc;
+    border: 7px solid lighten($background-color, 5%);
+    background-color: $background-color;
+    opacity: 0.5;
+  }
+}
+
+.m-service--webapp{
+  .m-service_logo.visible{
+    height: 70px;
+    width: 105px;
+
+    background: transparent url(./images/figures/laptop.png) 0 0 no-repeat;
+    background-size: 100%;
+  }
+
+  .m-service_logo-wrap{
+    $background-color: #ff7058;
+    border: 7px solid lighten($background-color, 5%);
+    background-color: $background-color;
+  }
+}

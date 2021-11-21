@@ -1,0 +1,23 @@
+/**
+ * Theme
+ * --------------------------------------------------
+ */
+
+.th-section-title{
+  @include for-phone-only{
+    font-size: 30px;
+  }
+
+  margin-bottom: 30px;
+
+  color: #555;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.th-link-underline{
+  border-bottom: 1px solid #ccc;
+}

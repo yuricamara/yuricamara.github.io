@@ -1,0 +1,22 @@
+/**
+ * Variables
+ * --------------------------------------------------
+ */
+
+// Maps - Exemplo de uso
+//  background-color: map-get($colors, dark);
+
+$colors: (
+  primary:          #2e81b7,
+  secondary:        #4f5666,
+  danger:           #e54d42,
+  dark:             #333
+);
+
+$font-stack-primary: Montserrat, sans-serif;
+$font-stack-secundary: "Open Sans", sans-serif;
+
+$distance-min-lateral: 13px;
+
+$nav-heigth-desktop: 70px;
+$nav-heigth-mobile: 50px;

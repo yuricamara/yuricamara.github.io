@@ -1,0 +1,28 @@
+/**
+ * Layout
+ * --------------------------------------------------
+ */
+
+.l-main{
+  overflow: hidden;
+}
+
+.l-section{
+  padding: 80px 0;
+
+  clear: both;
+
+  @include for-tablet-landscape-up{
+    padding: 100px 0;
+  }
+}
+
+.l-footer{
+  padding: 0 $distance-min-lateral;
+}
+
+// Ações
+.l-centralize{
+  margin: 0 auto;
+  max-width: 1200px;
+}

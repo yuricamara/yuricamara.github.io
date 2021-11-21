@@ -1,0 +1,109 @@
+/**
+ * Projects Module
+ * -------------------------------------------------
+ */
+
+$desktop-info-width: 70%;
+$desktop-figure-width: 100% - $desktop-info-width;
+$project_max-width: 330px;
+
+.m-projects{
+  background-color: #333;
+}
+
+.m-projects_title{
+  color: #FFF;
+}
+
+.m-projects_subtitle{
+  font-size: 24px;
+}
+
+.m-project{
+  color: white;
+}
+
+.m-projects_wrapper{
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.m-project-wrapper{
+  height: 300px;
+  width: 300px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.m-projects_content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// Backgrounds
+// **************************************
+.m-project-wrapper{
+  background: url(./images/placeholders/mobile.svg) center no-repeat;
+  background-size: 50%;
+}
+
+.m-project-wrapper.visible{
+  background-size: 100%;
+
+  .m-project--askforfood &{
+    background-image: url(./images/figures/projetos/askforfood.png);
+  }
+  .m-project--brincando & {
+    background-image: url(./images/figures/projetos/brincando.png);
+  }
+  .m-project--chart & {
+    background-image: url(./images/figures/projetos/organograma.png);
+  }
+  .m-project--emailapp & {
+    background-image: url(./images/figures/projetos/email-interface.png);
+  }
+  .m-project--gtr-checkdelivery & {
+    background-image: url(./images/figures/projetos/gtr-checkdelivery.jpeg);
+  }
+  .m-project--gtr-mobile & {
+    background-image: url(./images/figures/projetos/gtr-mobile.png);
+  }
+  .m-project--math & {
+    background-image: url(./images/figures/projetos/matematica.png);
+  }
+  .m-project--meconheca & {
+    background-image: url(./images/figures/projetos/meconheca.png);
+  }
+  .m-project--transfer & {
+    background-image: url(./images/figures/projetos/transfer.png);
+  }
+}
+
+// Informações
+// ***************************************
+.m-project_info{
+  padding: 0 $distance-min-lateral;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  background-color: rgba(0,0,0,.5);
+}
+
+.m-project_info-top_title-text{
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.m-project_info-top_desc{
+  text-align: center;
+  font-size: 16px;
+}

@@ -1,0 +1,58 @@
+/**
+ * Offers Module
+ * --------------------------------------------------
+ */
+
+.m-offers{
+  background-color: #eee;
+}
+
+.m-offers_content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-gap: 50px;
+}
+
+.m-offer{
+  padding: 0 $distance-min-lateral;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 30px;
+  @include for-phone-only{
+    margin-bottom: 30px;
+  }
+
+  &:last-child{
+    @include for-phone-only {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.m-offer_icon{
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+.m-offer_title{
+  margin-bottom: 15px;
+
+  color: #918751;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+
+  @include for-tablet-landscape-up{
+    font-size: 24px;
+  }
+}
+
+.m-offer_informations{
+  max-width: 550px;
+  margin: 0 auto;
+
+  text-align: center;
+}

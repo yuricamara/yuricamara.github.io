@@ -1,0 +1,193 @@
+/**
+ * Contacts Module
+ * --------------------------------------------------
+ */
+
+.m-contacts{
+  background-color: #1693A5;
+}
+
+.m-contacts_wrapper{
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+  @include for-tablet-landscape-up{
+    justify-content: center;
+    flex-flow: row;
+  }
+}
+
+.m-contact{
+  margin-top: 25px;
+
+  display: flex;
+  align-items: center;
+}
+
+.m-contact_title{
+  color: #FFF;
+}
+
+.m-contact_icon{
+  height: 30px;
+
+  &--email{
+    width: 30px;
+  }
+}
+
+.m-contact_text{
+  padding-left: 10px;
+
+  line-height: 1;
+
+  &--email{
+    color: #267cb5;
+
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-position: under;
+    font-weight: bold;
+  }
+}
+
+.m-contact_section-title{
+  background-color: #fff;
+}
+
+// Whatsapp
+@keyframes whatsapp {
+  0% {
+    transform: scale(.5);
+    opacity: 0
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0
+  }
+}
+
+.m-contact_whatsapp-fab{
+  height: 70px;
+  width: 70px;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%,-50%);
+
+  background: #0cba59;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include for-phone-only{
+    height: 55px;
+    width: 55px;
+    transform: translate(-40%,-40%);
+  }
+
+  @include for-desktop-up{
+    transform: translate(-100%,-100%);
+  }
+
+  &:before, &:after{
+    @include for-desktop-up{
+      content: '';
+      display: block;
+      position: absolute;
+      border: 1px solid #0cba59;
+      left: -20px;
+      right: -20px;
+      top: -20px;
+      bottom: -20px;
+      border-radius: 50%;
+      animation: whatsapp 1.5s linear infinite;
+      opacity: 0;
+      z-index: -999999;
+    }
+  }
+
+  &:after{
+    animation-delay: .5s;
+  }
+
+  &_data-icon{
+    height: 40px;
+    width: 40px;
+
+    @include for-phone-only{
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  &_data-text{
+    width: 0;
+
+    text-indent: -9999px;
+  }
+}
+
+.m-contact--box{
+  border-radius: 4px;
+  padding: 20px;
+  width: 300px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &_whatsapp{
+    margin-bottom: 20px;
+    background-color: #455a64;
+
+    @include for-tablet-landscape-up{
+      margin-bottom:0;
+      margin-right: 20px;
+    }
+
+    &_data-text{
+      color: white;
+    }
+  }
+
+  &_email{
+    background-color: #f2f2f2;
+
+    &_data-text{
+      color: #404040;
+    }
+  }
+
+  &_data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_data-text{
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-position: initial;
+    line-height: 1;
+
+    @include for-tablet-landscape-up{
+      text-decoration: none;
+    }
+  }
+
+  &_data-icon{
+    height: 35px;
+    margin-right: 10px;
+    width: 35px;
+  }
+}
