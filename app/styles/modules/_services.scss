@@ -22,7 +22,8 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 115px;
 }
 
 .m-service{
