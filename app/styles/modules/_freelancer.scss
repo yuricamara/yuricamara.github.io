@@ -32,11 +32,11 @@
   }
 
   &_positioning{
-    margin-bottom: 40px;
-
     font-family: $font-stack-secundary;
+    font-size: 22px;
 
     @include for-tablet-landscape-up{
+      margin-bottom: 40px;
       width: 50%;
     }
   }
