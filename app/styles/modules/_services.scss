@@ -34,7 +34,7 @@
   position: relative;
 
   &_title{
-    margin: 20px 0 40px;
+    margin-top: 20px;
 
     font-size: 18px;
     font-weight: bold;
@@ -102,6 +102,12 @@
 }
 
 .m-service--mobile{
+  margin-bottom: 40px;
+
+  @include for-tablet-portrait-up{
+    margin-bottom: 0;
+  }
+
   .m-service_logo.visible{
     height: 125px;
     width: 125px;
