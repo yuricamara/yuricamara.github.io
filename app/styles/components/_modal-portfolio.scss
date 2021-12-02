@@ -114,8 +114,10 @@
 }
 
 .portmodal-desc_title-wrap{
+  margin-bottom: 8px;
+
   display: flex;
-  margin-bottom: 5px;
+  align-items: center;
 }
 
 .portmodal-desc_title{
@@ -123,11 +125,14 @@
   font-size: 16px;
   text-transform: uppercase;
   font-weight:bold;
+  line-height: 1;
+  color: #000;
 }
 
 .portmodal-desc_text{
-  color: #aaa;
+  color: #3c3c3c;
   font-size: 15px;
+
   a{
     color: inherit;
     font-size: inherit;
@@ -138,6 +143,30 @@
 
 .portmodal-desc_text--indent{
   text-indent: 30px;
+}
+
+.portmodal-technologies{
+  margin-top: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.portmodal-technology{
+  height: 23px;
+  width: 85px;
+}
+
+.portmodal-technology_js{
+  height: 23px;
+  width: 23px;
+}
+
+.portmodal-technology_icon{
+  height: inherit;
+  width: inherit;
 }
 
 .portmodal_features{
@@ -180,6 +209,10 @@
     margin: 70px auto 30px;
     width: 140px;
     clear: left;
+
+    .c-btn-icon-text{
+      margin-left: 8px;
+    }
   }
 }
 
