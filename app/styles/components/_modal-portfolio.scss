@@ -199,6 +199,7 @@
 
   display: flex;
   justify-content: center;
+  column-gap: 15px;
 }
 
 .portmodal-btn{
@@ -217,7 +218,6 @@
 }
 
 .c-btn-android{
-  margin-right: 15px;
   width: 110px;
 }
 
