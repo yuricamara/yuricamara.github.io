@@ -1,20 +1,15 @@
 i18next
+  .use(i18nextHttpBackend)
   .use(i18nextBrowserLanguageDetector)
   .init({
     fallbackLng: 'en',
+    load: 'languageOnly',
     debug: true,
     cleanCode: true,
-    resources: {
-      en: {
-        translation: {
-          "key": "hello"
-        }
-      },
-      pt: {
-        translation: {
-          "key": "oi"
-        }
-      }
+    backend: {
+      loadPath: `${document.location.href}locales/{{lng}}.json`,
+      crossDomain: true,
+      queryStringParams: { v: '1.0.0' },
     }
   }).then(()=> { updateContent(); });
 
