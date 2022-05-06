@@ -1,3 +1,15 @@
+const keys = {
+  hello: null,
+  // title: { what: 'i18next' }
+}
+
+// Conteúdo
+const replaceByKeys = keys => {
+  for(const p in keys){
+    document.querySelector(`[data-i18n="${p}"]`).innerHTML = i18next.t(`${p}`);
+  }
+}
+
 i18next
   .use(i18nextHttpBackend)
   .use(i18nextBrowserLanguageDetector)
@@ -11,17 +23,13 @@ i18next
       crossDomain: true,
       queryStringParams: { v: '1.0.0' },
     }
-  }).then(()=> { updateContent(); });
-
-// Conteúdo
-const updateContent = () => {
-  document.getElementById('output').innerHTML = i18next.t('key');
-}
-
-// Mudança de idioma
-i18next.on('languageChanged', () => {
-  updateContent();
+  }).then(()=> {
+    replaceByKeys(keys);
+    i18next.on('languageChanged', () => {
+      replaceByKeys(keys);
+    });
 });
+
 
 const changeLanguage = lang => {
   i18next.changeLanguage(lang);
