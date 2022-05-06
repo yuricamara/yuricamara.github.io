@@ -138,6 +138,14 @@
                 </li>
               </ul>
             </nav>
+            <div style="height: 100px">
+              <button onclick="changeLanguage('en')" class="c-btn">
+                EN
+              </button>
+              <button onclick="changeLanguage('pt')" class="c-btn">
+                PT
+              </button>
+            </div>
           </div>
           <div id="ie" class="ie">
             <p class="ie-message">
@@ -163,6 +171,9 @@
             <h1 class="th-section-title">
               Sobre
             </h1>
+
+            <p id="output">xxxxxxxxxxxxxx</p>
+
             <div class="c-bar-section-title"></div>
             <div class="m-about_content">
               <img class="m-about-freelancer-photo lazy"
@@ -2136,16 +2147,24 @@
     </div>
 
     <!-- Plugins -->
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@7.4.1/swiper-bundle.min.js"></script>
     <script>!window.Swiper && document.write('<script src="/plugins/swiper-bundle.min.js"><\/script>')</script>
 
     <script src="https://unpkg.com/micromodal@0.4.6/dist/micromodal.min.js"></script>
     <script>!window.MicroModal && document.write('<script src="/plugins/micromodal.min.js"><\/script>')</script>
+
+    <script src="https://unpkg.com/i18next@21.7.1/dist/umd/i18next.min.js"></script>
+    <script>!window.i18next && document.write('<script src="/plugins/i18next.min.js"><\/script>')</script>
+
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.4/i18nextBrowserLanguageDetector.min.js"></script>
+    <script>!window.i18nextBrowserLanguageDetector && document.write('<script src="/plugins/i18next-browser-languagedetector.min.js"><\/script>')</script>
+
     <!-- build:js /main.min.js -->
     <script src="/scripts/ie.js"></script>
     <script src="/scripts/images.js"></script>
     <script src="/scripts/nav.js"></script>
     <script src="/scripts/swippers.js"></script>
+    <script src="/scripts/i18n.js"></script>
     <!-- endbuild -->
 
     <script>
