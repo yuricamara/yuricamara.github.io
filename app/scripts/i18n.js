@@ -1,12 +1,13 @@
 const keys = {
   hello: null,
-  // title: { what: 'i18next' }
+  title: { what: 'i18next' }
 }
 
 // Conteúdo
 const replaceByKeys = keys => {
   for(const p in keys){
-    document.querySelector(`[data-i18n="${p}"]`).innerHTML = i18next.t(`${p}`);
+    const el = document.querySelector(`[data-i18n="${p}"]`);
+    el ? el.innerHTML = i18next.t(`${p}`) : console.error(`i18n error: elemento HTML com key ${p} não encontrado.`);
   }
 }
 
@@ -23,13 +24,16 @@ i18next
       crossDomain: true,
       queryStringParams: { v: '1.0.0' },
     }
-  }).then(()=> {
+  })
+  .then(()=> {
     replaceByKeys(keys);
     i18next.on('languageChanged', () => {
       replaceByKeys(keys);
     });
-});
-
+  })
+  .catch(error => {
+    console.error('error',error);
+  });
 
 const changeLanguage = lang => {
   i18next.changeLanguage(lang);
