@@ -1,14 +1,19 @@
 const keys = {
-  hello: null,
+  'about-intro': null,
   is: { what: 'i18next', how: 'great' }
 }
 
-// Conteúdo
+// Keys
 const replaceByKeys = keys => {
   for(const p in keys){
     const el = document.querySelector(`[data-i18n="${p}"]`);
     el ? el.innerHTML = i18next.t(`${p}`, keys[p]) : console.error(`i18n error: elemento HTML com key ${p} não encontrado.`);
   }
+}
+
+// Lang
+const setDataLang = () => {
+  document.querySelector('[data-lang]').setAttribute('data-lang', i18next.language)
 }
 
 i18next
@@ -26,13 +31,16 @@ i18next
     }
   })
   .then(()=> {
+    setDataLang();
     replaceByKeys(keys);
+
     i18next.on('languageChanged', () => {
+      setDataLang();
       replaceByKeys(keys);
     });
   })
   .catch(error => {
-    console.error('error',error);
+    console.error('i18n error',error);
   });
 
 const changeLanguage = lang => {
