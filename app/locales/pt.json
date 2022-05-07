@@ -1,3 +1,4 @@
 {
-  "hello": "Oi"
+  "hello": "Oi",
+  "is": "{{what}} é {{how}}"
 }

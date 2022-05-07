@@ -1,13 +1,13 @@
 const keys = {
   hello: null,
-  title: { what: 'i18next' }
+  is: { what: 'i18next', how: 'great' }
 }
 
 // Conteúdo
 const replaceByKeys = keys => {
   for(const p in keys){
     const el = document.querySelector(`[data-i18n="${p}"]`);
-    el ? el.innerHTML = i18next.t(`${p}`) : console.error(`i18n error: elemento HTML com key ${p} não encontrado.`);
+    el ? el.innerHTML = i18next.t(`${p}`, keys[p]) : console.error(`i18n error: elemento HTML com key ${p} não encontrado.`);
   }
 }
 
