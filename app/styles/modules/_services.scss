@@ -3,6 +3,8 @@
  * --------------------------------------------------
  */
 
+@use "sass:color";
+
 .m-services{
   color: #FFF;
   background-color: #CCCC99;
@@ -66,7 +68,7 @@
     line-height: 30px;
     text-align: center;
 
-    background-color: darken($border-color, 5%);
+    background-color: color.adjust($border-color, $lightness: -5%);
   }
 
   &_logo-wrap{
@@ -119,7 +121,7 @@
   .m-service_logo-wrap{
     $border-color: #f7f7f7;
     border: 7px solid $border-color;
-    background-color: darken($border-color, 5%);
+    background-color: color.adjust($border-color, $lightness: -5%);
   }
 }
 
@@ -133,7 +135,7 @@
   }
   .m-service_logo-wrap{
     $background-color: #27c8dc;
-    border: 7px solid lighten($background-color, 5%);
+    border: 7px solid color.adjust($background-color, $lightness: 5%);
     background-color: $background-color;
     opacity: 0.5;
   }
@@ -150,7 +152,7 @@
 
   .m-service_logo-wrap{
     $background-color: #ff7058;
-    border: 7px solid lighten($background-color, 5%);
+    border: 7px solid color.adjust($background-color, $lightness: 5%);
     background-color: $background-color;
   }
 }

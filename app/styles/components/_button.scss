@@ -3,6 +3,8 @@
  * --------------------------------------------------
  */
 
+@use "sass:color";
+
 .c-btn{
   border-radius: 4px;
   height: 45px;
@@ -63,7 +65,7 @@
   background-color: $background-color;
 
   &:hover{
-    background-color: darken($background-color, 5%);
+    background-color: color.adjust($background-color, $lightness: -5%);
   }
 }
 
@@ -76,7 +78,7 @@
   background-color: $background-color;
 
   &:hover{
-    background-color: darken($background-color, 5%);
+    background-color: color.adjust($background-color, $lightness: -5%);
   }
 }
 
@@ -89,7 +91,7 @@
   background-color: $background-color;
 
   &:hover{
-    background-color: darken($background-color, 5%);
+    background-color: color.adjust($background-color, $lightness: -5%);
   }
 }
 
@@ -102,7 +104,7 @@
   background-color: $background-color;
 
   &:hover{
-    background-color: darken($background-color, 5%);
+    background-color: color.adjust($background-color, $lightness: -5%);
   }
 }
 
@@ -120,7 +122,7 @@
   background-color: $background-color;
 
   &:hover{
-    background-color: darken($background-color, 5%);
+    background-color: color.adjust($background-color, $lightness: -5%);
   }
 }
 
@@ -166,7 +168,7 @@
   text-transform: uppercase;
 
   &:hover{
-    background-color: darken($background-color, 5%);
+    background-color: color.adjust($background-color, $lightness: -5%);
   }
 
   @include for-tablet-portrait-up{
