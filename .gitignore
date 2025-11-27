@@ -6,3 +6,4 @@
 .htaccess
 node_modules
 sprite.*.html
+dist
