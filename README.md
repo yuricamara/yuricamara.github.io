@@ -1,3 +1,4 @@
 www.yuricamara.com.br
 
-Node version 12
+Node 12
+Python 3
